@@ -1,0 +1,15 @@
+\documentclass{article}
+\usepackage{tikz}
+\begin{document}
+
+\begin{tikzpicture}[scale = 2]
+%\draw[very thin, color = gray](0, 0) grid (5, 3);
+\draw [<->, thick] (0, 3) node (yaxis) [above] {$Return$} 
+  |- (5, 0) node (xaxis) [right] {$Risk$};
+\draw[thick, color = blue] (1.0, 0.5) to [out = 120, in = 210] (2.0, 2.0) to [out = 25, in = 180] (5, 2.5);
+\draw[domain = 0.0:3.9, color = red] plot(\x, {1 + 0.5*\x});
+\node at (2, 2) [above left] {MP};
+\end{tikzpicture}
+
+
+\end{document}

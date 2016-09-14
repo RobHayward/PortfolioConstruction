@@ -1,0 +1,75 @@
+\documentclass[14pt,xcolor=pdftex,dvipsnames,table]{beamer}
+
+% Specify theme
+\usetheme{Madrid}
+% See deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html for other themes
+\usepackage{caption}
+\usepackage{tikz}
+ \usetikzlibrary{arrows,positioning}
+\usepackage{multirow}
+\usepackage[comma, sort&compress]{natbib}
+\usepackage{graphicx}
+\graphicspath{{../Pictures/}}
+\usepackage{amsmath}
+\bibliographystyle{agsm}
+% Specify base color
+\usecolortheme[named=OliveGreen]{structure}
+% See http://goo.gl/p0Phn for other colors
+
+% Specify other colors and options as required
+\setbeamercolor{alerted text}{fg=Maroon}
+\setbeamertemplate{items}[square]
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
+% Title and author information
+\title{Modern Portfolio Theory}
+\author{Rob Hayward}
+\begin{document}
+
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\section{Modern Portfolio Theory}
+
+\begin{frame}{{Harry Harkowitz}
+\begin{center}
+\includegraphics[height = 3.0in]{markowitz}
+\end{center}
+\end{frame}
+
+\begin{frame}{William F. Sharpe}
+\begin{center}
+\includegraphics[height = 3.0in]{markowitz}
+\end{center}
+\end{frame}
+
+\begin{frame}{Merton Miller}
+\begin{center}
+\includegraphics[height = 3.0in]{markowitz}
+\end{center}
+\end{frame}
+
+\begin{frame}
+
+
+
+
+
+
+
+\section{Issues with MPT}
+
+
+
+\end{document}
+\begin{itemize}[<+-| alert@+>]
