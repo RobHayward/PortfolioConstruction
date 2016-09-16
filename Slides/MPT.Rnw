@@ -82,22 +82,27 @@
 \begin{frame}{Features of MPT}
 Some key features of MPT
 \begin{itemize}[<+-| alert@+>]
+\pause
 \item The \emph{investment universe}
 \item A mean-variance analysis
 \item Lack of transaction costs
 \item Stability of relationships
+\item Risk-free rate
 \end{itemize}
 \end{frame}
 
-
-
-
-
-
-
+\begin{frame}{Capital Asset Pricing Model}
 
 
 \section{Issues with MPT}
+\begin{frame}{Issues with MPT}
+There are a number of issues in implementing MPT
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item Covariance tends to one during a crisis
+\item 
+
+
 
 
 
