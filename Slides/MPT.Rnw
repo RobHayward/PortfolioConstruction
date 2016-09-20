@@ -90,8 +90,32 @@ Some key features of MPT
 \item Risk-free rate
 \end{itemize}
 \end{frame}
-
+% these may be expanded in slides or just discussion (pictures?)
 \begin{frame}{Capital Asset Pricing Model}
+Closely associated with MPT is the \emph{Capital Asset Pricing Model} (CAPM)
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item individual securities only matter relative to the makret
+\item Beta $(\beta)$ is the measure of this relationship
+\item High beta is high risk 
+\item Low beta is low risk
+\end{itemize}
+\end{frame}
+
+\begin{frame}{CAPM}
+\begin{tikzpicture}[scale = 2] 
+\draw[very thin, color = gray](0, 0) grid (5, 3);
+\draw [<->, thick] (0, 3) node (yaxis) [above] {$Return$} 
+  |- (5, 0) node (xaxis) [right] {$Risk$};
+\pause
+\draw[domain = 0.0:5.0, color = olive] plot(\x, {0.5 + 0.5*\x});
+\node at (2.5, 1.75) [above left] {beta = 1};
+%\node at (1.0, 1.0) [right] {\scriptsize Efficient Frontier};
+\pause
+
+\draw [fill = red] (2.5, 1.75) circle [radius = 0.05];
+\end{tikzpicture}
+\end{frame}
 
 
 \section{Issues with MPT}
@@ -99,12 +123,33 @@ Some key features of MPT
 There are a number of issues in implementing MPT
 \pause
 \begin{itemize}[<+-| alert@+>]
+\item There are transaction costs
 \item Covariance tends to one during a crisis
-\item 
+\item What is the risk-free rate
+\item Can you borrow at the same rate that you lend?
+\end{itemize}
+\end{frame}
+%there is something in the appendix is needed. 
+
 
 
 
 
 
 \end{document}
+
 \begin{itemize}[<+-| alert@+>]
+\begin{frame}{Trading costs}
+There are a number of studies
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item Hasbrouck (2009) makes estimates 1926 to 2005
+\item Cost of trading have generally trended lower
+\item EFT has tended to reduce costs during calm conditions but tends to make liquidity more patchy
+\item Lower costs make rebalancing more effective
+\item Regulatory changes increase transparency and reduce costs
+\end{itemize}
+\end{frame}
+% do we need a chart of transaction costs falling or picture of new method of exhange-trading? 
+\frame{Instability of correlation coefficients}
+
