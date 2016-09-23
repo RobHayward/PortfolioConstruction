@@ -88,9 +88,31 @@ Some key features of MPT
 \item Lack of transaction costs
 \item Stability of relationships
 \item Risk-free rate
+\item Expected vs historical record
 \end{itemize}
 \end{frame}
 % these may be expanded in slides or just discussion (pictures?)
+
+\begin{frame}{Normal distribution}
+<<norm, fig.height=4.6, echo=FALSE, warning=FALSE>>=
+x <- seq(-6, 6, 0.1)
+fs = function(x, epsilon, delta){
+  dnorm(sinh(delta*asinh(x) - epsilon)) * delta*cosh(delta*asinh(x) - 
+    epsilon)/sqrt(1 + x^2)
+}
+plot(x, fs(x, 0, 1), type = 'l', col = 'darkgreen', main = 'Normal Distribution', 
+     xlab = 'Return', ylab = 'frequency')
+# http://stats.stackexchange.com/questions/43482/transformation-to-increase-kurtosis-and-skewness-of-normal-r-v
+lines(x, fs(x, 0, 1.5), type = 'l')
+@
+\end{frame}
+
+\begin{frame}{Black swans}
+\centering
+\includegraphics[scale = 0.25]{blackswan}
+\end{frame}
+
+%\begin{frame}{Expected values}
 \begin{frame}{Capital Asset Pricing Model}
 Closely associated with MPT is the \emph{Capital Asset Pricing Model} (CAPM)
 \pause
@@ -112,7 +134,6 @@ Closely associated with MPT is the \emph{Capital Asset Pricing Model} (CAPM)
 \node at (2.5, 1.75) [above left] {beta = 1};
 %\node at (1.0, 1.0) [right] {\scriptsize Efficient Frontier};
 \pause
-
 \draw [fill = red] (2.5, 1.75) circle [radius = 0.05];
 \end{tikzpicture}
 \end{frame}
