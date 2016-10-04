@@ -81,11 +81,10 @@
 
 \begin{frame}{Modern Portfolio Theory}
 According to MPT, the \emph{market portfolio} is \emph{mean-variance optimal}
-\begin{itemize}[<+-| alert@+>]
 \pause
-\item In theory, it depends on forecasting expected returns and their expected covariances matrix for hundreds of assets
-\item Or hold the \emph{Market portfolio}
-\end{itemize} 
+\begin{block}{}
+Holding the market portfolio is an alternative to forecasting expected returns and their expected covariances matrix for hundreds of assets
+\end{block}
 \end{frame}
 
 \begin{frame}{Some questions about MPT}
@@ -105,21 +104,52 @@ Some questions about MPT
 
 \begin{frame}{Normal distribution}
 <<norm, fig.height=4.6, echo=FALSE, warning=FALSE>>=
-x <- seq(-6, 6, 0.1)
+x <- seq(-3, 3, 0.1)
 fs = function(x, epsilon, delta){
   dnorm(sinh(delta*asinh(x) - epsilon)) * delta*cosh(delta*asinh(x) - 
     epsilon)/sqrt(1 + x^2)
 }
 plot(x, fs(x, 0, 1), type = 'l', col = 'darkgreen', main = 'Normal Distribution', 
-     xlab = 'Return', ylab = 'frequency')
+     xlab = 'Return', ylab = 'frequency', ylim = c(0, 0.6))
 # http://stats.stackexchange.com/questions/43482/transformation-to-increase-kurtosis-and-skewness-of-normal-r-v
-lines(x, fs(x, 0, 1.5), type = 'l')
+#lines(x, fs(x, 0, 1.5), type = 'l', lty = 3)
+#lines(x, fs(x, -0.4, 1), type = 'l', lty = 2)
+@
+\end{frame}
+
+\begin{frame}{Kurtosis}
+<<kurt, fig.height=4.6, echo=FALSE, warning=FALSE>>=
+x <- seq(-3, 3, 0.1)
+fs = function(x, epsilon, delta){
+  dnorm(sinh(delta*asinh(x) - epsilon)) * delta*cosh(delta*asinh(x) - 
+    epsilon)/sqrt(1 + x^2)
+}
+plot(x, fs(x, 0, 1), type = 'l', col = 'darkgreen', main = 'Distribution with Kurtosis', 
+     xlab = 'Return', ylab = 'frequency', ylim = c(0, 0.6))
+# http://stats.stackexchange.com/questions/43482/transformation-to-increase-kurtosis-and-skewness-of-normal-r-v
+lines(x, fs(x, 0, 1.5), type = 'l', lty = 3)
+#lines(x, fs(x, -0.4, 1), type = 'l', lty = 2)
+@
+\end{frame}
+
+\begin{frame}{Skew}
+<<skew, fig.height=4.6, echo=FALSE, warning=FALSE>>=
+x <- seq(-3, 3, 0.1)
+fs = function(x, epsilon, delta){
+  dnorm(sinh(delta*asinh(x) - epsilon)) * delta*cosh(delta*asinh(x) - 
+    epsilon)/sqrt(1 + x^2)
+}
+plot(x, fs(x, 0, 1), type = 'l', col = 'darkgreen', main = 'Distribution with Skew', 
+     xlab = 'Return', ylab = 'frequency', ylim = c(0, 0.6))
+# http://stats.stackexchange.com/questions/43482/transformation-to-increase-kurtosis-and-skewness-of-normal-r-v
+#lines(x, fs(x, 0, 1.5), type = 'l', lty = 3)
+lines(x, fs(x, -0.4, 1), type = 'l', lty = 2)
 @
 \end{frame}
 
 \begin{frame}{Black swans}
 \centering
-%\includegraphics[scale = 0.25]{blackswan}
+\includegraphics[scale = 0.2]{blackswan}
 \end{frame}
 
 %\begin{frame}{Expected values}
@@ -127,8 +157,11 @@ lines(x, fs(x, 0, 1.5), type = 'l')
 Closely associated with MPT is the \emph{Capital Asset Pricing Model} (CAPM)
 \pause
 \begin{itemize}[<+-| alert@+>]
-\item individual securities only matter relative to the market
+\item Individual securities only matter relative to the market
 \item Beta $(\beta)$ is the measure of this relationship
+\begin{itemize}
+\item Covariance of asset returns with market returns
+\end{itemize}
 \item High beta is high risk 
 \item Low beta is low risk
 \end{itemize}
@@ -141,7 +174,7 @@ Closely associated with MPT is the \emph{Capital Asset Pricing Model} (CAPM)
   |- (5, 0) node (xaxis) [right] {$Risk$};
 \pause
 \draw[domain = 0.0:5.0, color = olive] plot(\x, {0.5 + 0.5*\x});
-\node at (2.5, 1.75) [above left] {beta = 1};
+\node at (2.5, 1.75) [above left] {$\beta$ = 1};
 %\node at (1.0, 1.0) [right] {\scriptsize Efficient Frontier};
 \pause
 \draw [fill = red] (2.5, 1.75) circle [radius = 0.05];
@@ -166,7 +199,7 @@ A number of anomalies have been found
   |- (5, 0) node (xaxis) [right] {$Risk$};
 \pause
 \draw[domain = 0.0:5.0, color = olive] plot(\x, {0.5 + 0.5*\x});
-\node at (2.5, 1.75) [above left] {beta = 1};
+\node at (2.5, 1.75) [above left] {$\beta$ = 1};
 %\node at (1.0, 1.0) [right] {\scriptsize Efficient Frontier};
 \pause
 \draw [fill = red] (2.5, 1.75) circle [radius = 0.05];
@@ -174,9 +207,9 @@ A number of anomalies have been found
 \end{frame}
 
 \section{Passive vs Active investment}
-\begin{frame}{One Hundred Dollar Bill}
+\begin{frame}{Economist and the one hundred dollar Bill}
 \begin{center}
-\includegraphics[scale = 0.2]{oneHundredDollar}
+\includegraphics[scale = 0.06]{oneHundredDollar}
 \end{center}
 \end{frame}
 
@@ -197,8 +230,8 @@ Active funds try to take advantage of these inefficiencies
 \item \emph{Value Investment}
 \begin{itemize}
 \item Benjamin Graham
-\item Warren Buffet
-\item Berkshire Hathway
+\item Warren Buffett
+\item Berkshire Hathaway
 \end{itemize}
 \item Hedge funds CTA etc
 \end{itemize}
