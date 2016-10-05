@@ -61,7 +61,7 @@
 
 \begin{frame}{Modern Portfolio Theory}
 \begin{tikzpicture}[scale = 2] 
-\draw[very thin, color = gray](0, 0) grid (5, 3);
+%\draw[very thin, color = gray](0, 0) grid (5, 3);
 \draw [<->, thick] (0, 3) node (yaxis) [above] {$Return$} 
   |- (5, 0) node (xaxis) [right] {$Risk$};
 \pause
@@ -80,10 +80,10 @@
 \end{frame}
 
 \begin{frame}{Modern Portfolio Theory}
-According to MPT, the \emph{market portfolio} is \emph{mean-variance optimal}
+MPT: the \emph{market portfolio} is \emph{mean-variance optimal}
 \pause
 \begin{block}{}
-Holding the market portfolio is an alternative to forecasting expected returns and their expected covariances matrix for hundreds of assets
+Holding the market portfolio is the alternative to forecasting the expected returns and the expected covariances matrix for hundreds of assets
 \end{block}
 \end{frame}
 
@@ -98,6 +98,7 @@ Some questions about MPT
 \item Stability of relationships
 \item Risk-free asset
 \item Expected vs historical record
+\item Investors are risk-averse
 \end{itemize}
 \end{frame}
 % these may be expanded in slides or just discussion (pictures?)
@@ -169,15 +170,15 @@ Closely associated with MPT is the \emph{Capital Asset Pricing Model} (CAPM)
 
 \begin{frame}{CAPM}
 \begin{tikzpicture}[scale = 2] 
-\draw[very thin, color = gray](0, 0) grid (5, 3);
+%\draw[very thin, color = gray](0, 0) grid (5, 3);
 \draw [<->, thick] (0, 3) node (yaxis) [above] {$Return$} 
   |- (5, 0) node (xaxis) [right] {$Risk$};
 \pause
-\draw[domain = 0.0:5.0, color = olive] plot(\x, {0.5 + 0.5*\x});
-\node at (2.5, 1.75) [above left] {$\beta$ = 1};
-%\node at (1.0, 1.0) [right] {\scriptsize Efficient Frontier};
-\pause
+\node at (2.5, 1.75) [below right] {\scriptsize Market Portfolio};
+\draw[domain = 0.0:5.0, color = olive] plot(\x, {0.5 + 0.5*\x};
 \draw [fill = red] (2.5, 1.75) circle [radius = 0.05];
+\pause
+\node at (2.5, 1.75) [above left] {$\beta$ = 1};
 \end{tikzpicture}
 \end{frame}
 
@@ -194,15 +195,21 @@ A number of anomalies have been found
 
 \begin{frame}{CAPM}
 \begin{tikzpicture}[scale = 2] 
-\draw[very thin, color = gray](0, 0) grid (5, 3);
+%\draw[very thin, color = gray](0, 0) grid (5, 3);
 \draw [<->, thick] (0, 3) node (yaxis) [above] {$Return$} 
   |- (5, 0) node (xaxis) [right] {$Risk$};
 \pause
 \draw[domain = 0.0:5.0, color = olive] plot(\x, {0.5 + 0.5*\x});
-\node at (2.5, 1.75) [above left] {$\beta$ = 1};
-%\node at (1.0, 1.0) [right] {\scriptsize Efficient Frontier};
-\pause
 \draw [fill = red] (2.5, 1.75) circle [radius = 0.05];
+%\node at (2.5, 1.75) [above left] {$\beta$ = 1};
+\node at (1.0, 1.0) [right] {\scriptsize Market Portfolio};
+\pause
+\draw [fill = red] (3.5, 2.5) circle [radius = 0.05];
+\node at (3.5, 2.5) [left] {\scriptsize Small Capitalisation};
+\draw [fill = red] (1.5, 1.5) circle [radius = 0.05];
+\node at (1.5, 1.5) [left] {\scriptsize Value};
+\draw [fill = red] (1.5, 0.5) circle [radius = 0.05];
+\node at (1.5, 0.5) [right] {\scriptsize Growth};
 \end{tikzpicture}
 \end{frame}
 
