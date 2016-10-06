@@ -34,7 +34,6 @@
 \author{Rob Hayward}
 \begin{document}
 
-
 \begin{frame}
 \titlepage
 \end{frame}
@@ -95,9 +94,9 @@ Some questions about MPT
 \item The market portfolio
 \item A mean-variance analysis
 \item Lack of transaction costs
-\item Stability of relationships
 \item Risk-free asset
 \item Expected vs historical record
+\item Stability of relationships
 \item Investors are risk-averse
 \end{itemize}
 \end{frame}
@@ -128,7 +127,7 @@ fs = function(x, epsilon, delta){
 plot(x, fs(x, 0, 1), type = 'l', col = 'darkgreen', main = 'Distribution with Kurtosis', 
      xlab = 'Return', ylab = 'frequency', ylim = c(0, 0.6))
 # http://stats.stackexchange.com/questions/43482/transformation-to-increase-kurtosis-and-skewness-of-normal-r-v
-lines(x, fs(x, 0, 1.5), type = 'l', lty = 3)
+lines(x, fs(x, 0, 1.5), type = 'l', lty = 2)
 #lines(x, fs(x, -0.4, 1), type = 'l', lty = 2)
 @
 \end{frame}
@@ -204,14 +203,16 @@ A number of anomalies have been found
 \draw[domain = 0.0:5.0, color = olive] plot(\x, {0.5 + 0.5*\x});
 \draw [fill = red] (2.5, 1.75) circle [radius = 0.05];
 %\node at (2.5, 1.75) [above left] {$\beta$ = 1};
-\node at (1.0, 1.0) [right] {\scriptsize Market Portfolio};
+\node at (2.5, 1.75) [below right] {\scriptsize Market Portfolio};
 \pause
 \draw [fill = red] (3.5, 2.5) circle [radius = 0.05];
 \node at (3.5, 2.5) [left] {\scriptsize Small Capitalisation};
+\pause
 \draw [fill = red] (1.5, 1.5) circle [radius = 0.05];
 \node at (1.5, 1.5) [left] {\scriptsize Value};
-\draw [fill = red] (1.5, 0.5) circle [radius = 0.05];
-\node at (1.5, 0.5) [right] {\scriptsize Growth};
+\pause
+\draw [fill = red] (3.3, 1.8) circle [radius = 0.05];
+\node at (3.3, 1.8) [right] {\scriptsize Growth};
 \end{tikzpicture}
 \end{frame}
 
@@ -242,7 +243,19 @@ Active funds try to take advantage of these inefficiencies
 \item Warren Buffett
 \item Berkshire Hathaway
 \end{itemize}
-\item Hedge funds CTA etc
+\item Hedge funds, CTA etc
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Rise of Passive Investment}
+\textbf{Morning Star}
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Index-tracking funds increased share by \$2.0trn since 2013, reaching \$5.0tn
+\item Dominated by Vanguard and BlackRock dominate the index-tracking industry
+\item Only 16.9\% of US large-growth managers were able to beat their passive conterparts over the 10 year period
+\item Cost is a major contributor to investment performance
+\item Hedge funds notoriously charge 2\% and 20\%
 \end{itemize}
 \end{frame}
 
