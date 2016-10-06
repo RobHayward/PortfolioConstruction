@@ -168,6 +168,8 @@ Closely associated with MPT is the \emph{Capital Asset Pricing Model} (CAPM)
 \end{itemize}
 \end{frame}
 
+
+
 \begin{frame}{CAPM}
 \begin{tikzpicture}[scale = 2] 
 %\draw[very thin, color = gray](0, 0) grid (5, 3);
@@ -175,7 +177,7 @@ Closely associated with MPT is the \emph{Capital Asset Pricing Model} (CAPM)
   |- (5, 0) node (xaxis) [right] {$Risk$};
 \pause
 \node at (2.5, 1.75) [below right] {\scriptsize Market Portfolio};
-\draw[domain = 0.0:5.0, color = olive] plot(\x, {0.5 + 0.5*\x};
+\draw [domain = 0.0:5.0, color = olive] plot(\x, {0.5 + 0.5*\x});
 \draw [fill = red] (2.5, 1.75) circle [radius = 0.05];
 \pause
 \node at (2.5, 1.75) [above left] {$\beta$ = 1};
