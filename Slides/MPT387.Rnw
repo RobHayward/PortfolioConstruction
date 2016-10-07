@@ -217,7 +217,7 @@ A number of anomalies have been found
 \end{frame}
 
 \section{Passive vs Active investment}
-\begin{frame}{Economist and the one hundred dollar Bill}
+\begin{frame}{Economist and the one hundred dollar bill}
 \begin{center}
 \includegraphics[scale = 0.06]{oneHundredDollar}
 \end{center}
@@ -232,6 +232,14 @@ The Efficient Market Hypothesis
 \item This does not appear to hold
 \end{itemize}
 \end{frame}
+
+\begin{frame}{Value Investment}
+\frametitle{Value investment}
+\begin{center}
+\includegraphics[height = 3.0in]{BGsmall}
+\end{center}
+\end{frame}
+
 
 \begin{frame}{Active investment}
 Active funds try to take advantage of these inefficiencies
