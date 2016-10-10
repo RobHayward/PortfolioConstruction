@@ -154,11 +154,11 @@ lines(x, fs(x, -0.4, 1), type = 'l', lty = 2)
 \end{frame}
 
 \begin{frame}{Unknown unknowns}
-\begin{textblock*}{5cm}(1cm, 1.5cm) % (block width) (coords)
-\includegraphics[scale = 0.2]{Rumsfeld}
+\begin{textblock*}{5.2cm}(1cm, 3cm) % (block width) (coords)
+\includegraphics[scale = 0.8]{Rumsfeld}
 \end{textblock*}
-\begin{textblock*}{5cm}(6cm, 4cm)
-begin{block}{}
+\begin{textblock*}{5.2cm}(6cm, 3cm)
+\begin{block}{}
 There are things we know; there are things we do not know; there are things that we do not know that we do not know
 \end{block}
 \end{textblock*}
@@ -252,7 +252,6 @@ The Efficient Market Hypothesis
 \end{center}
 \end{frame}
 
-
 \begin{frame}{Active investment}
 Active funds try to take advantage of these inefficiencies
 \begin{itemize}[<+-| alert@+>]
@@ -273,7 +272,7 @@ Active funds try to take advantage of these inefficiencies
 \pause
 \item Index-tracking funds increased share by \$2.0trn since 2013, reaching \$5.0tn
 \item Dominated by Vanguard and BlackRock dominate the index-tracking industry
-\item Only 16.9\% of US large-growth managers were able to beat their passive conterparts over the 10 year period
+\item Only 16.9\% of US large-growth managers were able to beat their passive counterparts over the 10 year period
 \item Cost is a major contributor to investment performance
 \item Hedge funds notoriously charge 2\% and 20\%
 \end{itemize}
@@ -300,7 +299,7 @@ Two big issues for bond markets
 \begin{itemize}[<+-| alert@+>]
 \pause
 \item Hordahl et al. (2016): 2005-15 100bp rise in US yield curve associated with a 70bp to 80bp rise in  
- \item Reduced liquity due to regulation of investment banks (rebalancing more expensive)
+ \item Reduced liquidity due to regulation of investment banks (rebalancing more expensive)
  \item Increased use of ETF in the second (article on feedly)
  \end{itemize}
  \end{frame}

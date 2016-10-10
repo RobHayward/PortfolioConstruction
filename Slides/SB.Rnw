@@ -44,7 +44,7 @@
 There are a number of persistent criticisms of index investment 
 \begin{itemize}[<+-| alert@+>]
 \pause
-\item Capitalisation-weighted indices are \textbf{NOT} equivalent to the \emph{market porttfolio}
+\item Capitalisation-weighted indices are \textbf{NOT} equivalent to the \emph{market portfolio}
 \begin{itemize}
 \item Weights must be increased as shares gain in price
 \item Causes investors to buy \emph{winning stocks} and sell \emph{losing stocks}
@@ -60,7 +60,7 @@ There are two main types of Smart Beta:
 \begin{itemize}[<+-| alert@+>]
 \pause
 \item Take \emph{value-weighted} indices and weight them by some other measure
-\item Use investment anomolies or \emph{factors}
+\item Use investment anomalies or \emph{factors}
 \end{itemize}
 \end{frame}
 
@@ -70,12 +70,12 @@ The company is generally credited with introducing the first \emph{Smart Beta} f
 \pause
 \item Arnott, R., J. Hsu and P. Moore, \emph{Fundamental Indexation}, Financial Analysts Journal, 2005
 \item Fundamentally-weight index fund was launched in 2005. 
-\item \textbf{RRAFI}
+\item \textbf{RAFI}
 \end{itemize}
 \end{frame}
 
 \begin{frame}{Fundamentally weight indices}
-Arnott, Hsu and More tested four indices
+Arnott, Hsu and More tested a range of alternative (fundamental) weightings
 \begin{itemize}[<+-| alert@+>]
 \pause
 \item Book value
@@ -91,10 +91,10 @@ Arnott, Hsu and More tested four indices
 \begin{frame}{Fundamentally weighted indices}
 \begin{columns}{}
 \begin{column}{0.48\linewidth}
-\includegraphics[scale = 0.4]{Main-Street}
+\includegraphics[scale = 0.38]{Main-Street}
 \end{column}
 \begin{column}{0.48\linewidth}
-\includegraphics[scale = 0.25]{Wall-Street}
+\includegraphics[scale = 0.23]{Wall-Street}
 \end{column}
 \end{columns}
 \end{frame}
@@ -102,9 +102,9 @@ Arnott, Hsu and More tested four indices
 \begin{frame}{Details}
 \begin{itemize}[<+-| alert@+>]
 \item Compustat data from 1962 to 2004
-\item Portfolio re-balanced one a year (at end of year)
+\item Portfolio re-balanced once a year (at end of year)
 \item Comparison of expansion and recession
-\item COmparison of rising and falling interest rate environments
+\item Comparison of rising and falling interest rate environments
 \end{itemize}
 \end{frame}
 
@@ -118,7 +118,7 @@ Portfolio/index & 1980s & 1990s & 2000-04\\
 S\&P 500 & 17.7\% & 18.6\% & -2.1\% \\
 Book & 18.3\%     & 17.1\% & 5.8\%\\
 Income & 19.0\%   & 17.7\% & 7.6\% \\
-Sales & 19.5\%    & 16.8\% & 8/7\% \\
+Sales & 19.5\%    & 16.8\% & 8.7\% \\
 Dividends & 19.2\% & 15.4\% & 8.0\% \\
 Employment & 17.7\% & 15.7\% & 7.8\%\\
 Composite & 19.0\% & 16.6\% & 7.7\% 
@@ -134,7 +134,7 @@ Composite & 19.0\% & 16.6\% & 7.7\%
 \item Based on fundamental measures of company size
 \item Results hold across decades 
 \item Results hold across expansions and contractions
-\item Reults hold in rising and falling rate environment
+\item Results hold in rising and falling rate environment
 \end{itemize}
 \item Finding \emph{market inefficiencies} on average
 \end{itemize}
@@ -149,7 +149,7 @@ You have the advantages of the \emph{capitalisation-weighted} investment without
 \begin{itemize}
 \item This means high liquidity and low trading costs
 \end{itemize}
-\item Correlation with the returns and volatility of the capitaisation-weighted index is high
+\item Correlation with the returns and volatility of the capitalisation-weighted index is high
 \end{itemize}
 \end{frame}
 
@@ -182,8 +182,8 @@ Aim to build portfolios based on particular \emph{factors}
 \item value
 \item Avoiding growth
 \end{itemize} 
-\puse
-Are already captured by Adustments to get the size of the firm. 
+\pause
+Are already captured by Adjustments to get the size of the firm. 
 \begin{itemize}[<+-| alert@+>]
 \pause
 \item Small capitalisation
@@ -204,7 +204,7 @@ These have been one of the biggest winners of 2016
 \item Low or minimal volatility
 \item Introduced in 2011
 \item Tend to be high dividend stocks
-\item \emph{Crowded?} - concentrated in utilties
+\item \emph{Crowded?} - concentrated in utilities
 \end{itemize}
 \end{frame}
 
@@ -216,11 +216,11 @@ Bridgewater strategy
 \item Tests over long periods that include Great Depression and German hyperinflation
 \item Adjust the allocation to make the expected risk and return more compatible
 \item Traditional 60/40 stock-bond allocation is dominated by stocks
-\item Leveage bond holdings to make the risk comparable to that of stocks. 
+\item Leverage bond holdings to make the risk comparable to that of stocks. 
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Risk partity exampels}
+\begin{frame}{Risk parity examples}
 \begin{table}
 \begin{center}
 \rowcolors{1}{OliveGreen!20}{OliveGreen!5}
@@ -238,12 +238,12 @@ Sharpe Ratio & 0.45 & 0.72
 
 \section{Criticism}
 \begin{frame}{Criticisms of Smart Beta and Factor Investment}
-There are a numnber of criticism of Smart Beta (ironically, these have recently 
+There are a number of criticism of Smart Beta (ironically, these have recently 
 come from \textbf{Research Affiliates}). 
 \begin{itemize}[<+-| alert@+>]
 \pause
 \item Data mining
-\item Exploitation of the inefficiency should remove that ineffiicnecy
+\item Exploitation of the inefficiency should remove that inefficiency
 \item Factors do not always work 
 \end{itemize}
 \end{frame}
