@@ -173,7 +173,71 @@ Composite &  9.32pp& 17.2\%& 0.28
 \end{table}
 \end{frame}
 
-\begin{frame}{Criticisms of Smart Beta}
+
+\section{Factor investment}
+\begin{frame}{Factor investment}
+Aim to build portfolios based on particular \emph{factors}
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item value
+\item Avoiding growth
+\end{itemize} 
+\puse
+Are already captured by Adustments to get the size of the firm. 
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Small capitalisation
+\item Momentum
+\item Others
+\end{itemize}
+May have to be captured explicitly
+\end{frame}
+
+\begin{frame}{Low volatility}
+These have been one of the biggest winners of 2016
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Inflow of \$16.0bn in first 9 months of 2016
+\item 28 funds hold \$44bn in assets (XTF)
+\item BlackRock USMW 
+\item Seek to identify boring stocks.  
+\item Low or minimal volatility
+\item Introduced in 2011
+\item Tend to be high dividend stocks
+\item \emph{Crowded?} - concentrated in utilties
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Risk parity}
+Bridgewater strategy
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item All-Weather Asset-allocation approach introduced by Bridgewater
+\item Tests over long periods that include Great Depression and German hyperinflation
+\item Adjust the allocation to make the expected risk and return more compatible
+\item Traditional 60/40 stock-bond allocation is dominated by stocks
+\item Leveage bond holdings to make the risk comparable to that of stocks. 
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Risk partity exampels}
+\begin{table}
+\begin{center}
+\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
+\begin{tabular}{l  r r}
+Performance & 60/40 stock-bonds & Risk parity\\
+\hline
+Total Return & 8.5\% & 10.4\% \\
+Excess Return & 4.1\% & 5.9\%\\
+Standard Deviation & 8.9\% & 8.3\% \\
+Sharpe Ratio & 0.45 & 0.72
+\end{tabular}
+\end{center}
+\end{table}
+\end{frame}
+
+\section{Criticism}
+\begin{frame}{Criticisms of Smart Beta and Factor Investment}
 There are a numnber of criticism of Smart Beta (ironically, these have recently 
 come from \textbf{Research Affiliates}). 
 \begin{itemize}[<+-| alert@+>]
@@ -205,6 +269,35 @@ Even when they do not exist!
 \end{frame}
 
 
-\section{Factor investment}
+\begin{frame}{Increased efficiency}
+R. Arnott studied performance of factors before and after publication
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item 8 published factors since 1967
+\item Return of 5.8\% before publication
+\item Return of 2.6\% after publication
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Economist and the one hundred dollar bill}
+\begin{center}
+\includegraphics[scale = 0.06]{oneHundredDollar}
+\end{center}
+\end{frame}
+
+\begin{frame}{Factors are fickle}
+Factors work under some conditions and not others
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Value and momentum do not work together
+\item The correct factor should be played at the right time
+\item Factor switching is a move away from passive investment
+\item Lose the discipline of \emph{Smart Beta}
+\end{itemize}
+\end{frame}
+
+
+
+
 \end{document}
 

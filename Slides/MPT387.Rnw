@@ -6,6 +6,7 @@
 \usepackage{caption}
 \usepackage{tikz}
  \usetikzlibrary{arrows,positioning}
+\usepackage[absolute, overlay]{textpos}
 \usepackage{multirow}
 \usepackage[comma, sort&compress]{natbib}
 \usepackage{graphicx}
@@ -152,6 +153,17 @@ lines(x, fs(x, -0.4, 1), type = 'l', lty = 2)
 \includegraphics[scale = 0.2]{blackswan}
 \end{frame}
 
+\begin{frame}{Unknown unknowns}
+\begin{textblock*}{5cm}(1cm, 1.5cm) % (block width) (coords)
+\includegraphics[scale = 0.2]{Rumsfeld}
+\end{textblock*}
+\begin{textblock*}{5cm}(6cm, 4cm)
+begin{block}{}
+There are things we know; there are things we do not know; there are things that we do not know that we do not know
+\end{block}
+\end{textblock*}
+\end{frame}
+
 %\begin{frame}{Expected values}
 \begin{frame}{Capital Asset Pricing Model}
 Closely associated with MPT is the \emph{Capital Asset Pricing Model} (CAPM)
@@ -283,5 +295,14 @@ Research and sales focus on (US) stocks, but $\dots$
 \end{itemize}
 \end{frame}
 
+\begin{frame}{Bonds}
+Two big issues for bond markets
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Hordahl et al. (2016): 2005-15 100bp rise in US yield curve associated with a 70bp to 80bp rise in  
+ \item Reduced liquity due to regulation of investment banks (rebalancing more expensive)
+ \item Increased use of ETF in the second (article on feedly)
+ \end{itemize}
+ \end{frame}
 \end{document}
 
