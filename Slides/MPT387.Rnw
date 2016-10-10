@@ -267,5 +267,21 @@ Active funds try to take advantage of these inefficiencies
 \end{itemize}
 \end{frame}
 
+\section{Portfolio Practice}
+\begin{frame}{Portfolio Practice}
+Research and sales focus on (US) stocks, but $\dots$
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Diversification for bonds
+\begin{itemize}
+\item Diversify across levels of credit
+\item Diversify across maturities
+\item Diversify across countries
+\end{itemize}
+\item Diversification for commodities
+\item Diversification for currency
+\end{itemize}
+\end{frame}
+
 \end{document}
 

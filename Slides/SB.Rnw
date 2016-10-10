@@ -1,0 +1,210 @@
+\documentclass[14pt,xcolor=pdftex,dvipsnames,table]{beamer}
+
+% Specify theme
+\usetheme{Madrid}
+% See deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html for other themes
+\usepackage{caption}
+\usepackage{tikz}
+ \usetikzlibrary{arrows,positioning}
+\usepackage{multirow}
+\usepackage[comma, sort&compress]{natbib}
+\usepackage{graphicx}
+\graphicspath{{../Pictures/}}
+\usepackage{amsmath}
+\bibliographystyle{agsm}
+% Specify base color
+\usecolortheme[named=OliveGreen]{structure}
+% See http://goo.gl/p0Phn for other colors
+
+% Specify other colors and options as required
+\setbeamercolor{alerted text}{fg=Maroon}
+\setbeamertemplate{items}[square]
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
+% Title and author information
+\title{Smart Beta and Factor investments}
+\author{Rob Hayward}
+\begin{document}
+
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\section{Smart Beta}
+\begin{frame}{Criticisms of index investment}
+There are a number of persistent criticisms of index investment 
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Capitalisation-weighted indices are \textbf{NOT} equivalent to the \emph{market porttfolio}
+\begin{itemize}
+\item Weights must be increased as shares gain in price
+\item Causes investors to buy \emph{winning stocks} and sell \emph{losing stocks}
+\item Buy \emph{growth} and sell \emph{value}
+\item Overweight over-valued and under-weight undervalued
+\end{itemize}
+\item  
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Smart Beta}
+There are two main types of Smart Beta:
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Take \emph{value-weighted} indices and weight them by some other measure
+\item Use investment anomolies or \emph{factors}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Research Affiliates}
+The company is generally credited with introducing the first \emph{Smart Beta} fund 
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Arnott, R., J. Hsu and P. Moore, \emph{Fundamental Indexation}, Financial Analysts Journal, 2005
+\item Fundamentally-weight index fund was launched in 2005. 
+\item \textbf{RRAFI}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Fundamentally weight indices}
+Arnott, Hsu and More tested four indices
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Book value
+\item Trailing 5-year average cash flow
+\item Trailing 5-year average revenue
+\item Trailing 5-year average gross sales
+\item Trailing 5-year average gross dividends
+\item Total employment
+\item Composite of book, cash-flow, sales and dividends (most widely available for most countries)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Fundamentally weighted indices}
+\begin{columns}{}
+\begin{column}{0.48\linewidth}
+\includegraphics[scale = 0.4]{Main-Street}
+\end{column}
+\begin{column}{0.48\linewidth}
+\includegraphics[scale = 0.25]{Wall-Street}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Details}
+\begin{itemize}[<+-| alert@+>]
+\item Compustat data from 1962 to 2004
+\item Portfolio re-balanced one a year (at end of year)
+\item Comparison of expansion and recession
+\item COmparison of rising and falling interest rate environments
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Fundamentally weighted indices: results}
+\begin{table}
+\begin{center}
+\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
+\begin{tabular}{l r r r}
+Portfolio/index & 1980s & 1990s & 2000-04\\
+\hline
+S\&P 500 & 17.7\% & 18.6\% & -2.1\% \\
+Book & 18.3\%     & 17.1\% & 5.8\%\\
+Income & 19.0\%   & 17.7\% & 7.6\% \\
+Sales & 19.5\%    & 16.8\% & 8/7\% \\
+Dividends & 19.2\% & 15.4\% & 8.0\% \\
+Employment & 17.7\% & 15.7\% & 7.8\%\\
+Composite & 19.0\% & 16.6\% & 7.7\% 
+\end{tabular}
+\end{center}
+\end{table}
+\end{frame}
+
+\begin{frame}{Fundamentally-weighted index}
+\begin{itemize}[<+-| alert@+>]
+\item This is not \emph{data mining}
+\begin{itemize}
+\item Based on fundamental measures of company size
+\item Results hold across decades 
+\item Results hold across expansions and contractions
+\item Reults hold in rising and falling rate environment
+\end{itemize}
+\item Finding \emph{market inefficiencies} on average
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Comparison with capitalisation-weighted investment}
+You have the advantages of the \emph{capitalisation-weighted} investment without the costs
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item It is a passive strategy with natural re-weighting
+\item Large stocks have the largest weight
+\begin{itemize}
+\item This means high liquidity and low trading costs
+\end{itemize}
+\item Correlation with the returns and volatility of the capitaisation-weighted index is high
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Comparison to Capitalisation-weighed index (2000-04)}
+%\begin{center}
+\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
+\begin{table}
+\begin{center}
+\begin{tabular}{l r r r}
+Portfolio/index & Value-added & Ann Std Dev &  Sharpe\\
+\hline
+S\&P 500 & -0.43pp & 18.0\%& 0.27 \\
+Book &      7.57pp&  18.2\%& 0.17\\
+Income &    9.33pp&  17.5\%& 0.28 \\
+Sales &     10.4pp&  18.2\%& 0.31 \\
+Dividends & 9.71pp&  15.3\%& 0.35 \\
+Employment & 9.55pp& 18.6\%& 0.28\\
+Composite &  9.32pp& 17.2\%& 0.28 
+\end{tabular}
+\end{center}
+\end{table}
+\end{frame}
+
+\begin{frame}{Criticisms of Smart Beta}
+There are a numnber of criticism of Smart Beta (ironically, these have recently 
+come from \textbf{Research Affiliates}). 
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Data mining
+\item Exploitation of the inefficiency should remove that ineffiicnecy
+\item Factors do not always work 
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Torture the data until it speaks}
+\begin{center}
+\includegraphics[height = 3.0in]{torture}
+\end{center}
+\end{frame}
+
+\begin{frame}{But...}
+Behavioural studies find that it is natural to seek patterns
+\pause
+\begin{block}{}
+Even when they do not exist!
+\end{block}
+\end{frame}
+
+\begin{frame}{Patterns emerge}
+\begin{center}
+\includegraphics[scale = 0.35]{jesus-clouds}
+\end{center}
+\end{frame}
+
+
+\section{Factor investment}
+\end{document}
+
