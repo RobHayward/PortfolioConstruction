@@ -1,0 +1,66 @@
+\documentclass[14pt,xcolor=pdftex,dvipsnames,table]{beamer}
+
+% Specify theme
+\usetheme{Madrid}
+% See deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html for other themes
+\usepackage{caption}
+\usepackage{tikz}
+ \usetikzlibrary{arrows,positioning}
+\usepackage{multirow}
+\usepackage[comma, sort&compress]{natbib}
+\usepackage{graphicx}
+\graphicspath{{../Pictures/}}
+\usepackage{amsmath}
+\bibliographystyle{agsm}
+% Specify base color
+\usecolortheme[named=OliveGreen]{structure}
+% See http://goo.gl/p0Phn for other colors
+
+% Specify other colors and options as required
+\setbeamercolor{alerted text}{fg=Maroon}
+\setbeamertemplate{items}[square]
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
+% Title and author information
+  \title{New Developments and the future}
+\author{Rob Hayward}
+\begin{document}
+
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\section{Risk free rate}
+
+\begin{frame}{Low rate world}
+State street conducted a survey of the portfolio managers' response to the low-interest rate world
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Start of 2016
+\item 400 large institutional investors
+\item Mixture of active and passive investment
+\item Questions 
+\begin{itemize}
+\item Most important objectivce
+\item Changes to deal wtih low returns
+\item   
+
+
+\section{New trading technology}
+\section{Blockchain}
+
+
+
+
+
+\end{document}
+

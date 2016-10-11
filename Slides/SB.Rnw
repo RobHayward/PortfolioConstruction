@@ -5,6 +5,7 @@
 % See deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html for other themes
 \usepackage{caption}
 \usepackage{tikz}
+\usepackage[absolute, overlay]{textpos}
  \usetikzlibrary{arrows,positioning}
 \usepackage{multirow}
 \usepackage[comma, sort&compress]{natbib}
@@ -51,7 +52,7 @@ There are a number of persistent criticisms of index investment
 \item Buy \emph{growth} and sell \emph{value}
 \item Overweight over-valued and under-weight undervalued
 \end{itemize}
-\item  
+\item It impedes the process of \emph{price discovery} 
 \end{itemize}
 \end{frame}
 
@@ -65,6 +66,9 @@ There are two main types of Smart Beta:
 \end{frame}
 
 \begin{frame}{Research Affiliates}
+\begin{textblock*}{3cm}(1cm, 1.5cm)
+\includegraphics[scale = 0.3]{RA}
+\end{textblock*}
 The company is generally credited with introducing the first \emph{Smart Beta} fund 
 \begin{itemize}[<+-| alert@+>]
 \pause
@@ -94,7 +98,7 @@ Arnott, Hsu and More tested a range of alternative (fundamental) weightings
 \includegraphics[scale = 0.38]{Main-Street}
 \end{column}
 \begin{column}{0.48\linewidth}
-\includegraphics[scale = 0.23]{Wall-Street}
+\includegraphics[scale = 0.2]{Wall-Street}
 \end{column}
 \end{columns}
 \end{frame}
@@ -113,7 +117,7 @@ Arnott, Hsu and More tested a range of alternative (fundamental) weightings
 \begin{center}
 \rowcolors{1}{OliveGreen!20}{OliveGreen!5}
 \begin{tabular}{l r r r}
-Portfolio/index & 1980s & 1990s & 2000-04\\
+\textbf{Portfolio/index} & \textbf{1980s} & \textbf{1990s} & \textbf{2000-04}\\
 \hline
 S\&P 500 & 17.7\% & 18.6\% & -2.1\% \\
 Book & 18.3\%     & 17.1\% & 5.8\%\\
@@ -159,7 +163,7 @@ You have the advantages of the \emph{capitalisation-weighted} investment without
 \begin{table}
 \begin{center}
 \begin{tabular}{l r r r}
-Portfolio/index & Value-added & Ann Std Dev &  Sharpe\\
+\textbf{Portfolio/index} & \textbf{Value-added} & \textbf{Std Dev} &  \textbf{Sharpe}\\
 \hline
 S\&P 500 & -0.43pp & 18.0\%& 0.27 \\
 Book &      7.57pp&  18.2\%& 0.17\\
@@ -173,25 +177,28 @@ Composite &  9.32pp& 17.2\%& 0.28
 \end{table}
 \end{frame}
 
-
 \section{Factor investment}
 \begin{frame}{Factor investment}
-Aim to build portfolios based on particular \emph{factors}
-\begin{itemize}[<+-| alert@+>]
-\pause
-\item value
-\item Avoiding growth
-\end{itemize} 
-\pause
-Are already captured by Adjustments to get the size of the firm. 
-\begin{itemize}[<+-| alert@+>]
-\pause
-\item Small capitalisation
-\item Momentum
-\item Others
-\end{itemize}
-May have to be captured explicitly
+\begin{table}
+\begin{center}
+\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
+\begin{tabular}{l r r }
+\textbf{Factor} & \textbf{What is it?} & \textbf{Metric} \\
+\hline
+Value & Cheap & Book-to-price\\
+Size & Small cap & Capitalisation\\
+Momentum & Past performance & Recent gains\\
+Low vol & Low risk & Standard deviation\\
+Dividend & High dividend & Dividend yield\\
+Quality & Robust & Debt or management\\
+\end{tabular}
+\end{center}
+\end{table}
 \end{frame}
+
+% Barra Risk models also inclue liqudiity and growth but these do not 
+% produce excess retruns over the long-run. 
+% Do we use the next slide or put some of this information in the sliede abovve
 
 \begin{frame}{Low volatility}
 These have been one of the biggest winners of 2016
@@ -234,6 +241,24 @@ Sharpe Ratio & 0.45 & 0.72
 \end{tabular}
 \end{center}
 \end{table}
+\end{frame}
+
+\begin{frame}{Objective based investment}
+Generally views as an investment method where success is determined by the ability to reach specific goals rather than relative to a specific benchmark
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Protecting against inflation
+\item Matching liabilities
+\item Targetting specific factors
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Statistical factors}
+it is also possible to use statistical methods to draw out factors
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Principal components analysis (PCA)
+\end{itemize}
 \end{frame}
 
 \section{Criticism}
