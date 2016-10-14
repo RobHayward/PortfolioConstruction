@@ -289,6 +289,7 @@ These have been one of the biggest winners of 2016
 \end{itemize}
 \end{frame}
 
+ 
 \section{Other (relatively) new methods}
 \begin{frame}{Other (relatively) new methods}
 I do not want to look at these in detail but
@@ -407,8 +408,27 @@ Factors work under some conditions and not others
 \end{itemize}
 \end{frame}
 
+\begin{frame}{Assets as bundels of risk factors}
+A. Ang at BlackRock says 
+\pause
+%\vspace{2cm}
+\begin{block}{}
+Risk factors are like vitimins and minerals while assets are like food
+\end{block}
+\end{frame}
 
+\begin{frame}{Too good to be true?}
+Many of the funds argue 
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item You can reduce costs because this is passive investment
+\item You can systematise the capture of \emph{alpha}
+\item You can improve risk-adjusted returns
+\end{itemize}
+\end{frame}
 
+% Can you eat, sleep and lose weight? 
 
+% This file does not comile.  Not sure why. 
 \end{document}
 
