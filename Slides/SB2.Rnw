@@ -234,7 +234,7 @@ Dec 1991 to Dec 2015
 \begin{table}
 \begin{center}
 \begin{tabular}{l r r }
-\textbf{Portfolio/index} & \textbf{Return} & \textbf{Risk-adjusted\\ return} \\
+\textbf{Portfolio/index} & \textbf{Return} & \textbf{Risk-adjusted return} \\
 \hline
 S\&P 500        & 9.0\% &  0.6\\
 Quality         & 11.1\% & 0.8\\
@@ -279,7 +279,7 @@ These have been one of the biggest winners of 2016
 \begin{itemize}[<+-| alert@+>]
 \pause
 \item Introduced in 2011
-\item BlackRock USMW 
+\item BlackRock USMV 
 \item Inflow of \$16.0bn in first 9 months of 2016
 \item 28 funds hold \$44bn in assets (XTF)
 \item Seek to identify boring stocks.  
@@ -407,7 +407,7 @@ Factors work under some conditions and not others
 \item Lose the discipline of \emph{Smart Beta}
 \end{itemize}
 \end{frame}
-
+\end{document}
 \begin{frame}{Assets as bundels of risk factors}
 A. Ang at BlackRock says 
 \pause
@@ -430,5 +430,5 @@ Many of the funds argue
 % Can you eat, sleep and lose weight? 
 
 % This file does not comile.  Not sure why. 
-\end{document}
+
 
