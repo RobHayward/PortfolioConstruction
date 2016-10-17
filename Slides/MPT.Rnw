@@ -199,9 +199,9 @@ Closely associated with MPT is the \emph{Capital Asset Pricing Model} (CAPM)
 A number of anomalies have been found
 \begin{itemize}[<+-| alert@+>]
 \pause
-\item \emph{Small cap companies} seem do generate higher returns relative to the risk
-\item \emph{Value firm} appear to generate higher returns relative to risk
-\item \emph{Growth firms} appear to generate lower returns relative to risk
+\item \emph{Small cap companies} seem to generate high returns relative to their risk
+\item \emph{Value firm} appear to generate high returns relative to their risk
+\item \emph{Growth firms} appear to generate low returns relative to their risk
 \item There are other anomalies or inefficiencies
 \end{itemize}
 \end{frame}
@@ -223,8 +223,8 @@ A number of anomalies have been found
 \draw [fill = red] (1.5, 1.5) circle [radius = 0.05];
 \node at (1.5, 1.5) [left] {\scriptsize Value};
 \pause
-\draw [fill = red] (3.3, 1.8) circle [radius = 0.05];
-\node at (3.3, 1.8) [right] {\scriptsize Growth};
+\draw [fill = red] (3.5, 2.0) circle [radius = 0.05];
+\node at (3.5, 2.0) [right] {\scriptsize Growth};
 \end{tikzpicture}
 \end{frame}
 
@@ -241,7 +241,7 @@ The Efficient Market Hypothesis
 \pause
 \item Suggests that inefficiencies will be swiftly eliminated
 \item There are no \emph{systematic} deviations that allow \emph{supernormal profits} or returns that are more than just compensation for risk
-\item This does not appear to hold
+\item Are these effects (value, growth etc) ineffiiciencies or risk factors? 
 \end{itemize}
 \end{frame}
 
@@ -253,7 +253,7 @@ The Efficient Market Hypothesis
 \end{frame}
 
 \begin{frame}{Active investment}
-Active funds try to take advantage of these inefficiencies
+Active funds try to take advantage of these apparent inefficiencies
 \begin{itemize}[<+-| alert@+>]
 \pause
 \item \emph{Value Investment}
@@ -263,9 +263,22 @@ Active funds try to take advantage of these inefficiencies
 \item Berkshire Hathaway
 \end{itemize}
 \item Hedge funds, CTA etc
+\item Study of Norwegian Petroleum Fund found that most of the out-performance was due to investment in factors.  
 \end{itemize}
 \end{frame}
 
+\begin{frame}{Active management success}
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Many studies find that active managers are not successful on average
+\begin{itemize}
+\item List needed////
+\end{itemize}
+\item However, individual managers may be succssful
+\item Hedge funds have come under recent scrutiny and criticism
+\end{itemize}
+\end{frame}
+ 
 \begin{frame}{Rise of Passive Investment}
 \textbf{Morning Star}
 \begin{itemize}[<+-| alert@+>]

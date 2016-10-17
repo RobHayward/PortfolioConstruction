@@ -57,6 +57,7 @@ There are a number of persistent criticisms of index investment
 \item Buy \emph{growth} and sell \emph{value}
 \item Overweight over-valued and under-weight undervalued
 \end{itemize}
+\item An index may not be available (non-investable)
 \item It impedes the process of \emph{price discovery} 
 \end{itemize}
 \end{frame}
@@ -83,7 +84,7 @@ The company is generally credited with introducing the first \emph{Smart Beta} f
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Fundamentally weight indices}
+\begin{frame}{Fundamentally weighted indices}
 Arnott, Hsu and More tested a range of alternative (fundamental) weightings
 \begin{itemize}[<+-| alert@+>]
 \pause
@@ -102,7 +103,7 @@ Arnott, Hsu and More tested a range of alternative (fundamental) weightings
 \begin{column}{0.48\linewidth}
 \includegraphics[scale = 0.38]{Main-Street}
 \end{column}
-\begin{column}{0.48\linewidth}
+\begin{column}{0.47\linewidth}
 \includegraphics[scale = 0.2]{Wall-Street}
 \end{column}
 \end{columns}
@@ -272,14 +273,26 @@ International stocks; risk-adjusted return is return per unit of volatility
 % produce excess retruns over the long-run. 
 % Do we use the next slide or put some of this information in the sliede abovve
 
-
+\begin{frame}{Factor risks}
+Factors provide a return for taking risk
+% for example, the risk taken by Petroleum fund in GFC. 
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item \textbf{Value:} behavioural bias of pro-cyclical investment (De Bondt and Thaler (1985) and Fama French (??)
+\item \textbf{Growth:} behavioural bias of pro-cyclical investment (De Bondt and Thaler (1985) and Fama French (??)
+\item \textbf{Small cap:} Increased risk of small firms, liquidity or access to funding (Fama French (??)
+\item \textbf{Momentum:} behavioural and institutional serial correlaton (Jagadesh and Titman (??)
+\item \textbf{Volatility:}
+\item \textbf{Value}:
+\end{itemize}
+\end{frame}
 
 \begin{frame}{Low volatility}
 These have been one of the biggest winners of 2016
 \begin{itemize}[<+-| alert@+>]
 \pause
 \item Introduced in 2011
-\item BlackRock USMV 
+\item BlackRock USMW 
 \item Inflow of \$16.0bn in first 9 months of 2016
 \item 28 funds hold \$44bn in assets (XTF)
 \item Seek to identify boring stocks.  
@@ -290,16 +303,16 @@ These have been one of the biggest winners of 2016
 \end{frame}
 
  
-\section{Other (relatively) new methods}
-\begin{frame}{Other (relatively) new methods}
-I do not want to look at these in detail but
-\begin{itemize}[<+-| alert@+>]
-\pause
-\item Risk parity
-\item Objective based investment 
-\item Statistical methods
-\end{itemize}
-\end{frame}
+%\section{Other (relatively) new methods}
+%\begin{frame}{Other (relatively) new methods}
+%I do not want to look at these in detail but
+%\begin{itemize}[<+-| alert@+>]
+%\pause
+%\item Risk parity
+%\item Objective based investment 
+%\item Statistical methods
+%\end{itemize}
+%\end{frame}
 
 \begin{frame}{Risk parity}
 Bridgewater strategy
@@ -329,24 +342,24 @@ Sharpe Ratio & 0.45 & 0.72
 \end{table}
 \end{frame}
 
-\begin{frame}{Objective based investment}
-Generally views as an investment method where success is determined by the ability to reach specific goals rather than relative to a specific benchmark
-\begin{itemize}[<+-| alert@+>]
-\pause
-\item Protecting against inflation
-\item Matching liabilities
-\item Targeting specific factors
-\end{itemize}
-\end{frame}
+%\begin{frame}{Objective based investment}
+%Generally views as an investment method where success is determined by the ability to reach specific goals rather than relative to a specific benchmark
+%\begin{itemize}[<+-| alert@+>]
+%\pause
+%\item Protecting against inflation
+%\item Matching liabilities
+%\item Targeting specific factors
+%\end{itemize}
+%\end{frame}
 
-\begin{frame}{Statistical factors}
-It is also possible to use statistical methods to draw out factors
-\begin{itemize}[<+-| alert@+>]
-\pause
-\item Principal components analysis (PCA)
-\end{itemize}
-\end{frame}
-
+%\begin{frame}{Statistical factors}
+%It is also possible to use statistical methods to draw out factors
+%\begin{itemize}[<+-| alert@+>]
+%\pause
+%\item Principal components analysis (PCA)
+%\end{itemize}
+%\end{frame}
+%
 \section{Criticism}
 \begin{frame}{Criticisms of Smart Beta and Factor Investment}
 There are a number of criticism of Smart Beta (ironically, these have recently 
@@ -407,7 +420,7 @@ Factors work under some conditions and not others
 \item Lose the discipline of \emph{Smart Beta}
 \end{itemize}
 \end{frame}
-\end{document}
+
 \begin{frame}{Assets as bundels of risk factors}
 A. Ang at BlackRock says 
 \pause
@@ -427,8 +440,7 @@ Many of the funds argue
 \end{itemize}
 \end{frame}
 
-% Can you eat, sleep and lose weight? 
 
-% This file does not comile.  Not sure why. 
 
+\end{document}
 

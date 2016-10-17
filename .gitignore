@@ -39,3 +39,4 @@ vignettes/*.pdf
 *.toc
 *.log
 .Rproj.user
+*.xlsx

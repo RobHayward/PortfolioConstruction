@@ -52,12 +52,65 @@ State street conducted a survey of the portfolio managers' response to the low-i
 \begin{itemize}
 \item Most important objectivce
 \item Changes to deal wtih low returns
-\item   
+\item Impediments to change
+\end{itemize}
+\end{itemize}
+\end{frame}
 
 
-\section{New trading technology}
-\section{Blockchain}
+\section{ETF}
+\begin{frame}{The rise of ETF}
+\end{frame}
 
+
+\section{Fund structure and performance}
+\begin{frame}{Fund structure and performance}
+There are two main structure for funds
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Endowment model
+\begin{itemize}
+\item Strategic asset allocation
+\item Asset holdings are changed gradually]
+\item Performance measured against asset benchmark
+\end{itemize}
+\item Opportunity cost model
+\begin{itemize}
+\item Benchmark is a passive investment in stocks and bonds
+\item Leeway for fund managers to buy alternative assets (but tracking-error limits)
+\item Performance (net of fees) is judged against benchmark
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Decomposition of portolio return}
+\begin{tikzpicture} 
+%\draw[very thin, color = gray](0, 0) grid (12, 6);
+%\draw (0, 5) to (0, 4) to (3, 4) to (3, 5) to (0, 5);
+%\node at (0, 4.5) [right] {\scriptsize True passive Market unobserved};
+%\draw (4, 5) to (4, 4) to (7, 4) to (7, 5) to (4, 5);
+%\draw (8, 5) to (8, 4) to (11, 4) to (11, 5) to (8, 5);
+%\draw (8, 2) to (8, 1) to (11, 1) to (11, 2) to (8, 2);
+%\node at (1.0, 1.0) [right] {\scriptsize Efficient Frontier};
+\tikzstyle{block} = [draw, rectangle, text width = 5em, 
+  text centered, minimum height = 6mm, node distance = 5em];
+\tikzstyle{line} = [draw, -stealth, thick]
+\node [block] at (1.5, 4) (one) {\scriptsize True 'market' \\ (unobserved)};
+\node [block] at (5, 4) (two) {\scriptsize Passive investable \\ benchmark};
+\node [block] at (8.5, 4) (three) {\scriptsize Rebalanced \\ benchmark};
+\node [block] at (8.5, 2) (four) {\scriptsize Factor \\ tilts};
+\node [block] at (8.5, 0) (five) {\scriptsize Active \\ Portfolio};
+\path [line] (one) -- (two);
+\path [line] (two) -- (three);
+\path [line] (three) -- (four);
+\path [line] (four) -- (five);
+\node at (3, 5.5) [align = center]{\scriptsize Choice of investible \\ \scriptsize benchmark};
+\node at (6.5, 5.5) [align = center]{\scriptsize Rebalancing \\ \scriptsize gain};
+\node at (11, 3) [align = center] {\scriptsize Factor \\ \scriptsize risk premia};
+\node at (11, 1) [align = center] {\scriptsize Active \\ \scriptsize management};
+
+\end{tikzpicture}
+\end{frame}
 
 
 
