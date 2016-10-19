@@ -112,6 +112,16 @@ There are two main structure for funds
 \end{tikzpicture}
 \end{frame}
 
+\begin{frame}{Areas for active management}
+This presents a number of areas for active management
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Chosing the \emph{investable benchmark}
+\item Frequency of asset rebalancing 
+\item Factor tilts
+\item Active security selection
+\end{itemize}
+\end{frame}
 
 
 
