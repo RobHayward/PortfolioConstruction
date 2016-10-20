@@ -6,6 +6,7 @@
 \usepackage{caption}
 \usepackage{tikz}
  \usetikzlibrary{arrows,positioning}
+ \usepackage[absolute, overlay]{textpos}
 \usepackage{multirow}
 \usepackage[comma, sort&compress]{natbib}
 \usepackage{graphicx}
@@ -30,7 +31,7 @@
   \end{frame}
 }
 % Title and author information
-  \title{New Developments and the future}
+  \title{The fund management industry and the future}
 \author{Rob Hayward}
 \begin{document}
 
@@ -39,29 +40,21 @@
 \titlepage
 \end{frame}
 
-\section{Risk free rate}
-
-\begin{frame}{Low rate world}
-State street conducted a survey of the portfolio managers' response to the low-interest rate world
-\begin{itemize}[<+-| alert@+>]
-\pause
-\item Start of 2016
-\item 400 large institutional investors
-\item Mixture of active and passive investment
-\item Questions 
-\begin{itemize}
-\item Most important objectivce
-\item Changes to deal wtih low returns
-\item Impediments to change
-\end{itemize}
-\end{itemize}
-\end{frame}
-
-
 \section{ETF}
 \begin{frame}{The rise of ETF}
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item \emph{Pooled investment vehicles} with AP
+\item \emph{Authorised participant} will keep ETF value close to that of underlying assets by being prepared to arbitrage the two
+\begin{itemize}
+\item can create new shares or redeem old ones
+\item this may not be easy for illiquid assets
+\end{itemize}
+\item First ETF began in 1993 (SPY)
+\item Middle of 2016 there are more than 1600 ETF on US exchanges with a value of more than \$2.2tn
+\item OPtions on ETFs take as much as 60\% of the CBOE trade (VIX)
+\end{itemize}
 \end{frame}
-
 
 \section{Fund structure and performance}
 \begin{frame}{Fund structure and performance}
@@ -86,12 +79,6 @@ There are two main structure for funds
 \begin{frame}{Decomposition of portolio return}
 \begin{tikzpicture} 
 %\draw[very thin, color = gray](0, 0) grid (12, 6);
-%\draw (0, 5) to (0, 4) to (3, 4) to (3, 5) to (0, 5);
-%\node at (0, 4.5) [right] {\scriptsize True passive Market unobserved};
-%\draw (4, 5) to (4, 4) to (7, 4) to (7, 5) to (4, 5);
-%\draw (8, 5) to (8, 4) to (11, 4) to (11, 5) to (8, 5);
-%\draw (8, 2) to (8, 1) to (11, 1) to (11, 2) to (8, 2);
-%\node at (1.0, 1.0) [right] {\scriptsize Efficient Frontier};
 \tikzstyle{block} = [draw, rectangle, text width = 5em, 
   text centered, minimum height = 6mm, node distance = 5em];
 \tikzstyle{line} = [draw, -stealth, thick]
@@ -108,12 +95,71 @@ There are two main structure for funds
 \node at (6.5, 5.5) [align = center]{\scriptsize Rebalancing \\ \scriptsize gain};
 \node at (11, 3) [align = center] {\scriptsize Factor \\ \scriptsize risk premia};
 \node at (11, 1) [align = center] {\scriptsize Active \\ \scriptsize management};
-
 \end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Alternaive assets}
+Funds may improve risk-return by
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Finding assets that are not correlated with existing assets
+\begin{itemize}
+\item this may increase diversification and risk-return trade-off
+\item will low correlation hold in times of crisis
+\end{itemize}
+\item Finding \emph{private markets that may have less lilquidity attention}
+\begin{itemize}
+\item a liquiity risk premium
+\item market inefficiency
+\item is there a comparative advantage? 
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Alternative assets}
+\begin{textblock*}{5cm}(1cm, 4cm)
+\includegraphics[width = 5cm]{bridge}
+\end{textblock*}
+\begin{textblock*}{5cm}(5cm, 4cm)
+\includegraphics[width = 5cm]{container}
+\end{textblock*}
 \end{frame}
 
 
 
+\section{Rotating factors}
+\begin{frame}
+\end{frame}
+
+
+\begin{frame}{Flexible asset allocation}
+Flexible asset allocation has three steps:
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Calculate 4 months relative momentum and rank
+\item Calculate 4 months standard deviation and rank
+\item Calculate 4 months relative correlation and rank
+\end{itemize]
+\begin{block}{}
+Allocate 50\% to momentum 
+
+\section{The future}
+\begin{frame}{Low rate world}
+State street conducted a survey of the portfolio managers' response to the low-interest rate world
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Start of 2016
+\item 400 large institutional investors
+\item Mixture of active and passive investment
+\item Questions 
+\begin{itemize}
+\item Most important objectivce
+\item Changes to deal wtih low returns
+\item Impediments to change
+\end{itemize}
+\end{itemize}
+\end{frame}
 
 \end{document}
 
