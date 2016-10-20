@@ -6,7 +6,7 @@
 \usepackage{caption}
 \usepackage{tikz}
  \usetikzlibrary{arrows,positioning}
- \usepackage[absolute, overlay]{textpos}
+\usepackage[absolute, overlay]{textpos}
 \usepackage{multirow}
 \usepackage[comma, sort&compress]{natbib}
 \usepackage{graphicx}
@@ -52,19 +52,35 @@
 \end{itemize}
 \item First ETF began in 1993 (SPY)
 \item Middle of 2016 there are more than 1600 ETF on US exchanges with a value of more than \$2.2tn
-\item OPtions on ETFs take as much as 60\% of the CBOE trade (VIX)
+\item Competition is reducing prices 
+\item Bond ETF from \$60bn end of 2007 to \$600bn mid 2016
+\item Options on ETFs take as much as 60\% of the CBOE trade (VIX)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Risk of ETF}
+The proliferation of ETF has raised some concerns
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Concern at size and complexity
+\item Risk of \emph{performance chasing}
+\item Some attention on bond ETF (illiquid to liquid test)
+% this means that 20\% fall in market would happen in 2 hours not 2 days.
+\item More volume in ETF than the underlying
+\item Some are illiquid
+\item Can be redeemed in kind
 \end{itemize}
 \end{frame}
 
 \section{Fund structure and performance}
 \begin{frame}{Fund structure and performance}
-There are two main structure for funds
+There are two main structures for funds
 \begin{itemize}[<+-| alert@+>]
 \pause
 \item Endowment model
 \begin{itemize}
 \item Strategic asset allocation
-\item Asset holdings are changed gradually]
+\item Asset holdings are changed gradually
 \item Performance measured against asset benchmark
 \end{itemize}
 \item Opportunity cost model
@@ -76,7 +92,7 @@ There are two main structure for funds
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Decomposition of portolio return}
+\begin{frame}{Decomposition of portfolio return}
 \begin{tikzpicture} 
 %\draw[very thin, color = gray](0, 0) grid (12, 6);
 \tikzstyle{block} = [draw, rectangle, text width = 5em, 
@@ -91,56 +107,84 @@ There are two main structure for funds
 \path [line] (two) -- (three);
 \path [line] (three) -- (four);
 \path [line] (four) -- (five);
-\node at (3, 5.5) [align = center]{\scriptsize Choice of investible \\ \scriptsize benchmark};
+\node at (3, 5.5) [align = center]{\scriptsize Choice of investable \\ \scriptsize benchmark};
 \node at (6.5, 5.5) [align = center]{\scriptsize Rebalancing \\ \scriptsize gain};
 \node at (11, 3) [align = center] {\scriptsize Factor \\ \scriptsize risk premia};
 \node at (11, 1) [align = center] {\scriptsize Active \\ \scriptsize management};
 \end{tikzpicture}
 \end{frame}
 
-\begin{frame}{Alternaive assets}
+\begin{frame}{Active components of fund}
+There are a number of places where the fund must be active
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Deciding on the appropriate market
+\item Finding an investable fund
+\item Frequency of asset re-balancing
+\item Factor tilts
+\item Active security selection
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Alternative assets}
 Funds may improve risk-return by
 \begin{itemize}[<+-| alert@+>]
 \pause
 \item Finding assets that are not correlated with existing assets
 \begin{itemize}
 \item this may increase diversification and risk-return trade-off
-\item will low correlation hold in times of crisis
+\item will low correlation hold in times of crisis?
 \end{itemize}
-\item Finding \emph{private markets that may have less lilquidity attention}
+\item Finding \emph{private markets that may have less liquidity attention}
 \begin{itemize}
-\item a liquiity risk premium
+\item a liquidity risk premium
 \item market inefficiency
 \item is there a comparative advantage? 
 \end{itemize}
 \end{itemize}
 \end{frame}
 
+
 \begin{frame}{Alternative assets}
 \begin{textblock*}{5cm}(1cm, 4cm)
 \includegraphics[width = 5cm]{bridge}
 \end{textblock*}
-\begin{textblock*}{5cm}(5cm, 4cm)
+\begin{textblock*}{5cm}(7cm, 4cm)
 \includegraphics[width = 5cm]{container}
 \end{textblock*}
-\begin{frame}{Areas for active management}
+\end{frame}
 
-This presents a number of areas for active management
+\begin{frame}{Risk factors vs assets}
+Asset class diversification is not the same as risk diversification
 \begin{itemize}[<+-| alert@+>]
 \pause
-\item Chosing the \emph{investable benchmark}
-\item Frequency of asset rebalancing 
-\item Factor tilts
-\item Active security selection
+\item Different assets may be exposed to the same sort of risk
+\item This was most evident in the financial crisis
+\item Correlation tends to unity
+\item Need to identify risk that are embedded in particular assets and try to diversify these underlying risks
 \end{itemize}
 \end{frame}
 
-
+\begin{frame}{Risk factors and assets}
+\begin{table}
+\begin{center}
+\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
+\begin{tabular}{l r r r r r}
+& \textbf{Equity} & \textbf{Bond} & \textbf{EM} & \textbf{Commod}  & \textbf{Prop}\\
+\hline
+Equity & X & & X & X & X\\
+Interest & & X& X& & X\\
+Credit & X & & & X \\
+Currency & X & & X & X & \\
+Momentum & X & & X& X&X \\
+\end{tabular}
+\end{center}
+\end{table}
+\end{frame}
 
 \section{Rotating factors}
 \begin{frame}
 \end{frame}
-
 
 \begin{frame}{Flexible asset allocation}
 Flexible asset allocation has three steps:
@@ -149,9 +193,11 @@ Flexible asset allocation has three steps:
 \item Calculate 4 months relative momentum and rank
 \item Calculate 4 months standard deviation and rank
 \item Calculate 4 months relative correlation and rank
-\end{itemize]
+\end{itemize}
 \begin{block}{}
 Allocate 50\% to momentum 
+\end{block}
+\end{frame}
 
 \section{The future}
 \begin{frame}{Low rate world}
@@ -163,12 +209,12 @@ State street conducted a survey of the portfolio managers' response to the low-i
 \item Mixture of active and passive investment
 \item Questions 
 \begin{itemize}
-\item Most important objectivce
-\item Changes to deal wtih low returns
+\item Most important objective
+\item Changes to deal with low returns
 \item Impediments to change
 \end{itemize}
 \end{itemize}
 \end{frame}
 
-\end{document}
 
+\end{document}
