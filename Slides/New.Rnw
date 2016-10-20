@@ -116,7 +116,6 @@ Funds may improve risk-return by
 \end{itemize}
 \end{frame}
 
-
 \begin{frame}{Alternative assets}
 \begin{textblock*}{5cm}(1cm, 4cm)
 \includegraphics[width = 5cm]{bridge}
@@ -124,6 +123,16 @@ Funds may improve risk-return by
 \begin{textblock*}{5cm}(5cm, 4cm)
 \includegraphics[width = 5cm]{container}
 \end{textblock*}
+\begin{frame}{Areas for active management}
+
+This presents a number of areas for active management
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Chosing the \emph{investable benchmark}
+\item Frequency of asset rebalancing 
+\item Factor tilts
+\item Active security selection
+\end{itemize}
 \end{frame}
 
 
