@@ -135,7 +135,7 @@ Funds may improve risk-return by
 \item this may increase diversification and risk-return trade-off
 \item will low correlation hold in times of crisis?
 \end{itemize}
-\item Finding \emph{private markets that may have less liquidity attention}
+\item Finding \emph{private markets that may have less liquidity and receive less attention}
 \begin{itemize}
 \item a liquidity risk premium
 \item market inefficiency
@@ -186,18 +186,19 @@ Momentum & X & & X& X&X \\
 \begin{frame}
 \end{frame}
 
-\begin{frame}{Flexible asset allocation}
-Flexible asset allocation has three steps:
-\begin{itemize}[<+-| alert@+>]
-\pause
-\item Calculate 4 months relative momentum and rank
-\item Calculate 4 months standard deviation and rank
-\item Calculate 4 months relative correlation and rank
-\end{itemize}
-\begin{block}{}
-Allocate 50\% to momentum 
-\end{block}
-\end{frame}
+%\begin{frame}{Flexible asset allocation}
+%Flexible asset allocation has three steps:
+%\begin{itemize}[<+-| alert@+>]
+%\pause
+%\item Calculate 4 months relative momentum and rank
+%\item Calculate 4 months standard deviation and rank
+%\item Calculate 4 months relative correlation and rank
+%\end{itemize}
+%\pause
+%\begin{block}{}
+%Allocate 100\% to momentum, 50\% to high standard deviation 
+%\end{block}
+%\end{frame}
 
 \section{The future}
 \begin{frame}{Low rate world}
@@ -216,5 +217,35 @@ State street conducted a survey of the portfolio managers' response to the low-i
 \end{itemize}
 \end{frame}
 
+\begin{frame}{Findings}
+The findings
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item 27\% see an increase in active investment
+\item 27\% see an increase in objective investment
+\item 22\% see an increase in alternative assets
+\item 41\% see asset class as the most important view
+\item 30\% see factors as the most important
+\end{itemize}
+\end{frame}
 
+\begin{frame}{Findings continued}
+Changes that have taken place to deal with low returns (most important change)
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Increased allocation to alternative investments 22\%
+\item Increased use of objective-based investments 27\%
+\item Increased active investment 27\%
+\item Increased use of smart beta 49\%
+\item Bring investment in-house 38\%
+\item Decrase use of passive investment 28\%
+\item Increase use of passive investment 23\%
+\item Decreate use of active investmetn 0\%
+\end{itemize}
+\end{frame}
 \end{document}
+“It may be the case that a large portion of an aggregate portfolio’s active risk is explained by factor risk. Certain desirable risk factor exposures, such as an overweight to small caps, could be captured more cost-effectively with a smart beta portfolio.” Lori Heinel, Chief Portfolio Strategist, SSGA
+
+There is a common belief that more smart beta and more active management will be used to reduce the gap between performance and requirements. Three quarter of those introducing smart beta reported moderate to significant improvement in their ability to hit long-term targets.
+
+Though smart beta needs a long-term approach, there is evidence of short-term pressure. Only being give 1 year of underperformance. More work is needed on smart beta. What conditions allow it to work?
