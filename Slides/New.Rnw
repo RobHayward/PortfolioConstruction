@@ -5,7 +5,7 @@
 % See deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html for other themes
 \usepackage{caption}
 \usepackage{tikz}
- \usetikzlibrary{arrows,positioning}
+\usetikzlibrary{arrows,positioning}
 \usepackage[absolute, overlay]{textpos}
 \usepackage{multirow}
 \usepackage[comma, sort&compress]{natbib}
@@ -154,6 +154,19 @@ Funds may improve risk-return by
 \end{textblock*}
 \end{frame}
 
+\begin{frame}{Alternative assets}
+Amongst the alternatives
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Infrastructure
+\item Shipping (Baltic Dry Index)
+\item Private equity 
+\item Hedge funds
+\item Catastrophe insurance
+\item Distressed debt
+\end{itemize}
+\end{frame}
+
 \begin{frame}{Risk factors vs assets}
 Asset class diversification is not the same as risk diversification
 \begin{itemize}[<+-| alert@+>]
@@ -164,6 +177,27 @@ Asset class diversification is not the same as risk diversification
 \item Need to identify risk that are embedded in particular assets and try to diversify these underlying risks
 \end{itemize}
 \end{frame}
+
+%\begin{frame}{Risk factors}
+%\begin{tikzpicture}
+%[
+%    pie chart,
+%    slice type={comet}{blu},
+%    slice type={legno}{rosso},
+%    slice type={coltello}{giallo},
+%    slice type={sedia}{viola},
+%    slice type={caffe}{verde},
+%    pie values/.style={font={\small}},
+%    scale=2
+%]
+%
+%    \pie{2008}{73/comet,13/legno,7/sedia,7/coltello}
+%
+%    \legend[shift={(0cm,-1cm)}]{{Comet (Pordenone)}/comet, {Wood and furniture (Livenza)}/legno, {Knife (Maniago)}/coltello}
+%    \legend[shift={(3cm,-1cm)}]{{Chair (Manzano)}/sedia, {Coffee (Trieste)}/caffe}
+%
+%\end{tikzpicture}
+%\end{frame}
 
 \begin{frame}{Risk factors and assets}
 \begin{table}
@@ -182,9 +216,20 @@ Momentum & X & & X& X&X \\
 \end{table}
 \end{frame}
 
-\section{Rotating factors}
-\begin{frame}
+
+\begin{frame}{Risk factors}
+Combine these risk factors with economic views
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Current position of low interest rates
+\item Makes bonds, emerging markets and property vulnerable to rising rates
+\item Position according to view on rates
+\end{itemize}
 \end{frame}
+
+%\section{Rotating factors}
+%\begin{frame}
+%\end{frame}
 
 %\begin{frame}{Flexible asset allocation}
 %Flexible asset allocation has three steps:
@@ -235,17 +280,11 @@ Changes that have taken place to deal with low returns (most important change)
 \pause
 \item Increased allocation to alternative investments 22\%
 \item Increased use of objective-based investments 27\%
-\item Increased active investment 27\%
 \item Increased use of smart beta 49\%
 \item Bring investment in-house 38\%
-\item Decrase use of passive investment 28\%
+\item Decrease use of passive investment 28\%
 \item Increase use of passive investment 23\%
-\item Decreate use of active investmetn 0\%
+\item Decrease use of active investment 0\%
 \end{itemize}
 \end{frame}
 \end{document}
-“It may be the case that a large portion of an aggregate portfolio’s active risk is explained by factor risk. Certain desirable risk factor exposures, such as an overweight to small caps, could be captured more cost-effectively with a smart beta portfolio.” Lori Heinel, Chief Portfolio Strategist, SSGA
-
-There is a common belief that more smart beta and more active management will be used to reduce the gap between performance and requirements. Three quarter of those introducing smart beta reported moderate to significant improvement in their ability to hit long-term targets.
-
-Though smart beta needs a long-term approach, there is evidence of short-term pressure. Only being give 1 year of underperformance. More work is needed on smart beta. What conditions allow it to work?
