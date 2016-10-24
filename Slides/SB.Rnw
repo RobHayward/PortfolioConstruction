@@ -58,7 +58,7 @@ There are a number of persistent criticisms of using traditional indices as the 
 \item Overweight over-valued and under-weight undervalued
 \end{itemize}
 \item An index may not be available (non-investable)
-\item It impedes the process of \emph{price discovery} 
+\item Index investment impedes the process of \emph{price discovery} 
 \end{itemize}
 \end{frame}
 
@@ -96,6 +96,17 @@ Arnott, Hsu and More tested a range of alternative (fundamental) weightings
 \item Total employment
 \item Composite of book, cash-flow, sales and dividends (most widely available for most countries)
 \end{itemize}
+\end{frame}
+
+\begin{frame}{Fundamentally weighted indices}
+\begin{columns}{}
+\begin{column}{0.48\linewidth}
+\includegraphics[scale = 0.38]{Main-Street}
+\end{column}
+\begin{column}{0.47\linewidth}
+\includegraphics[scale = 0.18]{Wall-Street}
+\end{column}
+\end{columns}
 \end{frame}
 
 \begin{frame}{Details}
@@ -234,8 +245,8 @@ Factors provide a return for taking risk
 \pause
 \item \textbf{Value:} behavioural bias of pro-cyclical investment (De Bondt and Thaler (1985) and Fama French (1993)
 \item \textbf{Growth:} behavioural bias of pro-cyclical investment (De Bondt and Thaler (1985) and Fama French (1993)
-\item \textbf{Small cap:} Increased risk of small firms, liquidity or access to funding (Fama French (1993)
-\item \textbf{Momentum:} behavioural and institutional serial correlaton (Jagadesh and Titman (1993)
+\item \textbf{Small cap:} Increased risk of small firms, liquidity or access to funding: Fama French (1993)
+\item \textbf{Momentum:} behavioural and institutional serial correlation: Jagadesh and Titman (1993)
 \item \textbf{Volatility:}
 \item \textbf{Value}:
 \end{itemize}
@@ -299,30 +310,16 @@ International stocks; risk-adjusted return is return per unit of volatility
 % Do we use the next slide or put some of this information in the sliede abovve
 
 
-\begin{frame}{Low volatility}
-These have been one of the biggest winners of 2016
-\begin{itemize}[<+-| alert@+>]
-\pause
-\item Introduced in 2011
-\item BlackRock USMW 
-\item Inflow of \$16.0bn in first 9 months of 2016
-\item 28 funds hold \$44bn in assets (XTF)
-\item Seek to identify boring stocks.  
-\item Low or minimal volatility
-\item Tend to be high dividend stocks
-\item \emph{Crowded?} - concentrated in utilities
-\end{itemize}
-\end{frame}
 
 \begin{frame}{Fixed income}
 Enthusiasm for factor investment has spread from equities to other asset classes, including bonds
 \begin{itemize}[<+-| alert@+>]
 \pause
-\item Fama-French (1993) includes matuirity and default risk factors for bonds
+\item Fama-French (1993) includes maturity and default risk factors for bonds
 \item However, of 573 funds in Morning Star Strategic Beta universe, only 19 are fixed income
 \item Bonds already have a layer of active investment (maturing bonds must be replaced)
 \item There is less reliable data for identifying factors
-\item Over-the-counter market makes pricing less relialbe or transparent
+\item Over-the-counter market makes pricing less reliable or transparent
 \end{itemize}
 \end{frame}
 
@@ -331,7 +328,7 @@ Capitalisation is even more a problem with fixed income
 \begin{itemize}[<+-| alert@+>]
 \pause
 \item GDP-weighted indices compared to market-capitalisation
-\item Research Afiliates also have
+\item Research Affiliates also have
 \begin{itemize}
 \item population
 \item land area
@@ -450,16 +447,6 @@ Even when they do not exist!
 \end{center}
 \end{frame}
 
-\begin{frame}{Fundamentally weighted indices}
-\begin{columns}{}
-\begin{column}{0.48\linewidth}
-\includegraphics[scale = 0.38]{Main-Street}
-\end{column}
-\begin{column}{0.47\linewidth}
-\includegraphics[scale = 0.18]{Wall-Street}
-\end{column}
-\end{columns}
-\end{frame}
 
 \begin{frame}{Increased efficiency}
 R. Arnott studied performance of factors before and after publication
@@ -504,9 +491,24 @@ Profitable & -0.35\%* & Expensive\\
 \end{tabular}
 \end{center}
 \end{table}
-Factor valuation vs following 5-year returns.  1967-2015.  R. Arnot, N. Beck, V. Kalesnik and J. West, Feb 2016.  * Statisticaly signiciant
+Factor valuation vs following 5-year returns.  1967-2015.  R. Arnot, N. Beck, V. Kalesnik and J. West, Feb 2016.  
+* Statistically significant
 \end{frame}
 
+\begin{frame}{Low volatility}
+These have been one of the biggest winners of 2016
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Introduced in 2011
+\item BlackRock USMW 
+\item Inflow of \$16.0bn in first 9 months of 2016
+\item 28 funds hold \$44bn in assets (XTF)
+\item Seek to identify boring stocks.  
+\item Low or minimal volatility
+\item Tend to be high dividend stocks
+\item \emph{Crowded?} - concentrated in utilities
+\end{itemize}
+\end{frame}
 \begin{frame}{Factors are fickle}
 Factors work under some conditions and not others
 \begin{itemize}[<+-| alert@+>]
@@ -518,12 +520,12 @@ Factors work under some conditions and not others
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Assets as bundels of risk factors}
+\begin{frame}{Assets as bundles of risk factors}
 A. Ang at BlackRock says 
 \pause
 %\vspace{2cm}
 \begin{block}{}
-Risk factors are like vitimins and minerals while assets are like food
+Risk factors are like vitamins and minerals while assets are like food
 \end{block}
 \end{frame}
 

@@ -246,7 +246,7 @@ The Efficient Market Hypothesis
 \pause
 \item Suggests that inefficiencies will be swiftly eliminated
 \item There are no \emph{systematic} deviations that allow \emph{supernormal profits} or returns that are more than just compensation for risk
-\item Are these effects (value, growth etc) ineffiiciencies or risk factors? 
+\item Are these effects (value, growth etc) inefficiencies or risk factors? 
 \end{itemize}
 \end{frame}
 
@@ -280,7 +280,7 @@ Active funds try to take advantage of these apparent inefficiencies
 \item Malkiel (1995), Gruber (1996), Wermers (2000, 2003), and Jones
 and Wermers (2011)
 \end{itemize}
-\item However, individual managers may be succssful
+\item However, individual managers may be successful
 \item Hedge funds seek alpha but have come under recent scrutiny and criticism
 \end{itemize}
 \end{frame}
@@ -297,7 +297,7 @@ and Wermers (2011)
 \end{itemize}
 \end{frame}
 
-\section{Portfolio consctruction: decision-making}
+\section{Portfolio construction: decision-making}
 %\begin{frame}{Fund structure and performance}
 %There are two main structures for funds
 %\begin{itemize}[<+-| alert@+>]
@@ -381,12 +381,12 @@ Started in 1996 with NOK 40 bn now has 7.2tn (\$875bn)
 Committee was split
 \begin{itemize}[<+-| alert@+>]
 \pause
-\item Majority wanted to increase equity share to 70\%
+\item Majority wants to increase equity share to 70\%
 \begin{itemize}
-\item Risky oil and gass reserves have fallen as a share of assets
+\item Risky oil and gas reserves have fallen as a share of assets
 \item Fiscal rule could be more adaptable
 \end{itemize}
-\item Mork wanted to reduce the size of the equity share to 50\%
+\item Mork wants to reduce the size of the equity share to 50\%
 \begin{itemize}
 \item Concerned about the need for steady fiscal transfers
 \end{itemize}
