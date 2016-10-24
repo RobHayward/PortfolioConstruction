@@ -69,6 +69,8 @@ The proliferation of ETF has raised some concerns
 \item More volume in ETF than the underlying
 \item Some are illiquid
 \item Can be redeemed in kind
+\item SEC investigation (leverage and minimum cash)
+% restriction on use of derivatives and maximum of 15\% illiquid funds
 \end{itemize}
 \end{frame}
 

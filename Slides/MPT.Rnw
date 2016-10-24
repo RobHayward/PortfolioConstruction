@@ -39,6 +39,11 @@
 \titlepage
 \end{frame}
 
+\begin{frame}
+\frametitle{Overview} 
+\tableofcontents
+\end{frame}
+
 \section{Modern Portfolio Theory}
 
 \begin{frame}{Harry Markowitz}
@@ -53,11 +58,11 @@
 \end{center}
 \end{frame}
 
-\begin{frame}{Merton Miller}
-\begin{center}
-\includegraphics[height = 3.0in]{merton}
-\end{center}
-\end{frame}
+%\begin{frame}{Merton Miller}
+%\begin{center}
+%\includegraphics[height = 3.0in]{merton}
+%\end{center}
+%\end{frame}
 
 \begin{frame}{Modern Portfolio Theory}
 \begin{tikzpicture}[scale = 2] 
@@ -82,6 +87,7 @@
 \begin{frame}{Modern Portfolio Theory}
 MPT: the \emph{market portfolio} is \emph{mean-variance optimal}
 \pause
+\vspace{1cm}
 \begin{block}{}
 Holding the market portfolio is the alternative to forecasting the expected returns and the expected covariances matrix for hundreds of assets
 \end{block}
@@ -93,10 +99,10 @@ Some questions about MPT
 \pause
 \item The \emph{investment universe}
 \item The market portfolio
+\item Expected vs historical record
 \item A mean-variance analysis
 \item Lack of transaction costs
 \item Risk-free asset
-\item Expected vs historical record
 \item Stability of relationships
 \item Investors are risk-averse
 \end{itemize}
@@ -166,10 +172,11 @@ There are things we know; there are things we do not know; there are things that
 
 %\begin{frame}{Expected values}
 \begin{frame}{Capital Asset Pricing Model}
-Closely associated with MPT is the \emph{Capital Asset Pricing Model} (CAPM)
+\emph{Capital Asset Pricing Model} (CAPM) is an important part of the MPT framework 
 \pause
 \begin{itemize}[<+-| alert@+>]
-\item Individual securities only matter relative to the market
+\item There is an public equity risk premium
+\item Returns on individual securities is related to this risk premium
 \item Beta $(\beta)$ is the measure of this relationship
 \begin{itemize}
 \item Covariance of asset returns with market returns
@@ -178,8 +185,6 @@ Closely associated with MPT is the \emph{Capital Asset Pricing Model} (CAPM)
 \item Low beta is low risk
 \end{itemize}
 \end{frame}
-
-
 
 \begin{frame}{CAPM}
 \begin{tikzpicture}[scale = 2] 
@@ -195,14 +200,14 @@ Closely associated with MPT is the \emph{Capital Asset Pricing Model} (CAPM)
 \end{tikzpicture}
 \end{frame}
 
-\begin{frame}{Anomalies}
-A number of anomalies have been found
+\begin{frame}{Other risk factors}
+A number of additional risk factors have been found
 \begin{itemize}[<+-| alert@+>]
 \pause
 \item \emph{Small cap companies} seem to generate high returns relative to their risk
 \item \emph{Value firm} appear to generate high returns relative to their risk
 \item \emph{Growth firms} appear to generate low returns relative to their risk
-\item There are other anomalies or inefficiencies
+\item There are other \emph{risk factors} or anomalies that we will return to later
 \end{itemize}
 \end{frame}
 
@@ -272,10 +277,11 @@ Active funds try to take advantage of these apparent inefficiencies
 \pause
 \item Many studies find that active managers are not successful on average
 \begin{itemize}
-\item List needed////
+\item Malkiel (1995), Gruber (1996), Wermers (2000, 2003), and Jones
+and Wermers (2011)
 \end{itemize}
 \item However, individual managers may be succssful
-\item Hedge funds have come under recent scrutiny and criticism
+\item Hedge funds seek alpha but have come under recent scrutiny and criticism
 \end{itemize}
 \end{frame}
  
@@ -291,30 +297,128 @@ Active funds try to take advantage of these apparent inefficiencies
 \end{itemize}
 \end{frame}
 
-\section{Portfolio Practice}
-\begin{frame}{Portfolio Practice}
-Research and sales focus on (US) stocks, but $\dots$
+\section{Portfolio consctruction: decision-making}
+%\begin{frame}{Fund structure and performance}
+%There are two main structures for funds
+%\begin{itemize}[<+-| alert@+>]
+%\pause
+%\item Endowment model
+%\begin{itemize}
+%\item Strategic asset allocation
+%\item Asset holdings are changed gradually
+%\item Performance measured against asset benchmark
+%\end{itemize}
+%\item Opportunity cost model
+%\begin{itemize}
+%\item Benchmark is a passive investment in stocks and bonds
+%\item Leeway for fund managers to buy alternative assets (but tracking-error limits)
+%\item Performance (net of fees) is judged against benchmark
+%\end{itemize}
+%\end{itemize}
+%\end{frame}
+
+\begin{frame}{Portfolio construction}
+\begin{tikzpicture} 
+%\draw[very thin, color = gray](0, 0) grid (12, 6);
+\tikzstyle{block} = [draw, rectangle, text width = 5em, 
+  text centered, minimum height = 6mm, node distance = 5em];
+\tikzstyle{line} = [draw, -stealth, thick]
+\node [block] at (1.5, 4) (one) {\scriptsize True 'market' \\ (unobserved)};
+\node [block] at (5, 4) (two) {\scriptsize Passive investable \\ benchmark};
+\node [block] at (8.5, 4) (three) {\scriptsize Rebalanced \\ benchmark};
+\node [block] at (8.5, 2) (four) {\scriptsize Factor \\ tilts};
+\node [block] at (8.5, 0) (five) {\scriptsize Active \\ Portfolio};
+\path [line] (one) -- (two);
+\path [line] (two) -- (three);
+\path [line] (three) -- (four);
+\path [line] (four) -- (five);
+\node at (3, 5.5) [align = center]{\scriptsize Choice of investable \\ \scriptsize benchmark};
+\node at (6.5, 5.5) [align = center]{\scriptsize Rebalancing \\ \scriptsize gain};
+\node at (11, 3) [align = center] {\scriptsize Factor \\ \scriptsize risk premia};
+\node at (11, 1) [align = center] {\scriptsize Active \\ \scriptsize management};
+\end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Active components of fund}
+There are a number of places where the fund must be active
 \begin{itemize}[<+-| alert@+>]
 \pause
-\item Diversification for bonds
-\begin{itemize}
-\item Diversify across levels of credit
-\item Diversify across maturities
-\item Diversify across countries
-\end{itemize}
-\item Diversification for commodities
-\item Diversification for currency
+\item Deciding on the appropriate market
+\item Finding an investable fund
+\item Frequency of asset re-balancing
+\item Factor tilts
+\item Active security selection
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Bonds}
-Two big issues for bond markets
+\begin{frame}{Norwegian Petroleum Fund}
+\begin{center}
+\includegraphics[height = 3.0in]{Flag_Norway}
+\end{center}
+\end{frame}
+
+\begin{frame}{Norwegian Petroleum Fund}
+Started in 1996 with NOK 40 bn now has 7.2tn (\$875bn) 
 \begin{itemize}[<+-| alert@+>]
 \pause
-\item Hordahl et al. (2016): 2005-15 100bp rise in US yield curve associated with a 70bp to 80bp rise in  
- \item Reduced liquidity due to regulation of investment banks (rebalancing more expensive)
- \item Increased use of ETF in the second (article on feedly)
- \end{itemize}
- \end{frame}
+\item 1998 - 40\% of assets were equities
+\item 2001 - Budetary rule (maximum of 4\% to be used)
+\item 2009 - 60\% of assets were equities
+\item 2010 - 5\% real estate
+\item Today 60\% equity, 35\% fixed income, 5\% real estate
+\item Ethical council 
+\item Mork Committee
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Knut Anton Mork}
+\begin{center}
+\includegraphics[height = 3.0in]{mork}
+\end{center}
+\end{frame}
+
+\begin{frame}{Mork}
+Committee was split
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Majority wanted to increase equity share to 70\%
+\begin{itemize}
+\item Risky oil and gass reserves have fallen as a share of assets
+\item Fiscal rule could be more adaptable
+\end{itemize}
+\item Mork wanted to reduce the size of the equity share to 50\%
+\begin{itemize}
+\item Concerned about the need for steady fiscal transfers
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+
+
+%\section{Portfolio Practice}
+%\begin{frame}{Portfolio Practice}
+%Research and sales focus on (US) stocks, but $\dots$
+%\begin{itemize}[<+-| alert@+>]
+%\pause
+%\item Diversification for bonds
+%\begin{itemize}
+%\item Diversify across levels of credit
+%\item Diversify across maturities
+%\item Diversify across countries
+%\end{itemize}
+%\item Diversification for commodities
+%\item Diversification for currency
+%\end{itemize}
+%\end{frame}
+%
+%\begin{frame}{Bonds}
+%Two big issues for bond markets
+%\begin{itemize}[<+-| alert@+>]
+%\pause
+%\item Hordahl et al. (2016): 2005-15 100bp rise in US yield curve associated with a 70bp to 80bp rise in  
+% \item Reduced liquidity due to regulation of investment banks (rebalancing more expensive)
+% \item Increased use of ETF in the second (article on feedly)
+% \end{itemize}
+% \end{frame}
 \end{document}
 

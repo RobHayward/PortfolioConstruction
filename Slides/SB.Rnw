@@ -47,7 +47,7 @@
 
 \section{Smart Beta}
 \begin{frame}{Criticisms of index investment}
-There are a number of persistent criticisms of index investment 
+There are a number of persistent criticisms of using traditional indices as the basis for investment
 \begin{itemize}[<+-| alert@+>]
 \pause
 \item Capitalisation-weighted indices are \textbf{NOT} equivalent to the \emph{market portfolio}
@@ -67,7 +67,7 @@ There are two main types of Smart Beta:
 \begin{itemize}[<+-| alert@+>]
 \pause
 \item Take \emph{value-weighted} indices and weight them by some other measure
-\item Use investment anomalies or \emph{factors}
+\item Use risk \emph{factors} or other anomalies 
 \end{itemize}
 \end{frame}
 
@@ -96,17 +96,6 @@ Arnott, Hsu and More tested a range of alternative (fundamental) weightings
 \item Total employment
 \item Composite of book, cash-flow, sales and dividends (most widely available for most countries)
 \end{itemize}
-\end{frame}
-
-\begin{frame}{Fundamentally weighted indices}
-\begin{columns}{}
-\begin{column}{0.48\linewidth}
-\includegraphics[scale = 0.38]{Main-Street}
-\end{column}
-\begin{column}{0.47\linewidth}
-\includegraphics[scale = 0.2]{Wall-Street}
-\end{column}
-\end{columns}
 \end{frame}
 
 \begin{frame}{Details}
@@ -198,6 +187,28 @@ Fundamentally-weighted indices would tend to pick up the value and growth anomal
 \end{itemize}
 \end{frame}
 
+\begin{frame}{CAPM}
+\begin{tikzpicture}[scale = 2] 
+%\draw[very thin, color = gray](0, 0) grid (5, 3);
+\draw [<->, thick] (0, 3) node (yaxis) [above] {$Return$} 
+  |- (5, 0) node (xaxis) [right] {$Risk$};
+\pause
+\draw[domain = 0.0:5.0, color = olive] plot(\x, {0.5 + 0.5*\x});
+\draw [fill = red] (2.5, 1.75) circle [radius = 0.05];
+%\node at (2.5, 1.75) [above left] {$\beta$ = 1};
+\node at (2.5, 1.75) [below right] {\scriptsize Market Portfolio};
+\pause
+\draw [fill = red] (3.5, 2.5) circle [radius = 0.05];
+\node at (3.5, 2.5) [left] {\scriptsize Small Capitalisation};
+\pause
+\draw [fill = red] (1.5, 1.5) circle [radius = 0.05];
+\node at (1.5, 1.5) [left] {\scriptsize Value};
+\pause
+\draw [fill = red] (3.5, 2.0) circle [radius = 0.05];
+\node at (3.5, 2.0) [right] {\scriptsize Growth};
+\end{tikzpicture}
+\end{frame}
+
 \begin{frame}{Factor investment}
 \begin{table}
 \begin{center}
@@ -214,6 +225,20 @@ Quality & Robust & Debt or management\\
 \end{tabular}
 \end{center}
 \end{table}
+\end{frame}
+
+\begin{frame}{Factor risks}
+Factors provide a return for taking risk
+% for example, the risk taken by Petroleum fund in GFC. 
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item \textbf{Value:} behavioural bias of pro-cyclical investment (De Bondt and Thaler (1985) and Fama French (1993)
+\item \textbf{Growth:} behavioural bias of pro-cyclical investment (De Bondt and Thaler (1985) and Fama French (1993)
+\item \textbf{Small cap:} Increased risk of small firms, liquidity or access to funding (Fama French (1993)
+\item \textbf{Momentum:} behavioural and institutional serial correlaton (Jagadesh and Titman (1993)
+\item \textbf{Volatility:}
+\item \textbf{Value}:
+\end{itemize}
 \end{frame}
 
 \begin{frame}{Results of factor investment}
@@ -273,19 +298,6 @@ International stocks; risk-adjusted return is return per unit of volatility
 % produce excess retruns over the long-run. 
 % Do we use the next slide or put some of this information in the sliede abovve
 
-\begin{frame}{Factor risks}
-Factors provide a return for taking risk
-% for example, the risk taken by Petroleum fund in GFC. 
-\begin{itemize}[<+-| alert@+>]
-\pause
-\item \textbf{Value:} behavioural bias of pro-cyclical investment (De Bondt and Thaler (1985) and Fama French (??)
-\item \textbf{Growth:} behavioural bias of pro-cyclical investment (De Bondt and Thaler (1985) and Fama French (??)
-\item \textbf{Small cap:} Increased risk of small firms, liquidity or access to funding (Fama French (??)
-\item \textbf{Momentum:} behavioural and institutional serial correlaton (Jagadesh and Titman (??)
-\item \textbf{Volatility:}
-\item \textbf{Value}:
-\end{itemize}
-\end{frame}
 
 \begin{frame}{Low volatility}
 These have been one of the biggest winners of 2016
@@ -302,7 +314,51 @@ These have been one of the biggest winners of 2016
 \end{itemize}
 \end{frame}
 
- 
+\begin{frame}{Fixed income}
+Enthusiasm for factor investment has spread from equities to other asset classes, including bonds
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Fama-French (1993) includes matuirity and default risk factors for bonds
+\item However, of 573 funds in Morning Star Strategic Beta universe, only 19 are fixed income
+\item Bonds already have a layer of active investment (maturing bonds must be replaced)
+\item There is less reliable data for identifying factors
+\item Over-the-counter market makes pricing less relialbe or transparent
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Fixed income and capitalisation}
+Capitalisation is even more a problem with fixed income
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item GDP-weighted indices compared to market-capitalisation
+\item Research Afiliates also have
+\begin{itemize}
+\item population
+\item land area
+\item energy consumption
+\end{itemize}
+\item Lower liquidity may reduce the frequency of rebalancing 
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Fundamental factors}
+These are for government and corporate sectors
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Government 
+\begin{itemize}
+\item deficit-to-GDP
+\item debt-to-GDP
+\item demographics and political stability
+\end{itemize}
+\item Corporate 
+\begin{itemize}
+\item free cash flow 
+\item leverage
+\end{itemize}
+\end{itemize}
+\end{frame}
+
 %\section{Other (relatively) new methods}
 %\begin{frame}{Other (relatively) new methods}
 %I do not want to look at these in detail but
@@ -330,7 +386,7 @@ Bridgewater strategy
 \begin{table}
 \begin{center}
 \rowcolors{1}{OliveGreen!20}{OliveGreen!5}
-\begin{tabular}{l  r r}
+\begin{tabular}{l  p{2cm} r}
 \textbf{Performance} & \textbf{60/40 stock-bonds} & \textbf{Risk parity}\\
 \hline
 Total Return & 8.5\% & 10.4\% \\
@@ -368,7 +424,8 @@ come from \textbf{Research Affiliates}).
 \pause
 \item Data mining
 \item Exploitation of the inefficiency should remove that inefficiency
-\item Factors do not always work 
+\item Factors depend on underlying economic conditions
+\item Factors can become crowded or expensive 
 \end{itemize}
 \end{frame}
 
@@ -381,7 +438,7 @@ come from \textbf{Research Affiliates}).
 \begin{frame}{But...}
 Behavioural studies find that it is natural to seek patterns
 \pause
-\vspace{2cm}
+\vspace{1cm}
 \begin{block}{}
 Even when they do not exist!
 \end{block}
@@ -393,6 +450,16 @@ Even when they do not exist!
 \end{center}
 \end{frame}
 
+\begin{frame}{Fundamentally weighted indices}
+\begin{columns}{}
+\begin{column}{0.48\linewidth}
+\includegraphics[scale = 0.38]{Main-Street}
+\end{column}
+\begin{column}{0.47\linewidth}
+\includegraphics[scale = 0.18]{Wall-Street}
+\end{column}
+\end{columns}
+\end{frame}
 
 \begin{frame}{Increased efficiency}
 R. Arnott studied performance of factors before and after publication
@@ -408,6 +475,36 @@ R. Arnott studied performance of factors before and after publication
 \begin{center}
 \includegraphics[scale = 0.06]{oneHundredDollar}
 \end{center}
+\end{frame}
+
+\begin{frame}{Factors are expensive}
+Recent work by Research Affiliates finds that factors have become \emph{expensive}
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Assess whether factors are expensive of cheap by measuring the price-to-book ratio
+\item Compare the value (price-to-book) vs 5 year returns
+\item Find the current valuation
+\item Changes in recent years  may be driven by valuation
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Factor value}
+\begin{table}
+\begin{center}
+\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
+\begin{tabular}{l  p{2cm} r}
+\textbf{Testing} & \textbf{Beta} & \textbf{Current value}\\
+\hline
+Value vs growth & -1.9\%* & Cheap\\
+Capitalisation & -0.72\%* & Mid\\
+Momentum & -0.34\%* & Cheap\\
+Liquidity & -0.45\%* & Expensive\\ 
+Beta & -0.00 & Cheap\\
+Profitable & -0.35\%* & Expensive\\
+\end{tabular}
+\end{center}
+\end{table}
+Factor valuation vs following 5-year returns.  1967-2015.  R. Arnot, N. Beck, V. Kalesnik and J. West, Feb 2016.  * Statisticaly signiciant
 \end{frame}
 
 \begin{frame}{Factors are fickle}
