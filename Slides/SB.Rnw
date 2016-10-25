@@ -85,6 +85,17 @@ The company is generally credited with introducing the first \emph{Smart Beta} f
 \end{frame}
 
 \begin{frame}{Fundamentally weighted indices}
+\begin{columns}{}
+\begin{column}{0.48\linewidth}
+\includegraphics[scale = 0.38]{Main-Street}
+\end{column}
+\begin{column}{0.47\linewidth}
+\includegraphics[scale = 0.18]{Wall-Street}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Fundamentally weighted indices}
 Arnott, Hsu and More tested a range of alternative (fundamental) weightings
 \begin{itemize}[<+-| alert@+>]
 \pause
@@ -96,17 +107,6 @@ Arnott, Hsu and More tested a range of alternative (fundamental) weightings
 \item Total employment
 \item Composite of book, cash-flow, sales and dividends (most widely available for most countries)
 \end{itemize}
-\end{frame}
-
-\begin{frame}{Fundamentally weighted indices}
-\begin{columns}{}
-\begin{column}{0.48\linewidth}
-\includegraphics[scale = 0.38]{Main-Street}
-\end{column}
-\begin{column}{0.47\linewidth}
-\includegraphics[scale = 0.18]{Wall-Street}
-\end{column}
-\end{columns}
 \end{frame}
 
 \begin{frame}{Details}
@@ -146,7 +146,8 @@ Composite & 19.0\% & 16.6\% & 7.7\%
 \item Results hold across expansions and contractions
 \item Results hold in rising and falling rate environment
 \end{itemize}
-\item Finding \emph{market inefficiencies} on average
+\item Choosing individual value and growth companies is difficult
+\item Here \emph{market inefficiencies} are found on average
 \end{itemize}
 \end{frame}
 
@@ -243,12 +244,12 @@ Factors provide a return for taking risk
 % for example, the risk taken by Petroleum fund in GFC. 
 \begin{itemize}[<+-| alert@+>]
 \pause
-\item \textbf{Value:} behavioural bias of pro-cyclical investment (De Bondt and Thaler (1985) and Fama French (1993)
-\item \textbf{Growth:} behavioural bias of pro-cyclical investment (De Bondt and Thaler (1985) and Fama French (1993)
+  \item \textbf{Value:} behavioural bias of pro-cyclical investment: De Bondt and Thaler (1985) and Fama French (1993)
+\item \textbf{Growth:} behavioural bias of pro-cyclical investment: De Bondt and Thaler (1985) and Fama French (1993)
 \item \textbf{Small cap:} Increased risk of small firms, liquidity or access to funding: Fama French (1993)
 \item \textbf{Momentum:} behavioural and institutional serial correlation: Jagadesh and Titman (1993)
-\item \textbf{Volatility:}
-\item \textbf{Value}:
+\item \textbf{Volatility:} not so clear
+\item \textbf{Quality:} not so clear
 \end{itemize}
 \end{frame}
 
@@ -495,7 +496,7 @@ Factor valuation vs following 5-year returns.  1967-2015.  R. Arnot, N. Beck, V.
 * Statistically significant
 \end{frame}
 
-\begin{frame}{Low volatility}
+\begin{frame}{For example: Low volatility}
 These have been one of the biggest winners of 2016
 \begin{itemize}[<+-| alert@+>]
 \pause
@@ -509,6 +510,66 @@ These have been one of the biggest winners of 2016
 \item \emph{Crowded?} - concentrated in utilities
 \end{itemize}
 \end{frame}
+
+
+\begin{frame}{Fickle Factors}
+How resilient are these factors? 
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item What is the source of the factor \emph{excess return}?
+\begin{itemize}
+\item Increased risk
+\item Inefficency
+\begin{itemize}
+\item behaviouiral
+\item institutional
+\end{itemize}
+\end{itemize}
+\item Will the source continue? 
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Factor source 1}
+\begin{table}
+\begin{center}
+\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
+\begin{tabular}{l l l}
+\textbf{Factor} & \textbf{Risk} & \textbf{Behavr-Instit}\\
+\hline
+Value & Systematic risk & Expectation error\\
+      &                 & Loss aversion\\
+      &                 & Investment flows\\
+Size  & Systematic risk & Expectation error\\
+      & Liquidity risk   & \\
+Momentum & Crash risk & Over-reaction\\
+        &             & Investment flows\\
+        &             & Asynchrnous trade\\
+\end{tabular}
+\end{center}
+\end{table}
+%Adapted from MSCI \emph{Foundations of Factor Investment}
+
+\end{frame}
+
+\begin{frame}{Factor source 2}
+\begin{table}
+\begin{center}
+\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
+\begin{tabular}{l p{3cm} l}
+\textbf{Factor} & \textbf{Risk} & \textbf{Behavr-Instit}\\
+\hline
+Low vol & NA          & Lottery effect\\
+        &             & Overconfidence\\
+        &             & Leverage aversion\\
+Quality & NA          & Expectations errors\\
+        &             & Manipulated earnings\\
+\end{tabular}
+\end{center}
+\end{table}
+Adapted from MSCI \emph{Foundations of Factor Investment}
+
+\end{frame}
+
 \begin{frame}{Factors are fickle}
 Factors work under some conditions and not others
 \begin{itemize}[<+-| alert@+>]
@@ -539,7 +600,57 @@ Many of the funds argue
 \end{itemize}
 \end{frame}
 
+\section{The future}
+\begin{frame}{Low rate world}
+State street conducted a survey of the portfolio managers' response to the low-interest rate world
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Start of 2016
+\item 400 large institutional investors
+\item Mixture of active and passive investment
+\item Key questions 
+\begin{itemize}
+\item Most important objective
+\item Changes to deal with low returns
+\item Impediments to change
+\end{itemize}
+\end{itemize}
+\end{frame}
 
+\begin{frame}{Findings: most important objective}
+The most imprortant objective:
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item 41\% see asset class as the most important view
+\item 30\% see factors as the most important
+\item 25\% see a objective based investment
+\end{itemize}
+\end{frame}
 
+\begin{frame}{Findings: changes to deal with low returns}
+The Changtes to deal with low returns
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item 49\% increased use of smart beta
+\item 27\% see an increase in active investment
+\item 27\% see an increase in objective investment
+\item 22\% see an increase in alternative assets
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Findings: Impediments to change}
+Impediments to change
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Peer-group adoption
+\item Lack of in-house expertise
+\item Difficulties in benchmarking
+\item Difficulty in getting board buy-in
+\item Lack of proven record
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Further Reading}
+\end{frame}
 \end{document}
 
