@@ -40,3 +40,4 @@ vignettes/*.pdf
 *.log
 .Rproj.user
 *.xlsx
+*.png
