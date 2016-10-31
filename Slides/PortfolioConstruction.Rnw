@@ -7,7 +7,7 @@
 \usepackage{tikz}
  \usetikzlibrary{arrows,positioning}
 \usepackage[absolute, overlay]{textpos}
-\definecolor{MyBrown}{RGB}{125, 90, 8}
+\definecolor{MyBrown}{RGB}{180, 151, 90}
 \usepackage{multirow}
 \usepackage[comma, sort&compress]{natbib}
 \usepackage{graphicx}
@@ -34,7 +34,7 @@
 % Title and author information
 \title{Modern Portfolio Theory}
 \author{Rob Hayward}
-\date{2-Nov-2016}
+\date{Nov-2016}
 \begin{document}
 
 %\begin{frame}
@@ -50,7 +50,7 @@
 \tableofcontents
 \end{frame}
 
-\section{Modern Portfolio Theory}
+\section{Modern portfolio theory}
 
 \begin{frame}{Harry Markowitz}
 \begin{center}
@@ -84,7 +84,7 @@
 \pause
 \node at (0, 1) [left] {rf};
 \pause
-\draw[domain = 0.0:3.9, color = red] plot(\x, {1 + 0.5*\x});
+\draw[domain = 0.0:3.9, color = black] plot(\x, {1 + 0.5*\x});
 \pause
   \node at (3.5, 2.65) [right] {\scriptsize Security Market Line};
 \end{tikzpicture}
@@ -108,7 +108,7 @@ Some questions about MPT
 \item Expected vs historical record
 \item A mean-variance analysis
 \item Lack of transaction costs
-\item Risk-free asset
+\item Risk free rate
 \item Stability of relationships
 \item Investors are risk-averse
 \end{itemize}
@@ -182,7 +182,7 @@ There are things we know; there are things we do not know; there are things that
 \pause
 \begin{itemize}[<+-| alert@+>]
 \item There is an public equity risk premium
-\item Returns on individual securities is related to this risk premium
+\item Returns on individual securities are related to this risk premium
 \item Beta $(\beta)$ is the measure of this relationship
 \begin{itemize}
 \item Covariance of asset returns with market returns
@@ -200,7 +200,7 @@ There are things we know; there are things we do not know; there are things that
 \pause
 \node at (2.5, 1.75) [below right] {\scriptsize Market Portfolio};
 \draw [domain = 0.0:5.0, color = olive] plot(\x, {0.5 + 0.5*\x});
-\draw [fill = red] (2.5, 1.75) circle [radius = 0.05];
+\draw [fill = brown] (2.5, 1.75) circle [radius = 0.05];
 \pause
 \node at (2.5, 1.75) [above left] {$\beta$ = 1};
 \end{tikzpicture}
@@ -224,22 +224,22 @@ A number of additional risk factors have been found
   |- (5, 0) node (xaxis) [right] {$Risk$};
 \pause
 \draw[domain = 0.0:5.0, color = olive] plot(\x, {0.5 + 0.5*\x});
-\draw [fill = red] (2.5, 1.75) circle [radius = 0.05];
+\draw [fill = brown] (2.5, 1.75) circle [radius = 0.05];
 %\node at (2.5, 1.75) [above left] {$\beta$ = 1};
 \node at (2.5, 1.75) [below right] {\scriptsize Market Portfolio};
 \pause
-\draw [fill = red] (3.5, 2.5) circle [radius = 0.05];
+\draw [fill = brown] (3.5, 2.5) circle [radius = 0.05];
 \node at (3.5, 2.5) [left] {\scriptsize Small Capitalisation};
 \pause
-\draw [fill = red] (1.5, 1.5) circle [radius = 0.05];
+\draw [fill = brown] (1.5, 1.5) circle [radius = 0.05];
 \node at (1.5, 1.5) [left] {\scriptsize Value};
 \pause
-\draw [fill = red] (3.5, 2.0) circle [radius = 0.05];
+\draw [fill = brown] (3.5, 2.0) circle [radius = 0.05];
 \node at (3.5, 2.0) [right] {\scriptsize Growth};
 \end{tikzpicture}
 \end{frame}
 
-\section{Passive vs Active investment}
+\section{Passive vs active investment}
 \begin{frame}{Economist and the one hundred dollar bill}
 \begin{center}
 \includegraphics[scale = 0.06]{oneHundredDollar}
@@ -298,7 +298,7 @@ and Wermers (2011)
 \end{frame}
  
 \begin{frame}{Rise of Passive Investment}
-\textbf{Morning Star}
+\textbf{Morningstar}
 \begin{itemize}[<+-| alert@+>]
 \pause
 \item Index-tracking funds increased share by \$2.0trn since 2013, reaching \$5.0tn
@@ -348,7 +348,7 @@ and Wermers (2011)
 \node at (6.5, 5.5) [align = center]{\scriptsize Rebalancing \\ \scriptsize gain};
 \node at (11, 3) [align = center] {\scriptsize Factor \\ \scriptsize risk premia};
 \node at (11, 1) [align = center] {\scriptsize Active \\ \scriptsize management};
-\node at (2, 1) [align = center] {\scriptsize Ang, Brandt, Denison (2014)};
+\node at (2, 0) [align = center] {\scriptsize Ang, Brandt, Denison (2014)};
 \end{tikzpicture}
 \end{frame}
 
@@ -435,7 +435,7 @@ Committee was split
 % \end{frame}
 
 
-\section{Smart Beta}
+\section{Smart beta}
 \begin{frame}{Criticisms of index investment}
 There are a number of persistent criticisms of using traditional indices as the basis for investment
 \begin{itemize}[<+-| alert@+>]
@@ -458,15 +458,15 @@ There are two main types of Smart Beta:
 \begin{itemize}[<+-| alert@+>]
 \pause
 \item Take \emph{value-weighted} indices and weight them by some other measure
-\item Use risk \emph{factors} or other anomalies 
+\item Use risk \emph{factors} or anomalies 
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Research Affiliates}
-\begin{textblock*}{3cm}(1cm, 1.5cm)
-\includegraphics[scale = 0.3]{RA}
-\end{textblock*}
-The company is generally credited with introducing the first \emph{Smart Beta} fund 
+\begin{frame}{Fundamental indexation}
+%\begin{textblock*}{3cm}(1cm, 1.5cm)
+%\includegraphics[scale = 0.3]{RA}
+%\end{textblock*}
+Research Affiliates is generally credited with introducing the first \emph{Smart Beta} fund 
 \begin{itemize}[<+-| alert@+>]
 \pause
 \item Arnott, R., J. Hsu and P. Moore, \emph{Fundamental Indexation}, Financial Analysts Journal, 2005
@@ -512,7 +512,7 @@ Arnott, Hsu and More tested a range of alternative (fundamental) weightings
 \begin{frame}{Fundamentally weighted indices: results}
 \begin{table}
 \begin{center}
-\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
+\rowcolors{1}{MyBrown!20}{MyBrown!5}
 \begin{tabular}{l r r r}
 \textbf{Portfolio/index} & \textbf{1980s} & \textbf{1990s} & \textbf{2000-04}\\
 \hline
@@ -526,7 +526,7 @@ Composite & 19.0\% & 16.6\% & 7.7\%
 \end{tabular}
 \end{center}
 \end{table}
-Arnott, Hsu and More (2005)
+Annualised returns by decade.  Arnott, Hsu and More (2005)
 \end{frame}
 
 \begin{frame}{Fundamentally-weighted index}
@@ -558,7 +558,7 @@ You have the advantages of the \emph{capitalisation-weighted} investment without
 
 \begin{frame}{Comparison to Capitalisation-weighed index (2000-04)}
 %\begin{center}
-\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
+\rowcolors{1}{MyBrown!20}{MyBrown!5}
 \begin{table}
 \begin{center}
 \begin{tabular}{l r r r}
@@ -574,6 +574,7 @@ Composite &  9.32pp& 17.2\%& 0.28
 \end{tabular}
 \end{center}
 \end{table}
+Value-added and risk adjusted returns.  Arnott, Hsu and More (2005)
 \end{frame}
 
 \section{Factor investment}
@@ -598,17 +599,17 @@ Fundamentally-weighted indices would tend to pick up the value and growth anomal
   |- (5, 0) node (xaxis) [right] {$Risk$};
 \pause
 \draw[domain = 0.0:5.0, color = olive] plot(\x, {0.5 + 0.5*\x});
-\draw [fill = red] (2.5, 1.75) circle [radius = 0.05];
+\draw [fill = brown] (2.5, 1.75) circle [radius = 0.05];
 %\node at (2.5, 1.75) [above left] {$\beta$ = 1};
 \node at (2.5, 1.75) [below right] {\scriptsize Market Portfolio};
 \pause
-\draw [fill = red] (3.5, 2.5) circle [radius = 0.05];
+\draw [fill = brown] (3.5, 2.5) circle [radius = 0.05];
 \node at (3.5, 2.5) [left] {\scriptsize Small Capitalisation};
 \pause
-\draw [fill = red] (1.5, 1.5) circle [radius = 0.05];
+\draw [fill = brown] (1.5, 1.5) circle [radius = 0.05];
 \node at (1.5, 1.5) [left] {\scriptsize Value};
 \pause
-\draw [fill = red] (3.5, 2.0) circle [radius = 0.05];
+\draw [fill = brown] (3.5, 2.0) circle [radius = 0.05];
 \node at (3.5, 2.0) [right] {\scriptsize Growth};
 \end{tikzpicture}
 \end{frame}
@@ -616,7 +617,7 @@ Fundamentally-weighted indices would tend to pick up the value and growth anomal
 \begin{frame}{Factor investment}
 \begin{table}
 \begin{center}
-\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
+\rowcolors{1}{MyBrown!20}{MyBrown!5}
 \begin{tabular}{l r r }
 \textbf{Factor} & \textbf{What is it?} & \textbf{Metric} \\
 \hline
@@ -629,19 +630,19 @@ Quality & Robust & Debt or management\\
 \end{tabular}
 \end{center}
 \end{table}
+Most common factors, what they are and how they can be measured
 \end{frame}
 
 \begin{frame}{Factor risks}
-Factors provide a return for taking risk
-% for example, the risk taken by Petroleum fund in GFC. 
 \begin{itemize}[<+-| alert@+>]
 \pause
   \item \textbf{Value:} behavioural bias of pro-cyclical investment: De Bondt and Thaler (1985) and Fama French (1993)
 \item \textbf{Growth:} behavioural bias of pro-cyclical investment: De Bondt and Thaler (1985) and Fama French (1993)
 \item \textbf{Small cap:} increased risk of small firms, liquidity or access to funding: Fama French (1993)
 \item \textbf{Momentum:} behavioural and institutional serial correlation: Jagadesh and Titman (1993)
-\item \textbf{Volatility:} not so clear
-\item \textbf{Quality:} not so clear
+\item \textbf{Volatility:} Black, Jensen and Scholes (1972)
+\item \textbf{High dividend:}
+\item \textbf{Quality:} 
 \end{itemize}
 \end{frame}
 
@@ -660,7 +661,7 @@ Investec analysis of following factors for S\&P 500 and MSCI EAFE (Dec 1991 to D
 \begin{frame}{Results 1}
 Dec 1991 to Dec 2015
 %\begin{center}
-\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
+\rowcolors{1}{MyBrown!20}{MyBrown!5}
 \begin{table}
 \begin{center}
 \begin{tabular}{l r r }
@@ -681,7 +682,7 @@ US stocks; risk-adjusted return is return per unit of volatility. Bender, Briand
 \begin{frame}{Results 2}
 Dec 1991 to Dec 2015
 %\begin{center}
-\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
+\rowcolors{1}{MyBrown!20}{MyBrown!5}
 \begin{table}
 \begin{center}
 \begin{tabular}{l r r }
@@ -750,14 +751,63 @@ These are for government and corporate sectors
 \begin{itemize}
 \item Value, size, momentum, volatility, quality
 \end{itemize}
-\item Other: term, liquidity, credit 
+\item Other
+\begin{itemize}
+\item term, liquidity, credit 
+\end{itemize}  
 \end{itemize}
 \end{frame}
 
-\section{Other methods portfolio methods}
+\begin{frame}{Factors in Norwegian oil fund}
+Ang, Goetzmann and Schaefer (2009) find the following factors explain the active activity of fund
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item \textbf{Term:} yield curve 
+\item \textbf{Credit:} credit risk
+\item \textbf{FX carry:} carry-trade
+\item \textbf{Liquidity:} purchase is illiquid assets
+\item \textbf{Value-growth:} long-value/short-growth
+\item \textbf{Size:} long-small cap/short-large cap
+\item \textbf{Momentum:} Buy recent winners sell recent losers
+\item \textbf{Vol:} Spread between implied and realised volatility
+\end{itemize}
+\end{frame}
+
+\begin{frame}{The rise of ETF}
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item \emph{Pooled investment vehicles} with AP
+\item \emph{Authorised participant} will keep ETF value close to that of underlying assets by being prepared to arbitrage the two
+\begin{itemize}
+\item can create new shares or redeem old ones
+\item this may not be easy for illiquid assets
+\end{itemize}
+\item First ETF began in 1993 (SPY)
+\item Middle of 2016 there are more than 1600 ETF on US exchanges with a value of more than \$2.2tn
+\item Competition is reducing prices 
+\item Bond ETF: \$60bn end of 2007 to \$600bn mid 2016
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Risk of ETF}
+The proliferation of ETF has raised some concerns
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Size and complexity
+\item Risk of \emph{performance chasing}
+\item Some attention on bond ETF (illiquid to liquid test)
+% this means that 20\% fall in market would happen in 2 hours not 2 days.
+\item More volume in ETF than the underlying
+\item Can be redeemed in kind
+\item SEC investigation: there are already limits on leverage and the minimum amount of cash)
+% restriction on use of derivatives and maximum of 15\% illiquid funds
+\end{itemize}
+\end{frame}
+
+\section{Other portfolio construction methods}
 \begin{frame}{Assets as bundles of risk}
 \begin{textblock*}{5cm}(1cm, 2cm)
-Colourful metaphor
+Colourful metaphors
 \end{textblock*}
 \begin{textblock*}{5.2cm}(1cm, 3cm) % (block width) (coords)
 \includegraphics[scale = 0.1]{vit}
@@ -771,16 +821,16 @@ Colourful metaphor
 For a standard pension fund (adapted from Podkaminer (2013) CFA Institute)
 \begin{table}
 \begin{center}
-\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
+\rowcolors{1}{MyBrown!20}{MyBrown!5}
 \begin{tabular}{l r r r}
 \textbf{Asset} & \textbf{\%} & \textbf{Risk} & \textbf{\%}\\
 \hline
 US equity     & 25\% & Equity & 57\% \\
 Non-US equity & 10\% & & \\
-Global equity & 2\% & & \\
+Emerging equity & 2\% & & \\
 Private equity  & 20\% &  &  \\
 \hline
-US fixed income & 20\% & Gov&  10\%\\
+US fixed income & 20\% & Interest rate&  10\%\\
 Global fixed income & 5\% & Credit & 18\%\\
 Cash            & 3\% & &  \\
 
@@ -794,21 +844,22 @@ Other           & 5\% & Other & 5\% \\
 
 
 \begin{frame}{Risk parity}
-Bridgewater strategy
+Weight assets so that their risk to the portfolio is equal.  
 \begin{itemize}[<+-| alert@+>]
 \pause
-\item All-Weather Asset-allocation approach introduced by Bridgewater
-\item Tests over long periods that include Great Depression and German hyperinflation
-\item Adjust the allocation to make the expected risk and return more compatible
-\item Traditional 60/40 stock-bond allocation is dominated by stocks
-\item Leverage bond holdings to make the risk comparable to that of stocks. 
+%\item All-Weather Asset-allocation approach introduced by Bridgewater
+\item The large variance of equities usually dominates a 60/40 portfolio
+\item A 25/75 equity-bond mix will equalise effects of each asset but will reduce the expected return
+\item Leveraging bonds to have a risk that is comparable to equities will reduce the overall risk of portfolio \textbf{and} increase the expected return
+\item This takes advantage of \emph{leverage aversion}
+\item There is risk that is not quantified
 \end{itemize}
 \end{frame}
 
 \begin{frame}{Risk parity examples}
 \begin{table}
 \begin{center}
-\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
+\rowcolors{1}{MyBrown!20}{MyBrown!5}
 \begin{tabular}{l  p{2.5cm} r}
 \textbf{Performance} & \textbf{60/40 stock-bonds} & \textbf{Risk parity}\\
 \hline
@@ -912,9 +963,9 @@ Recent work by Research Affiliates finds that factors have become \emph{expensiv
 \begin{frame}{Factor value}
 \begin{table}
 \begin{center}
-\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
-\begin{tabular}{l  p{2cm} r}
-\textbf{Testing} & \textbf{Beta} & \textbf{Current value}\\
+\rowcolors{1}{MyBrown!20}{MyBrown!5}
+\begin{tabular}{l  p{2.3cm} r}
+\textbf{Testing} & \textbf{Coefficient} & \textbf{Current value}\\
 \hline
 Value vs growth & -1.9\%* & Cheap\\
 Capitalisation & -0.72\%* & Mid\\
@@ -958,23 +1009,23 @@ How resilient are these factors?
 \item institutional
 \end{itemize}
 \end{itemize}
-\item Will the source continue? 
+\item Will the returns continue? 
 \end{itemize}
 \end{frame}
 
 \begin{frame}{Factor source 1}
 \begin{table}
 \begin{center}
-\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
+\rowcolors{1}{MyBrown!20}{MyBrown!5}
 \begin{tabular}{l l l}
 \textbf{Factor} & \textbf{Risk} & \textbf{Behavr-Instit}\\
 \hline
-Value & Systematic risk & Expectation error\\
+\textbf{Value} & Systematic risk & Expectation error\\
       &                 & Loss aversion\\
       &                 & Investment flows\\
-Size  & Systematic risk & Expectation error\\
+\textbf{Size}  & Systematic risk & Expectation error\\
       & Liquidity risk   & \\
-Momentum & Crash risk & Over-reaction\\
+\textbf{Momentum} & Crash risk & Over-reaction\\
         &             & Investment flows\\
         &             & Asynchronous trade\\
 \end{tabular}
@@ -987,14 +1038,14 @@ Momentum & Crash risk & Over-reaction\\
 \begin{frame}{Factor source 2}
 \begin{table}
 \begin{center}
-\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
+\rowcolors{1}{MyBrown!20}{MyBrown!5}
 \begin{tabular}{l p{3cm} l}
 \textbf{Factor} & \textbf{Risk} & \textbf{Behavr-Instit}\\
 \hline
-Low vol & NA          & Lottery effect\\
+\textbf{Low vol} & Borrowing Constraint          & Lottery effect\\
         &             & Overconfidence\\
         &             & Leverage aversion\\
-Quality & NA          & Expectations errors\\
+\textbf{Quality} & NA          & Expectations errors\\
         &             & Manipulated earnings\\
 \end{tabular}
 \end{center}
@@ -1015,9 +1066,9 @@ State street conducted a survey of the portfolio managers' response to the low-i
 \item Mixture of active and passive investment
 \item Key questions 
 \begin{itemize}
-\item Most important objective
-\item Changes to deal with low returns
-\item Impediments to change
+\item most important objective
+\item changes to deal with low returns
+\item barriers to overcome
 \end{itemize}
 \end{itemize}
 \end{frame}
@@ -1033,17 +1084,17 @@ The most important objective:
 \end{frame}
 
 \begin{frame}{Findings: changes to deal with low returns}
-The Changes to deal with low returns
+Changes to deal with low returns
 \begin{itemize}[<+-| alert@+>]
 \pause
-\item 49\% increased use of smart beta
-\item 27\% see an increase in active investment
-\item 27\% see an increase in objective investment
-\item 22\% see an increase in alternative assets
+\item 49\% see an increased use of smart beta
+\item 27\% see an increased use of active investment
+\item 27\% see an increased use of objective investment
+\item 22\% see an increased use of alternative assets
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Findings: Impediments to change}
+\begin{frame}{Findings: Barriers to change}
 Impediments to change
 \begin{itemize}[<+-| alert@+>]
 \pause
@@ -1055,19 +1106,44 @@ Impediments to change
 \end{itemize}
 \end{frame}
 
-
+\begin{frame}{Portfolio construction}
+\begin{tikzpicture} 
+%\draw[very thin, color = gray](0, 0) grid (12, 6);
+\tikzstyle{block} = [draw, rectangle, text width = 5em, 
+  text centered, minimum height = 6mm, node distance = 5em];
+\tikzstyle{line} = [draw, -stealth, thick]
+\node [block] at (1.5, 4) (one) {\scriptsize True 'market' \\ (unobserved)};
+\node [block] at (5, 4) (two) {\scriptsize Passive investable \\ benchmark};
+\node [block] at (5, 2) (twoandhalf) {\scriptsize Alternative \\ assets};
+\node [block] at (8.5, 4) (three) {\scriptsize Rebalanced \\ benchmark};
+\node [block] at (8.5, 2) (four) {\scriptsize Dynamic factor \\ allocation};
+\node [block] at (8.5, 0) (five) {\scriptsize Active \\ Portfolio};
+\path [line] (one) -- (two);
+\path [line] (two) -- (three);
+\path [line] (two) -- (twoandhalf);
+\path [line] (three) -- (four);
+\path [line] (four) -- (five);
+\node at (3, 5.5) [align = center]{\scriptsize Choice of investable \\ \scriptsize benchmark};
+\node at (6.5, 5.5) [align = center]{\scriptsize Rebalancing \\ \scriptsize gain};
+\node at (11, 3) [align = center] {\scriptsize Factor \\ \scriptsize risk premia};
+\node at (11, 1) [align = center] {\scriptsize Active \\ \scriptsize management};
+\node at (2, 0) [align = center] {\scriptsize Adapted from \\ \scriptsize Ang, Brandt, Denison (2014)};
+\end{tikzpicture}
+\end{frame} 
 
 \begin{frame}{References and further reading}
 \begin{itemize}
 \item Ang, A, W.N. Goetmann and S.M. Schaefer (2009), "Evaluation of Active Management of the Norwegian Government Pension Fund",
 
-\item Arnott, R,. J.C. Hsu and Philip Moore (2005, "Fundamental Indexation", Financial Analystis Journal", Vol 61 No. 2. pp 83-89
+\item Arnott, R,. J.C. Hsu and Philip Moore (2005, "Fundamental Indexation", Financial Analysts Journal", Vol 61 No. 2. pp 83-89
 
 \item Bender J., R. Briand, D. Melas, R. Subramanian, (2013), 'Foundations for Factor Investing", MSCI Research Insight. 
 
+\item Black, F., M. Jense, M. Scholes, (1972), "The Capital Asset Pricing Model: Some Empirical Tests", In Studies in the Theory of Capital Markets, edited by M. Jensen, NY Praeger
+
 \item Dalio, R., B. Prince, G. Jensen, "Our Thoughts about Risk Parity and All Weather, Bridgewater Daily Observations" September 16 2015.
 
-\item De Bondt, W. R. Thaler, (1995), "Does the Stock Market Overreaact?", Jornal of Finance, vol 40, No 3, 793-803 
+\item De Bondt, W. R. Thaler, (1995), "Does the Stock Market Overreact?", Journal of Finance, vol 40, No 3, 793-803 
 
 \end{itemize}
 \end{frame}
