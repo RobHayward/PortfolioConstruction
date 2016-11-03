@@ -765,7 +765,7 @@ Ang, Goetzmann and Schaefer (2009) find the following factors explain the active
 \item \textbf{Term:} yield curve 
 \item \textbf{Credit:} credit risk
 \item \textbf{FX carry:} carry-trade
-\item \textbf{Liquidity:} purchase is illiquid assets
+\item \textbf{Liquidity:} purchase illiquid assets
 \item \textbf{Value-growth:} long-value/short-growth
 \item \textbf{Size:} long-small cap/short-large cap
 \item \textbf{Momentum:} Buy recent winners sell recent losers
