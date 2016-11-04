@@ -37,4 +37,4 @@ plot(mu.p.y, sig.p.y, main = "Variance-covariance matrix", xlab = "Risk",
      ylab = "Return", type = 'b')
 points(mu.p.x, sig.p.x, type = 'b')
 text(x = mu.p.y,  y = sig.p.y, labels = "Short", pos = 4)
-text(x= mu.p.x,  y = sig.p.x, labels = "Equal", pos = 5)
+text(x= mu.p.x,  y = sig.p.x, labels = "Equal", pos = 4)
