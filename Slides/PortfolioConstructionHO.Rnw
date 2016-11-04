@@ -1,4 +1,4 @@
-\documentclass[14pt,xcolor=pdftex,dvipsnames,table]{beamer}
+\documentclass[14pt,xcolor=pdftex,dvipsnames,table, handout]{beamer}
 
 % Specify theme
 \usetheme{Madrid}
@@ -76,6 +76,7 @@
 \draw [<->, thick] (0, 3) node (yaxis) [above] {$Return$} 
   |- (5, 0) node (xaxis) [right] {$Risk$};
 \pause
+\draw[thick, color = brown] (1.0, 0.5) to [out = 120, in = 210] (2.0, 2.0) to [out = 25, in = 180] (5, 2.5);
 \node at (1.0, 1.0) [right] {\scriptsize Efficient Frontier};
 \pause
 \node at (1.9, 2) [above left] {MP};
@@ -448,6 +449,7 @@ There are a number of persistent criticisms of using traditional indices as the 
 \item Buy \emph{growth} and sell \emph{value}
 \item Overweight over-valued and under-weight undervalued
 \end{itemize}
+ 
 \end{itemize}
 \end{frame}
 
@@ -572,6 +574,7 @@ Composite &  9.32pp& 17.2\%& 0.28
 \end{tabular}
 \end{center}
 \end{table}
+Value-added and risk adjusted returns.  Arnott, Hsu and More (2005)
 \end{frame}
 
 \section{Factor investment}
@@ -762,7 +765,7 @@ Ang, Goetzmann and Schaefer (2009) find the following factors explain the active
 \item \textbf{Term:} yield curve 
 \item \textbf{Credit:} credit risk
 \item \textbf{FX carry:} carry-trade
-\item \textbf{Liquidity:} purchase illiquid assets
+\item \textbf{Liquidity:} purchase is illiquid assets
 \item \textbf{Value-growth:} long-value/short-growth
 \item \textbf{Size:} long-small cap/short-large cap
 \item \textbf{Momentum:} Buy recent winners sell recent losers
@@ -1050,6 +1053,7 @@ How resilient are these factors?
 Adapted from MSCI \emph{Foundations of Factor Investment}
 
 \end{frame}
+
 
 
 \section{The future}
