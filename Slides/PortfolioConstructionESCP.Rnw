@@ -80,7 +80,7 @@
 \node at (1.0, 1.0) [right] {\scriptsize Efficient Frontier};
 \pause
 \node at (1.9, 2) [above left] {MP};
-\draw [fill = green] (2, 2) circle [radius = 0.05];
+\draw [fill = OliveGreen] (2, 2) circle [radius = 0.05];
 \pause
 \node at (0, 1) [left] {rf};
 \pause
@@ -200,7 +200,7 @@ There are things we know; there are things we do not know; there are things that
 \pause
 \node at (2.5, 1.75) [below right] {\scriptsize Market Portfolio};
 \draw [domain = 0.0:5.0, color = olive] plot(\x, {0.5 + 0.5*\x});
-\draw [fill = green] (2.5, 1.75) circle [radius = 0.05];
+\draw [fill = OliveGreen] (2.5, 1.75) circle [radius = 0.05];
 \pause
 \node at (2.5, 1.75) [above left] {$\beta$ = 1};
 \end{tikzpicture}
@@ -224,17 +224,17 @@ A number of additional risk factors have been found
   |- (5, 0) node (xaxis) [right] {$Risk$};
 \pause
 \draw[domain = 0.0:5.0, color = olive] plot(\x, {0.5 + 0.5*\x});
-\draw [fill = green] (2.5, 1.75) circle [radius = 0.05];
+\draw [fill = OliveGreen] (2.5, 1.75) circle [radius = 0.05];
 %\node at (2.5, 1.75) [above left] {$\beta$ = 1};
 \node at (2.5, 1.75) [below right] {\scriptsize Market Portfolio};
 \pause
-\draw [fill = green] (3.5, 2.5) circle [radius = 0.05];
+\draw [fill = OliveGreen] (3.5, 2.5) circle [radius = 0.05];
 \node at (3.5, 2.5) [left] {\scriptsize Small Capitalisation};
 \pause
-\draw [fill = green] (1.5, 1.5) circle [radius = 0.05];
+\draw [fill = OliveGreen] (1.5, 1.5) circle [radius = 0.05];
 \node at (1.5, 1.5) [left] {\scriptsize Value};
 \pause
-\draw [fill = green] (3.5, 2.0) circle [radius = 0.05];
+\draw [fill = OliveGreen] (3.5, 2.0) circle [radius = 0.05];
 \node at (3.5, 2.0) [right] {\scriptsize Growth};
 \end{tikzpicture}
 \end{frame}
@@ -597,17 +597,17 @@ Fundamentally-weighted indices would tend to pick up the value and growth anomal
   |- (5, 0) node (xaxis) [right] {$Risk$};
 \pause
 \draw[domain = 0.0:5.0, color = olive] plot(\x, {0.5 + 0.5*\x});
-\draw [fill = green] (2.5, 1.75) circle [radius = 0.05];
+\draw [fill = OliveGreen] (2.5, 1.75) circle [radius = 0.05];
 %\node at (2.5, 1.75) [above left] {$\beta$ = 1};
 \node at (2.5, 1.75) [below right] {\scriptsize Market Portfolio};
 \pause
-\draw [fill = green] (3.5, 2.5) circle [radius = 0.05];
+\draw [fill = OliveGreen] (3.5, 2.5) circle [radius = 0.05];
 \node at (3.5, 2.5) [left] {\scriptsize Small Capitalisation};
 \pause
-\draw [fill = green] (1.5, 1.5) circle [radius = 0.05];
+\draw [fill = OliveGreen] (1.5, 1.5) circle [radius = 0.05];
 \node at (1.5, 1.5) [left] {\scriptsize Value};
 \pause
-\draw [fill = green] (3.5, 2.0) circle [radius = 0.05];
+\draw [fill = OliveGreen] (3.5, 2.0) circle [radius = 0.05];
 \node at (3.5, 2.0) [right] {\scriptsize Growth};
 \end{tikzpicture}
 \end{frame}
