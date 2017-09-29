@@ -80,7 +80,7 @@
 \node at (1.0, 1.0) [right] {\scriptsize Efficient Frontier};
 \pause
 \node at (1.9, 2) [above left] {MP};
-\draw [fill = brown] (2, 2) circle [radius = 0.05];
+\draw [fill = green] (2, 2) circle [radius = 0.05];
 \pause
 \node at (0, 1) [left] {rf};
 \pause
@@ -200,7 +200,7 @@ There are things we know; there are things we do not know; there are things that
 \pause
 \node at (2.5, 1.75) [below right] {\scriptsize Market Portfolio};
 \draw [domain = 0.0:5.0, color = olive] plot(\x, {0.5 + 0.5*\x});
-\draw [fill = brown] (2.5, 1.75) circle [radius = 0.05];
+\draw [fill = green] (2.5, 1.75) circle [radius = 0.05];
 \pause
 \node at (2.5, 1.75) [above left] {$\beta$ = 1};
 \end{tikzpicture}
@@ -224,17 +224,17 @@ A number of additional risk factors have been found
   |- (5, 0) node (xaxis) [right] {$Risk$};
 \pause
 \draw[domain = 0.0:5.0, color = olive] plot(\x, {0.5 + 0.5*\x});
-\draw [fill = brown] (2.5, 1.75) circle [radius = 0.05];
+\draw [fill = green] (2.5, 1.75) circle [radius = 0.05];
 %\node at (2.5, 1.75) [above left] {$\beta$ = 1};
 \node at (2.5, 1.75) [below right] {\scriptsize Market Portfolio};
 \pause
-\draw [fill = brown] (3.5, 2.5) circle [radius = 0.05];
+\draw [fill = green] (3.5, 2.5) circle [radius = 0.05];
 \node at (3.5, 2.5) [left] {\scriptsize Small Capitalisation};
 \pause
-\draw [fill = brown] (1.5, 1.5) circle [radius = 0.05];
+\draw [fill = green] (1.5, 1.5) circle [radius = 0.05];
 \node at (1.5, 1.5) [left] {\scriptsize Value};
 \pause
-\draw [fill = brown] (3.5, 2.0) circle [radius = 0.05];
+\draw [fill = green] (3.5, 2.0) circle [radius = 0.05];
 \node at (3.5, 2.0) [right] {\scriptsize Growth};
 \end{tikzpicture}
 \end{frame}
@@ -511,7 +511,7 @@ Arnott, Hsu and More tested a range of alternative (fundamental) weightings
 \begin{frame}{Fundamentally weighted indices: results}
 \begin{table}
 \begin{center}
-\rowcolors{1}{MyBrown!20}{MyBrown!5}
+\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
 \begin{tabular}{l r r r}
 \textbf{Portfolio/index} & \textbf{1980s} & \textbf{1990s} & \textbf{2000-04}\\
 \hline
@@ -557,7 +557,7 @@ You have the advantages of the \emph{capitalisation-weighted} investment without
 
 \begin{frame}{Comparison to Capitalisation-weighed index (2000-04)}
 %\begin{center}
-\rowcolors{1}{MyBrown!20}{MyBrown!5}
+\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
 \begin{table}
 \begin{center}
 \begin{tabular}{l r r r}
@@ -597,17 +597,17 @@ Fundamentally-weighted indices would tend to pick up the value and growth anomal
   |- (5, 0) node (xaxis) [right] {$Risk$};
 \pause
 \draw[domain = 0.0:5.0, color = olive] plot(\x, {0.5 + 0.5*\x});
-\draw [fill = brown] (2.5, 1.75) circle [radius = 0.05];
+\draw [fill = green] (2.5, 1.75) circle [radius = 0.05];
 %\node at (2.5, 1.75) [above left] {$\beta$ = 1};
 \node at (2.5, 1.75) [below right] {\scriptsize Market Portfolio};
 \pause
-\draw [fill = brown] (3.5, 2.5) circle [radius = 0.05];
+\draw [fill = green] (3.5, 2.5) circle [radius = 0.05];
 \node at (3.5, 2.5) [left] {\scriptsize Small Capitalisation};
 \pause
-\draw [fill = brown] (1.5, 1.5) circle [radius = 0.05];
+\draw [fill = green] (1.5, 1.5) circle [radius = 0.05];
 \node at (1.5, 1.5) [left] {\scriptsize Value};
 \pause
-\draw [fill = brown] (3.5, 2.0) circle [radius = 0.05];
+\draw [fill = green] (3.5, 2.0) circle [radius = 0.05];
 \node at (3.5, 2.0) [right] {\scriptsize Growth};
 \end{tikzpicture}
 \end{frame}
@@ -615,7 +615,7 @@ Fundamentally-weighted indices would tend to pick up the value and growth anomal
 \begin{frame}{Factor investment}
 \begin{table}
 \begin{center}
-\rowcolors{1}{MyBrown!20}{MyBrown!5}
+\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
 \begin{tabular}{l r r }
 \textbf{Factor} & \textbf{What is it?} & \textbf{Metric} \\
 \hline
@@ -659,7 +659,7 @@ Investec analysis of following factors for S\&P 500 and MSCI EAFE (Dec 1991 to D
 \begin{frame}{Results 1}
 Dec 1991 to Dec 2015
 %\begin{center}
-\rowcolors{1}{MyBrown!20}{MyBrown!5}
+\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
 \begin{table}
 \begin{center}
 \begin{tabular}{l r r }
@@ -680,7 +680,7 @@ US stocks; risk-adjusted return is return per unit of volatility. Bender, Briand
 \begin{frame}{Results 2}
 Dec 1991 to Dec 2015
 %\begin{center}
-\rowcolors{1}{MyBrown!20}{MyBrown!5}
+\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
 \begin{table}
 \begin{center}
 \begin{tabular}{l r r }
@@ -819,7 +819,7 @@ Colourful metaphors
 For a standard pension fund (adapted from Podkaminer (2013) CFA Institute)
 \begin{table}
 \begin{center}
-\rowcolors{1}{MyBrown!20}{MyBrown!5}
+\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
 \begin{tabular}{l r r r}
 \textbf{Asset} & \textbf{\%} & \textbf{Risk} & \textbf{\%}\\
 \hline
@@ -857,7 +857,7 @@ Weight assets so that their risk to the portfolio is equal.
 \begin{frame}{Risk parity examples}
 \begin{table}
 \begin{center}
-\rowcolors{1}{MyBrown!20}{MyBrown!5}
+\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
 \begin{tabular}{l  p{2.5cm} r}
 \textbf{Performance} & \textbf{60/40 stock-bonds} & \textbf{Risk parity}\\
 \hline
@@ -961,7 +961,7 @@ Recent work by Research Affiliates finds that factors have become \emph{expensiv
 \begin{frame}{Factor value}
 \begin{table}
 \begin{center}
-\rowcolors{1}{MyBrown!20}{MyBrown!5}
+\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
 \begin{tabular}{l  p{2.3cm} r}
 \textbf{Testing} & \textbf{Coefficient} & \textbf{Current value}\\
 \hline
@@ -1014,7 +1014,7 @@ How resilient are these factors?
 \begin{frame}{Factor source 1}
 \begin{table}
 \begin{center}
-\rowcolors{1}{MyBrown!20}{MyBrown!5}
+\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
 \begin{tabular}{l l l}
 \textbf{Factor} & \textbf{Risk} & \textbf{Behavr-Instit}\\
 \hline
@@ -1036,7 +1036,7 @@ How resilient are these factors?
 \begin{frame}{Factor source 2}
 \begin{table}
 \begin{center}
-\rowcolors{1}{MyBrown!20}{MyBrown!5}
+\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
 \begin{tabular}{l p{3cm} l}
 \textbf{Factor} & \textbf{Risk} & \textbf{Behavr-Instit}\\
 \hline

@@ -1,6 +1,6 @@
 # Matrix optimisation
 # this takes the variance-covariance matrix from the excel file. 
-#mysigma <- matrix(c(0.041227, 0.02266, 0.03056, 0.0000, 
+mysigma <- matrix(c(0.041227, 0.02266, 0.03056, 0.0000, 
                     0.0227, 0.0479, 0.015, 0.00000, 03056, 
                     0.01500, 0.09030, 0.0000, 0.00, 0.00, 
                     0.00, 0.00), nrow = 4)
