@@ -1,0 +1,34 @@
+These are some notes for the second of the Portfolio Construction sessions. I just need to remind myself of some of the key features.
+
+Regimes
+I did not speak much about the risk-on:risk-off strategy. This is all about low volatility. The HSBC note from the 6 August 2016 is all about the two regimes.  What do you buy in each of these regimes? 
+
+The big doubt at that time was that volatility was low even though there had been some major shocks: Brexit, Trump, terrorism, (others?, can we use some pictures here?).  The move forward 12 months means that volatiliktyremains low.  Use ViX index.  It is probably not enough just to say that it will change at some point and it will be ugly.  We need some metrics that can determine when this will be. 
+
+One good example of this is the carry-trade.  When they are successful, they become crowded and the risk of reversal 
+
+Alternative assets
+Another though it the exposuire to credit risk. There are securitisations of loans but also some scope for more machine-learning of credit risk. Can this be captured.  Is it a hedge-fund idea or a fintech idea? Can it be scalled?  
+
+Robert Barro and Sanjay Misra have a study of gold performance. The answer: gold has not been a good hedge against poor economic performance. From 1836 to 2011 gold delivered a return of 1.1% (close to the treaury bill rate of 1.0%).  However, the standard deviation of annual gold returns was 13.7% compared to 16.7% for the US stock market. There is no negative correlation with GDP as would be the case if it were to offer protection against recession. The correlation is essentially zero. The authors identify 56 'economic disasters' and find that the real returns in these disasters are litle more than average and that there are real losses in over half of the 56 cases. 
+
+Diversification 
+Raviv 06-Aug-2016 has the article on 60-40 portfolio performance that shows that even a very simple diversified model will do relatively well. I can use this 
+
+Risk metrics
+Ang and the risk factors that may run across asset classes.  Assets like property, venture capital commodities and emerging markets all have equity-like features and perform very much like equities in times of crisis.  Does this link to the regimes above? This is probably exacerbated by the increased linkages caused by globalisation. There are also institutional features: funds will sell liquid assets in times of crisis so that they have cash that is available for redemptions. redemptions 
+
+Ang's list of factors are: volatility, momentum, quality, value and yield.  For bonds, Pimco has five buckets of risk: duration, curve, volatility, sensitivity to foreign exchange and spread ? Linking to the regimes above, some of these factors do well duering volatile periods and some do not. The aim is to be truely diversificed. Towers watson speaks of return drivers. This can inclde the sort of techniques used by hedge funds such as merger arbitrage and carry etc. The aim is to test the performance of these factros through a period of shocks such as LTCM etc. Asset classes tend to fall together but risk factors offer the diversification. 
+
+The return drivers: equity risk premium, credit risk premium and inflation risk premium to begin. Different return drivers perform in different ways under different circumstances. Thematic investing could also represent an alternative solution. Thematic investment tries to focus on future trends. It screens the players to be affected by major new trends. This also provides a nice contrast to the traditional MPT approach that relies on past performance. Thematic investment is not easy. For example, Towers report that over 2000 auto companies were creating in the US after the investion of the car.  However, only a very few of these survive.  The aim is to capture those winners.  This is the same as the dot.com time. Amazon survive amongst the many. Therefore, thematic investment requires top-down and also bottom-up approaches. 
+
+This thematic approach is based on the concept that the future will be different in this way.... It is very hard to get concrete support for these sort of ideas. The aim is to tilt the portfllio to take advantage of trends and to avoid potenital pitfalls. An example offered by Tower is that in a world of increasing population and relative scarcity of water, this could be a theme: to take advantage of water owners and steer clear of thse that are vulnerable. It may involve technology that will find a solution. 
+
+It is important to be aware of possible risk concetratins.  For example, an Austrailian pension fund is already exposed to Australian equities nad therefore to emerging markets.  Using an emerging markets theme would unduely concetrate risk. 
+
+Some other theems from Towers Watson (paper in Other): Altered spedending (aging population, negaive equities in short-term, better equities in lopng-term; heealtcare and consumer staples. Water: water companies, clean technology. Othes. Emerging wealth: rise of global middle class: developed market portfolio to emerging wealth. Opportunities in hedge funds and private wealth. 
+
+Institutiions
+State street has stopped using the Russle indices and started compiling its own indicates as part of the race to cut costs. The expense ratio will fall to 0.03 from 0.1 and 0.05 from 0.1. The boom in ETF has been a boon to the large index providers. 
+There is a distinction between asset owners (pension funds and insurance funds) and the fund managers. There is a report here that suggests that asset owners are increasingly taking some of the work in-house and are restribting the funds that they put outside to those that involve specialist fund managers and specialist assets. Alterantive investments may be outsurced. Pension fund have very specific mandates for hedge funds. Asset owners include pension funds, insurance companies, sovereign wealth funds and endowments. Mkinsey is asking for these asset owners to seek a more long-term bhorizon. 
+
