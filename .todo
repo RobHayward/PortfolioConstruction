@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<todo version="0.1.20">
+    <note priority="veryhigh" time="1509450110">
+        Run through Cambridge slides and update
+        <note priority="veryhigh" time="1509450797">
+            The rise of passive investment must be updated (slide 24)
+        </note>
+        <note priority="veryhigh" time="1509450958">
+            Try to dinstinguish between asset owners and asset managers
+        </note>
+        <note priority="veryhigh" time="1509451356">
+            The rise of the ETF should be updated
+        </note>
+        <note priority="veryhigh" time="1509451403">
+            The risks associated with ETF can be updated
+        </note>
+        <note priority="veryhigh" time="1509451752">
+            Need to update or remove the State Street Survey on slide 77
+        </note>
+        <note priority="high" time="1509450998">
+            Update Norwegian information (slide 30)
+        </note>
+        <note priority="high" time="1509451499">
+            Slide 62 can be expanded into two. Other issues that may be interesting - quantification ESG metrics and governance
+        </note>
+        <note priority="high" time="1509451510">
+            Slide 62 can be expanded into two. Other issues that may be interesting - quantification ESG metrics and governance and textmining.
+        </note>
+        <note priority="high" time="1509451606">
+            Need to take a look at low volatility. Does this expand beyond just factors into a more general investment style?
+        </note>
+        <note priority="high" time="1509451685">
+            The fickle factors section on slide 73 may change. Can it come earlier? It is about resilience. I think that it is important. A conclusion?
+        </note>
+        <note priority="medium" time="1509451200">
+            Consider whether we need the table on slide 46 and the bullets on 47. Can they be combined?  Maybe take out the table and use slide 48 with the explanation of the study that was conducted.
+        </note>
+    </note>
+    <note priority="veryhigh" time="1509462110">
+        Look for the BlackSwan picture at work
+    </note>
+    <note priority="veryhigh" time="1509462158">
+        Try to compile the PortfolioConstruction 2017 on Toshiba.
+    </note>
+    <note priority="high" time="1509462419">
+        Comments on specific slides
+        <note priority="high" time="1509462460">
+            Do we need something more on Active Mangement Success?
+        </note>
+    </note>
+</todo>
