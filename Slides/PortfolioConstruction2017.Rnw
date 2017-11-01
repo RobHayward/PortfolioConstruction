@@ -161,7 +161,7 @@ lines(x, fs(x, -0.4, 1), type = 'l', lty = 2)
 
 \begin{frame}{Black swans}
 \centering
-\includegraphics[scale = 0.2]{Blackswan}
+\includegraphics[scale = 0.2]{blackswan}
 \end{frame}
 
 \begin{frame}{Unknown unknowns}
@@ -302,148 +302,38 @@ The impossibility of informationally efficient markets
 \begin{itemize}
 \item Malkiel (1995), Gruber (1996), Wermers (2000, 2003), and Jones
 and Wermers (2011)
+\item Morningstar : only 16.9\% of US large-growth managers were able to beat their passive counterparts over the 10 year period
 \end{itemize}
-\item However, individual managers may be successful
-\item Hedge funds have come under increased scrutiny and questions are raised about high fees
+\item Cost and fees are a major factor
+\item There are exceptions
 \end{itemize}
 \end{frame}
  
 \begin{frame}{Rise of Passive Investment}
-\textbf{Morningstar}
+\textbf{ETFGI}
 \begin{itemize}[<+-| alert@+>]
 \pause
-\item Index-tracking funds increased share by \$2.0trn since 2013, reaching \$5.0tn
-\item Dominated by Vanguard and BlackRock in US equity market
+\item ETF assets were \$4.3tn in Sep 2017 
+\item They were \$3.4tn at the end of 2016
+\item They were \$1.3tn at the end of 2010
+\item There is currently a price war (2-5bp in some places)
+\item Active management fees are down to 63bp from 100bp in 2000
+\item This compares to the 2-20 for hedge funds
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Rise of Passive Investment}
+\textbf{ETFGI and Morningstar}
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item ETF assets were \$4.3tn in Sep 2017 
+\item They were \$3.4tn at the end of 2016
 \item Only 16.9\% of US large-growth managers were able to beat their passive counterparts over the 10 year period
 \item Cost is a major contributor to investment performance
 \item Hedge funds notoriously charge 2\% and 20\%
 \end{itemize}
 \end{frame}
 
-\section{Portfolio construction: decision-making}
-%\begin{frame}{Fund structure and performance}
-%There are two main structures for funds
-%\begin{itemize}[<+-| alert@+>]
-%\pause
-%\item Endowment model
-%\begin{itemize}
-%\item Strategic asset allocation
-%\item Asset holdings are changed gradually
-%\item Performance measured against asset benchmark
-%\end{itemize}
-%\item Opportunity cost model
-%\begin{itemize}
-%\item Benchmark is a passive investment in stocks and bonds
-%\item Leeway for fund managers to buy alternative assets (but tracking-error limits)
-%\item Performance (net of fees) is judged against benchmark
-%\end{itemize}
-%\end{itemize}
-%\end{frame}
-
-\begin{frame}{Portfolio construction}
-\begin{tikzpicture} 
-%\draw[very thin, color = gray](0, 0) grid (12, 6);
-\tikzstyle{block} = [draw, rectangle, text width = 5em, 
-  text centered, minimum height = 6mm, node distance = 5em];
-\tikzstyle{line} = [draw, -stealth, thick]
-\node [block] at (1.5, 4) (one) {\scriptsize True 'market' \\ (unobserved)};
-\node [block] at (5, 4) (two) {\scriptsize Passive investable \\ benchmark};
-\node [block] at (8.5, 4) (three) {\scriptsize Rebalanced \\ benchmark};
-\node [block] at (8.5, 2) (four) {\scriptsize Factor \\ tilts};
-\node [block] at (8.5, 0) (five) {\scriptsize Active \\ Portfolio};
-\path [line] (one) -- (two);
-\path [line] (two) -- (three);
-\path [line] (three) -- (four);
-\path [line] (four) -- (five);
-\node at (3, 5.5) [align = center]{\scriptsize Choice of investable \\ \scriptsize benchmark};
-\node at (6.5, 5.5) [align = center]{\scriptsize Rebalancing \\ \scriptsize gain};
-\node at (11, 3) [align = center] {\scriptsize Factor \\ \scriptsize risk premia};
-\node at (11, 1) [align = center] {\scriptsize Active \\ \scriptsize management};
-\node at (2, 0) [align = center] {\scriptsize Ang, Brandt, Denison (2014)};
-\end{tikzpicture}
-\end{frame}
-
-\begin{frame}{Active components of fund}
-There are a number of places where the fund must be active
-\begin{itemize}[<+-| alert@+>]
-\pause
-\item Deciding on the appropriate market
-\item Finding an investable fund
-\item Frequency of asset re-balancing
-\item Factor tilts
-\item Active security selection
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Norwegian Petroleum Fund}
-\begin{center}
-\includegraphics[height = 3.0in]{Flag_Norway}
-\end{center}
-\end{frame}
-
-\begin{frame}{Norwegian Petroleum Fund}
-Started in 1996 with NOK 40 bn now has 7.2tn (\$875bn) 
-\begin{itemize}[<+-| alert@+>]
-\pause
-\item 1998 - 40\% of assets were equities
-\item 2001 - Budetary rule (maximum of 4\% to be used)
-\item 2009 - 60\% of assets were equities
-\item 2010 - 5\% real estate
-\item Today 60\% equity, 35\% fixed income, 5\% real estate
-\item Ethical council 
-\item Mork Committee
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Knut Anton Mork}
-\begin{center}
-\includegraphics[height = 3.0in]{mork}
-\end{center}
-\end{frame}
-
-\begin{frame}{Mork}
-Committee was split
-\begin{itemize}[<+-| alert@+>]
-\pause
-\item Majority wants to increase equity share to 70\%
-\begin{itemize}
-\item Risky oil and gas reserves have fallen as a share of assets
-\item Fiscal rule could be more adaptable
-\end{itemize}
-\item Mork wants to reduce the size of the equity share to 50\%
-\begin{itemize}
-\item Concerned about the need for steady fiscal transfers
-\end{itemize}
-\end{itemize}
-\end{frame}
-
-
-
-%\section{Portfolio Practice}
-%\begin{frame}{Portfolio Practice}
-%Research and sales focus on (US) stocks, but $\dots$
-%\begin{itemize}[<+-| alert@+>]
-%\pause
-%\item Diversification for bonds
-%\begin{itemize}
-%\item Diversify across levels of credit
-%\item Diversify across maturities
-%\item Diversify across countries
-%\end{itemize}
-%\item Diversification for commodities
-%\item Diversification for currency
-%\end{itemize}
-%\end{frame}
-%
-%\begin{frame}{Bonds}
-%Two big issues for bond markets
-%\begin{itemize}[<+-| alert@+>]
-%\pause
-%\item Hordahl et al. (2016): 2005-15 100bp rise in US yield curve associated with a 70bp to 80bp rise in  
-% \item Reduced liquidity due to regulation of investment banks (rebalancing more expensive)
-% \item Increased use of ETF in the second (article on feedly)
-% \end{itemize}
-% \end{frame}
 
 
 \section{Smart beta}
@@ -767,13 +657,110 @@ These are for government and corporate sectors
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Flowqs to bond ETFs}
+\begin{frame}{Flows to bond ETFs}
 Though lagging equities, increased money has been drawn into bond ETFs this year.  According to Morningstar 
 \begin{itemize}[<+-| alert@+>]
 \pause
-\item Bond ETFs attracted $130bn in 2017 so far
-\item This is more than the record $117bn that was recorded last year
+\item Bond ETFs attracted \$130bn in 2017 so far
+\item This is more than the record \$117bn that was recorded last year
 \item In the environment of very low rates, there is particular intrest in floating rate, short maturity and emerging market bond ETFs
+\end{itemize}
+\end{frame}
+
+\section{Portfolio construction: decision-making}
+\begin{frame}{Norwegian Petroleum Fund}
+\begin{center}
+\includegraphics[height = 3.0in]{Flag_Norway}
+\end{center}
+\end{frame}
+
+\begin{frame}{Norwegian Petroleum Fund}
+Started in 1996 with NOK 40 bn passed \$1.0tn in Sep 2017 (NOK 8.2tn)
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item 1998 - 40\% of assets were equities
+\item 2001 - Budetary rule (maximum of 4\% to be used)
+\item 2009 - 60\% of assets were equities
+\item 2010 - 5\% real estate
+\item Today 60\% equity, 35\% fixed income, 5\% real estate
+\item Ethical council 
+\item Mork Committee
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Knut Anton Mork}
+\begin{center}
+\includegraphics[height = 3.0in]{Mork}
+\end{center}
+\end{frame}
+
+\begin{frame}{Mork}
+Committee was split
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Majority wanted to increase the equity share to 70\%
+\begin{itemize}
+\item Risky oil and gas reserves have fallen as a share of assets
+\item Fiscal rule could be more adaptable
+\end{itemize}
+\item Mork wanted to reduce the size of the equity share to 50\%
+\begin{itemize}
+\item His minority group was Concerned about the need for steady fiscal transfers
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+%\begin{frame}{Fund structure and performance}
+%There are two main structures for funds
+%\begin{itemize}[<+-| alert@+>]
+%\pause
+%\item Endowment model
+%\begin{itemize}
+%\item Strategic asset allocation
+%\item Asset holdings are changed gradually
+%\item Performance measured against asset benchmark
+%\end{itemize}
+%\item Opportunity cost model
+%\begin{itemize}
+%\item Benchmark is a passive investment in stocks and bonds
+%\item Leeway for fund managers to buy alternative assets (but tracking-error limits)
+%\item Performance (net of fees) is judged against benchmark
+%\end{itemize}
+%\end{itemize}
+%\end{frame}
+
+\begin{frame}{Portfolio construction}
+\begin{tikzpicture} 
+%\draw[very thin, color = gray](0, 0) grid (12, 6);
+\tikzstyle{block} = [draw, rectangle, text width = 5em, 
+  text centered, minimum height = 6mm, node distance = 5em];
+\tikzstyle{line} = [draw, -stealth, thick]
+\node [block] at (1.5, 4) (one) {\scriptsize True 'market' \\ (unobserved)};
+\node [block] at (5, 4) (two) {\scriptsize Passive investable \\ benchmark};
+\node [block] at (8.5, 4) (three) {\scriptsize Rebalanced \\ benchmark};
+\node [block] at (8.5, 2) (four) {\scriptsize Factor \\ tilts};
+\node [block] at (8.5, 0) (five) {\scriptsize Active \\ Portfolio};
+\path [line] (one) -- (two);
+\path [line] (two) -- (three);
+\path [line] (three) -- (four);
+\path [line] (four) -- (five);
+\node at (3, 5.5) [align = center]{\scriptsize Choice of investable \\ \scriptsize benchmark};
+\node at (6.5, 5.5) [align = center]{\scriptsize Rebalancing \\ \scriptsize gain};
+\node at (11, 3) [align = center] {\scriptsize Factor \\ \scriptsize risk premia};
+\node at (11, 1) [align = center] {\scriptsize Active \\ \scriptsize management};
+\node at (2, 0) [align = center] {\scriptsize Ang, Brandt, Denison (2014)};
+\end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Active components of fund}
+There are a number of places where the fund must be active
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Deciding on the appropriate market
+\item Finding an investable fund
+\item Frequency of asset re-balancing
+\item Factor tilts
+\item Active security selection
 \end{itemize}
 \end{frame}
 
