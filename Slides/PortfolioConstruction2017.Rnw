@@ -76,6 +76,8 @@
 \draw [<->, thick] (0, 3) node (yaxis) [above] {$Return$} 
   |- (5, 0) node (xaxis) [right] {$Risk$};
 \pause
+\draw[thick, color ={rgb: brown, 5; white, 1}] (1.0, 0.5) to [out = 120, in = 210] (2.0, 2.0) to [out = 25, in = 180] (5, 2.5);
+\pause
 \node at (1.0, 1.0) [right] {\scriptsize Efficient Frontier};
 \pause
 \node at (1.9, 2) [above left] {MP};
@@ -309,7 +311,7 @@ and Wermers (2011)
 \end{itemize}
 \end{frame}
  
-\begin{frame}{Rise of Passive Investment}
+\begin{frame}{The rise of passive investment}
 \textbf{ETFGI}
 \begin{itemize}[<+-| alert@+>]
 \pause
@@ -321,20 +323,6 @@ and Wermers (2011)
 \item This compares to the 2-20 for hedge funds
 \end{itemize}
 \end{frame}
-
-\begin{frame}{Rise of Passive Investment}
-\textbf{ETFGI and Morningstar}
-\begin{itemize}[<+-| alert@+>]
-\pause
-\item ETF assets were \$4.3tn in Sep 2017 
-\item They were \$3.4tn at the end of 2016
-\item Only 16.9\% of US large-growth managers were able to beat their passive counterparts over the 10 year period
-\item Cost is a major contributor to investment performance
-\item Hedge funds notoriously charge 2\% and 20\%
-\end{itemize}
-\end{frame}
-
-
 
 \section{Smart beta}
 \begin{frame}{Criticisms of index investment}
@@ -698,7 +686,7 @@ Started in 1996 with NOK 40 bn passed \$1.0tn in Sep 2017 (NOK 8.2tn)
 Committee was split
 \begin{itemize}[<+-| alert@+>]
 \pause
-\item Majority wanted to increase the equity share to 70\%
+\item Majority wanted to increase equity share to 70\%
 \begin{itemize}
 \item Risky oil and gas reserves have fallen as a share of assets
 \item Fiscal rule could be more adaptable
@@ -805,7 +793,7 @@ The proliferation of ETF has raised some concerns
 % this means that 20\% fall in market would happen in 2 hours not 2 days.
 \item More volume in ETF than the underlying
 \item Can be redeemed in kind
-\item SEC investigation: there are already limits on leverage and the minimum amount of cash)
+\item US (SEC), Irish and French investigations are underway: there are already limits on leverage and the minimum amount of cash)
 % restriction on use of derivatives and maximum of 15\% illiquid funds
 \end{itemize}
 \end{frame}
@@ -845,10 +833,23 @@ Other           & 5\% & Other & 5\% \\
 \end{tabular}
 \end{center}
 \end{table}
-
 \end{frame}
 
+\begun{frame}{Statistical methods}
+\begin{itemize}[<+-| alert@+>]
+\item Principal components (PCA)
+\item Seeks to identify orthogonal factors that contribute most to the variation of the portfolio
+\item It may find that different assets have very similar risk factors
+\end{itemize}
+\end{frame}
 
+\begin{frame}{Matching liabilities}
+This will treat liabilities as a short position to be hedged
+\begin{itemize}
+\item Maturity matching
+\item Are liabilities bond-like or equity-like?
+\item This is something that was considered by the Norwegian Petroleum Fund.
+\end{itemize}
 \begin{frame}{Risk parity}
 Weight assets so that their risk to the portfolio is equal.  
 \begin{itemize}[<+-| alert@+>]
@@ -879,24 +880,6 @@ Sharpe Ratio & 0.45 & 0.72
 Risk-parity vs traditional average 1946 to 2015: Dalio, Prince, Jensen (2015)
 \end{frame}
 
-\begin{frame}{Other methods}
-\begin{itemize}[<+-| alert@+>]
-\pause
-\item Matching liabilities 
-\begin{itemize}
-\item Treat liabilities as a short position to be hedged
-\item Maturity matching
-\item Are liabilities bond-like or equity-like?
-\item This is something that was considered by the Norwegian Petroleum Fund.
-\end{itemize}
-\item Statistical methods
-\begin{itemize}
-\item Principal components (PCA)
-\item Seeks to identify orthogonal factors that contribute most to the variation of the portfolio
-\item It may find that different assets have very similar risk factors
-\end{itemize}
-\end{itemize}
-\end{frame}
 
 %\begin{frame}{Statistical factors}
 %It is also possible to use statistical methods to draw out factors
@@ -958,13 +941,13 @@ R. Arnott studied performance of factors before and after publication
 \end{frame}
 
 \begin{frame}{Factors are expensive}
-Recent work by Research Affiliates finds that factors have become \emph{expensive}
+A study carried out by Research Affiliates in 2015 found that factors were \emph{expensive}
 \begin{itemize}[<+-| alert@+>]
 \pause
 \item Assess whether factors are expensive of cheap by measuring the price-to-book ratio
 \item Compare the value (price-to-book) vs 5 year returns
 \item Find the current valuation
-\item Changes in recent years  may be driven by valuation
+\item Changes in recent years may be driven by valuation
 \end{itemize}
 \end{frame}
 
@@ -1064,52 +1047,14 @@ Adapted from MSCI \emph{Foundations of Factor Investment}
 
 
 \section{The future}
-\begin{frame}{Low rate world}
-State street conducted a survey of the portfolio managers' response to the low-interest rate world
+\begin{frame}{The future}
+Emerging issues
 \begin{itemize}[<+-| alert@+>]
 \pause
-\item Start of 2016
-\item 400 large institutional investors
-\item Mixture of active and passive investment
-\item Key questions 
-\begin{itemize}
-\item most important objective
-\item changes to deal with low returns
-\item barriers to overcome
-\end{itemize}
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Findings: most important objective}
-The most important objective:
-\begin{itemize}[<+-| alert@+>]
-\pause
-\item 41\% see asset class as the most important view
-\item 30\% see factors as the most important
-\item 25\% see a objective based investment
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Findings: changes to deal with low returns}
-Changes to deal with low returns
-\begin{itemize}[<+-| alert@+>]
-\pause
-\item 49\% see an increased use of smart beta
-\item 27\% see an increased use of active investment
-\item 27\% see an increased use of objective investment
-\item 22\% see an increased use of alternative assets
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Findings: Barriers to change}
-Impediments to change
-\begin{itemize}[<+-| alert@+>]
-\pause
-\item Peer-group adoption
-\item Lack of in-house expertise
-\item Difficulties in benchmarking
-\item Difficulty in getting board buy-in
-\item Lack of proven record
+\item Higher rates/tighter policy
+\item Regulation of ETF
+\item MOre quantification
+\item Environmental, Social and Governance (ESG)
 \end{itemize}
 \end{frame}
 
