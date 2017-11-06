@@ -243,7 +243,7 @@ A number of additional risk factors have been found
 \section{Passive vs active investment}
 \begin{frame}{Economist and the one hundred dollar bill}
 \begin{center}
-\includegraphics[scale = 0.06]{oneHundredDollar}
+\includegraphics[scale = 0.2]{oneHundredDollar}
 \end{center}
 \end{frame}
 
@@ -304,7 +304,7 @@ The impossibility of informationally efficient markets
 \begin{itemize}
 \item Malkiel (1995), Gruber (1996), Wermers (2000, 2003), and Jones
 and Wermers (2011)
-\item Morningstar : only 16.9\% of US large-growth managers were able to beat their passive counterparts over the 10 year period
+\item Morningstar: only 16.9\% of US large-growth managers were able to beat their passive counterparts over the 10 year period
 \end{itemize}
 \item Cost and fees are a major factor
 \item There are exceptions
@@ -655,6 +655,37 @@ Though lagging equities, increased money has been drawn into bond ETFs this year
 \end{itemize}
 \end{frame}
 
+
+\begin{frame}{The rise of ETF}
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item \emph{Pooled investment vehicles} with AP
+\item \emph{Authorised participant} will keep ETF value close to that of underlying assets by being prepared to arbitrage the two
+\begin{itemize}
+\item can create new shares or redeem old ones
+\item this may not be easy for illiquid assets
+\end{itemize}
+\item First ETF began in 1993 (SPY)
+\item Middle of 2016 there are more than 1600 ETF on US exchanges with a value of more than \$2.2tn
+\item Competition is reducing prices 
+\item Bond ETF: \$60bn end of 2007 to \$600bn mid 2016
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Risk of ETF}
+The proliferation of ETF has raised some concerns
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Size and complexity
+\item Risk of \emph{performance chasing}
+\item Some attention on bond ETF (illiquid to liquid test)
+% this means that 20\% fall in market would happen in 2 hours not 2 days.
+\item More volume in ETF than the underlying
+\item Can be redeemed in kind
+\item US (SEC), Irish and French investigations are underway: there are already limits on leverage and the minimum amount of cash)
+% restriction on use of derivatives and maximum of 15\% illiquid funds
+\end{itemize}
+\end{frame}
 \section{Portfolio construction: decision-making}
 \begin{frame}{Norwegian Petroleum Fund}
 \begin{center}
@@ -767,37 +798,6 @@ Ang, Goetzmann and Schaefer (2009) find the following factors explain the active
 \end{itemize}
 \end{frame}
 
-\begin{frame}{The rise of ETF}
-\begin{itemize}[<+-| alert@+>]
-\pause
-\item \emph{Pooled investment vehicles} with AP
-\item \emph{Authorised participant} will keep ETF value close to that of underlying assets by being prepared to arbitrage the two
-\begin{itemize}
-\item can create new shares or redeem old ones
-\item this may not be easy for illiquid assets
-\end{itemize}
-\item First ETF began in 1993 (SPY)
-\item Middle of 2016 there are more than 1600 ETF on US exchanges with a value of more than \$2.2tn
-\item Competition is reducing prices 
-\item Bond ETF: \$60bn end of 2007 to \$600bn mid 2016
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Risk of ETF}
-The proliferation of ETF has raised some concerns
-\begin{itemize}[<+-| alert@+>]
-\pause
-\item Size and complexity
-\item Risk of \emph{performance chasing}
-\item Some attention on bond ETF (illiquid to liquid test)
-% this means that 20\% fall in market would happen in 2 hours not 2 days.
-\item More volume in ETF than the underlying
-\item Can be redeemed in kind
-\item US (SEC), Irish and French investigations are underway: there are already limits on leverage and the minimum amount of cash)
-% restriction on use of derivatives and maximum of 15\% illiquid funds
-\end{itemize}
-\end{frame}
-
 \section{Other portfolio construction methods}
 \begin{frame}{Assets as bundles of risk}
 \begin{textblock*}{5cm}(1cm, 2cm)
@@ -835,7 +835,7 @@ Other           & 5\% & Other & 5\% \\
 \end{table}
 \end{frame}
 
-\begun{frame}{Statistical methods}
+\begin{frame}{Statistical methods}
 \begin{itemize}[<+-| alert@+>]
 \item Principal components (PCA)
 \item Seeks to identify orthogonal factors that contribute most to the variation of the portfolio
@@ -847,6 +847,11 @@ Other           & 5\% & Other & 5\% \\
 This will treat liabilities as a short position to be hedged
 \begin{itemize}
 \item Maturity matching
+\item Make use of long-term nature of liabilities to purchase illiquid assets
+\begin{itemize}
+\item commercial real estate
+\item infrastructure
+\end{itemize}
 \item Are liabilities bond-like or equity-like?
 \item This is something that was considered by the Norwegian Petroleum Fund.
 \end{itemize}
@@ -929,7 +934,7 @@ R. Arnott studied performance of factors before and after publication
 
 \begin{frame}{Economist and the one hundred dollar bill}
 \begin{center}
-\includegraphics[scale = 0.06]{oneHundredDollar}
+\includegraphics[scale = 0.2]{oneHundredDollar}
 \end{center}
 \end{frame}
 
@@ -967,12 +972,24 @@ Factor valuation vs following 5-year returns.  1967-2015.  R. Arnot, N. Beck, V.
 \begin{frame}{Explosion of factors and ETFs}
 \begin{itemize}[<+-| alert@+>]
 \item Low volatility introduced in 2011
-\item 
+\begin{itemize}
 \item \emph{Crowded?} - concentrated in utilities
-% need to complete this slides.  What special ETFs have emerged.
+\end{itemize}
+\item Based on analyst recommendations
+\item ETF called HACK
+\item ESG
 \end{itemize}
 \end{frame}
 
+\begin{frame}{MAGA ETF}
+\begin{center}
+  \includegraphics[scale = 1.0]{trump}
+\end{center}
+\begin{itemize}
+\item Rank firms according to the way they benefit from GOP policy
+\item Long winners from EU breakup; short loosers
+\end{itemize}
+\end{frame}
 
 \begin{frame}{Fickle Factors}
 How resilient are these factors? 
@@ -1047,23 +1064,22 @@ Emerging issues
 
 \begin{frame}{US interest rates}
 <<money, echo=FALSE, fig.height=4.6, fig.width=6.7, cache=TRUE>>=
-da <- read.csv('./Data/Rate.csv', skip = 5)
+da <- read.csv('../Data/Rate.csv', skip = 5)
 da$Date <- as.Date(da$Time.Period, format = "%Y-%m-%d")
-plot(da$Date, da[,2], type = 'l', main = "US Official Interest Rate", col = 'brown', 
+  plot(da$Date, da[,2], type = 'l', main = "US Official Interest Rate", col = 'chocolate4', 
      xlab = "Year", ylab = "Rate")
 @
 \end{frame}
 
 \begin{frame}{US interest rates}
 <<reserves, echo=FALSE, fig.height=4.6, fig.width=6.7, cache=TRUE>>=
-da2 <- read.csv('./Data/Res.csv')
-head(da2)
+da2 <- read.csv('../Data/Res.csv')
 da2$Date <- as.Date(da2$DATE, format =  "%Y-%m-%d")
 #https://stackoverflow.com/questions/28159936/formatting-large-
 #  currency-or-dollar-values-to-millions-billions
 da2$WALCL <- round(da2$WALCL /1e6, 1)
-plot(da2$Date, da2$WALCL, type = 'l', main = "Total Reserves of the 
-     US Federal Reserve", xlab = "Year", ylab = "Tn")
+plot(da2$Date, da2$WALCL, type = 'l', main = "Total Assets of the 
+     US Federal Reserve", xlab = "Year", ylab = "Tn", col = "chocolate4")
 @
 \end{frame}
 
@@ -1080,7 +1096,7 @@ Environmental, social and governance
 \item performance measurement
 \item moving from negative to positive features
 \end{itemize}
-\endPitemize}
+\end{itemize}
 \end{frame}
 
 \begin{frame}{Portfolio construction}
