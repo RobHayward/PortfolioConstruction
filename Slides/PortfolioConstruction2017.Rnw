@@ -850,6 +850,8 @@ This will treat liabilities as a short position to be hedged
 \item Are liabilities bond-like or equity-like?
 \item This is something that was considered by the Norwegian Petroleum Fund.
 \end{itemize}
+\end{frame}
+
 \begin{frame}{Risk parity}
 Weight assets so that their risk to the portfolio is equal.  
 \begin{itemize}[<+-| alert@+>]
@@ -880,15 +882,6 @@ Sharpe Ratio & 0.45 & 0.72
 Risk-parity vs traditional average 1946 to 2015: Dalio, Prince, Jensen (2015)
 \end{frame}
 
-
-%\begin{frame}{Statistical factors}
-%It is also possible to use statistical methods to draw out factors
-%\begin{itemize}[<+-| alert@+>]
-%\pause
-%\item Principal components analysis (PCA)
-%\end{itemize}
-%\end{frame}
-%
 \section{Criticism}
 \begin{frame}{Criticisms of Smart Beta and Factor Investment}
 There are a number of criticism of Smart Beta (ironically, these have recently 
@@ -971,18 +964,12 @@ Factor valuation vs following 5-year returns.  1967-2015.  R. Arnot, N. Beck, V.
 * Statistically significant
 \end{frame}
 
-\begin{frame}{For example: Low volatility}
-These have been one of the biggest winners of 2016
+\begin{frame}{Explosion of factors and ETFs}
 \begin{itemize}[<+-| alert@+>]
-\pause
-\item Introduced in 2011
-\item BlackRock USMW 
-\item Inflow of \$16.0bn in first 9 months of 2016
-\item 28 funds hold \$44bn in assets (XTF)
-\item Seek to identify boring stocks.  
-\item Low or minimal volatility
-\item Tend to be high dividend stocks
+\item Low volatility introduced in 2011
+\item 
 \item \emph{Crowded?} - concentrated in utilities
+% need to complete this slides.  What special ETFs have emerged.
 \end{itemize}
 \end{frame}
 
@@ -1053,9 +1040,47 @@ Emerging issues
 \pause
 \item Higher rates/tighter policy
 \item Regulation of ETF
-\item MOre quantification
+\item More quantification
 \item Environmental, Social and Governance (ESG)
 \end{itemize}
+\end{frame}
+
+\begin{frame}{US interest rates}
+<<money, echo=FALSE, fig.height=4.6, fig.width=6.7, cache=TRUE>>=
+da <- read.csv('./Data/Rate.csv', skip = 5)
+da$Date <- as.Date(da$Time.Period, format = "%Y-%m-%d")
+plot(da$Date, da[,2], type = 'l', main = "US Official Interest Rate", col = 'brown', 
+     xlab = "Year", ylab = "Rate")
+@
+\end{frame}
+
+\begin{frame}{US interest rates}
+<<reserves, echo=FALSE, fig.height=4.6, fig.width=6.7, cache=TRUE>>=
+da2 <- read.csv('./Data/Res.csv')
+head(da2)
+da2$Date <- as.Date(da2$DATE, format =  "%Y-%m-%d")
+#https://stackoverflow.com/questions/28159936/formatting-large-
+#  currency-or-dollar-values-to-millions-billions
+da2$WALCL <- round(da2$WALCL /1e6, 1)
+plot(da2$Date, da2$WALCL, type = 'l', main = "Total Reserves of the 
+     US Federal Reserve", xlab = "Year", ylab = "Tn")
+@
+\end{frame}
+
+\begin{frame}{ESG}
+Environmental, social and governance
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item An emerging factor?
+\item \$22.9tn in 2016
+\item 80\% of asset managers and asset owners surveyed by State Street said that they had some policy
+\item Problems
+\begin{itemize}
+\item benchmarking
+\item performance measurement
+\item moving from negative to positive features
+\end{itemize}
+\endPitemize}
 \end{frame}
 
 \begin{frame}{Portfolio construction}
