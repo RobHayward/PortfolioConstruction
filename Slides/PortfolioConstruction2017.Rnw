@@ -651,7 +651,7 @@ Though lagging equities, increased money has been drawn into bond ETFs this year
 \pause
 \item Bond ETFs attracted \$130bn in 2017 so far
 \item This is more than the record \$117bn that was recorded last year
-\item In the environment of very low rates, there is particular intrest in floating rate, short maturity and emerging market bond ETFs
+\item In the environment of very low rates, there is particular interest in floating rate, short maturity and emerging market bond ETFs
 \end{itemize}
 \end{frame}
 
@@ -686,6 +686,342 @@ The proliferation of ETF has raised some concerns
 % restriction on use of derivatives and maximum of 15\% illiquid funds
 \end{itemize}
 \end{frame}
+
+
+\section{Other portfolio construction methods}
+\begin{frame}{Assets as bundles of risk}
+\begin{textblock*}{5cm}(1cm, 2cm)
+Colourful metaphors
+\end{textblock*}
+\begin{textblock*}{5.2cm}(1cm, 3cm) % (block width) (coords)
+\includegraphics[scale = 0.1]{vit}
+\end{textblock*}
+\begin{textblock*}{5.2cm}(6.5cm, 3cm)
+\includegraphics[scale = 0.6]{atom}
+\end{textblock*}
+\end{frame}
+
+\begin{frame}{Assets as bundles of risk}
+For a standard pension fund (adapted from Podkaminer (2013) CFA Institute)
+\begin{table}
+\begin{center}
+\rowcolors{1}{MyBrown!20}{MyBrown!5}
+\begin{tabular}{l r r r}
+\textbf{Asset} & \textbf{\%} & \textbf{Risk} & \textbf{\%}\\
+\hline
+US equity     & 25\% & Equity & 57\% \\
+Non-US equity & 10\% & & \\
+Emerging equity & 2\% & & \\
+Private equity  & 20\% &  &  \\
+\hline
+US fixed income & 20\% & Interest rate&  10\%\\
+Global fixed income & 5\% & Credit & 18\%\\
+Cash            & 3\% & &  \\
+
+Real estate     & 10\% & Real estate & 10\%\\
+Other           & 5\% & Other & 5\% \\
+\end{tabular}
+\end{center}
+\end{table}
+\end{frame}
+
+\begin{frame}{Statistical methods}
+\begin{itemize}[<+-| alert@+>]
+\item Principal components (PCA)
+\item Seeks to identify orthogonal factors that contribute most to the variation of the portfolio
+\item It may find that different assets have very similar risk factors
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Global Asset Allocation Shifts}
+BIS paper by Kroenke, Schmeling and Schrimpf
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item US institutional and retail investor allocations Jan 2006 to Dec 2014
+\item 90\% of the variation comes from two factors
+\begin{itemize}
+\item 80\% is the rotation from stocks to bonds
+\item Shifting abroad
+\end{itemize}
+\item US interest rate decisions affect each of these moves
+\item There is a switch to bond in times of uncertainty
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Matching liabilities}
+This will treat liabilities as a short position to be hedged
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Maturity matching
+\item Make use of long-term nature of liabilities to purchase illiquid assets
+\begin{itemize}
+\item commercial real estate
+\item infrastructure
+\end{itemize}
+\item Are liabilities bond-like or equity-like?
+\item This is something that was considered by the Norwegian Petroleum Fund.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Risk parity}
+Weight assets so that their risk to the portfolio is equal.  
+\begin{itemize}[<+-| alert@+>]
+\pause
+%\item All-Weather Asset-allocation approach introduced by Bridgewater
+\item The large variance of equities usually dominates a 60/40 portfolio
+\item A 25/75 equity-bond mix will equalise effects of each asset but will reduce the expected return
+\item Leveraging bonds to have a risk that is comparable to equities will reduce the overall risk of portfolio \textbf{and} increase the expected return
+\item This takes advantage of \emph{leverage aversion}
+\item There is risk that is not quantified
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Risk parity examples}
+\begin{table}
+\begin{center}
+\rowcolors{1}{MyBrown!20}{MyBrown!5}
+\begin{tabular}{l  p{2.5cm} r}
+\textbf{Performance} & \textbf{60/40 stock-bonds} & \textbf{Risk parity}\\
+\hline
+Total Return & 8.5\% & 10.4\% \\
+Excess Return & 4.1\% & 5.9\%\\
+Standard Deviation & 8.9\% & 8.3\% \\
+Sharpe Ratio & 0.45 & 0.72
+\end{tabular}
+\end{center}
+\end{table}
+Risk-parity vs traditional average 1946 to 2015: Dalio, Prince, Jensen (2015)
+\end{frame}
+
+\section{Criticism}
+\begin{frame}{Criticisms of Smart Beta and Factor Investment}
+There are a number of criticism of Smart Beta (ironically, these have recently 
+come from \textbf{Research Affiliates}). 
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Data mining
+\item Exploitation of the inefficiency should remove that inefficiency
+\item Factors depend on underlying economic conditions
+\item Factors can become crowded or expensive 
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Torture the data until it speaks}
+\begin{center}
+\includegraphics[height = 3.0in]{torture}
+\end{center}
+\end{frame}
+
+\begin{frame}{But...}
+Behavioural studies find that it is natural to seek patterns
+\pause
+\vspace{1cm}
+\begin{block}{}
+Even when they do not exist!
+\end{block}
+\end{frame}
+
+\begin{frame}{Patterns emerge}
+\begin{center}
+\includegraphics[scale = 0.35]{jesus-clouds}
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Increased efficiency}
+R. Arnott studied performance of factors before and after publication
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item 8 published factors since 1967
+\item Return of 5.8\% before publication
+\item Return of 2.6\% after publication
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Economist and the one hundred dollar bill}
+\begin{center}
+\includegraphics[scale = 0.2]{oneHundredDollar}
+\end{center}
+\end{frame}
+
+\begin{frame}{Factors are expensive}
+A study carried out by Research Affiliates in 2015 found that factors were \emph{expensive}
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Assess whether factors are expensive or cheap by measuring the price-to-book ratio
+\item Compare the value (price-to-book) vs 5 year returns
+\item Find the current valuation
+\item Changes in recent years may be driven by valuation
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Factor value}
+\begin{table}
+\begin{center}
+\rowcolors{1}{MyBrown!20}{MyBrown!5}
+\begin{tabular}{l  p{2.3cm} r}
+\textbf{Testing} & \textbf{Coefficient} & \textbf{Current value}\\
+\hline
+Value vs growth & -1.9\%* & Cheap\\
+Capitalisation & -0.72\%* & Mid\\
+Momentum & -0.34\%* & Cheap\\
+Liquidity & -0.45\%* & Expensive\\ 
+Beta & -0.00 & Cheap\\
+Profitable & -0.35\%* & Expensive\\
+\end{tabular}
+\end{center}
+\end{table}
+Factor valuation vs following 5-year returns.  1967-2015.  R. Arnot, N. Beck, V. Kalesnik and J. West, Feb 2016.  
+* Statistically significant
+\end{frame}
+
+\begin{frame}{Explosion of factors and ETFs}
+\begin{itemize}[<+-| alert@+>]
+\item Low volatility introduced in 2011
+\begin{itemize}
+\item \emph{Crowded?} - concentrated in utilities
+\end{itemize}
+\item Based on analyst recommendations
+\item ETF called HACK
+\item ESG
+\end{itemize}
+\end{frame}
+
+\begin{frame}{MAGA ETF}
+\begin{center}
+\includegraphics[scale = 0.8]{trump}
+\end{center}
+\begin{itemize}
+\item Rank firms according to the way they benefit from GOP policy
+\item Long winners from EU breakup; short losers
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Fickle Factors}
+How resilient are these factors? 
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item What is the source of the factor \emph{excess return}?
+\begin{itemize}
+\item Increased risk
+\item Inefficiency
+\begin{itemize}
+\item behavioural
+\item institutional
+\end{itemize}
+\end{itemize}
+\item Will the returns continue? 
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Factor source 1}
+\begin{table}
+\begin{center}
+\rowcolors{1}{MyBrown!20}{MyBrown!5}
+\begin{tabular}{l l l}
+\textbf{Factor} & \textbf{Risk} & \textbf{Behavr-Instit}\\
+\hline
+\textbf{Value} & Systematic risk & Expectation error\\
+      &                 & Loss aversion\\
+      &                 & Investment flows\\
+\textbf{Size}  & Systematic risk & Expectation error\\
+      & Liquidity risk   & \\
+\textbf{Momentum} & Crash risk & Over-reaction\\
+        &             & Investment flows\\
+        &             & Asynchronous trade\\
+\end{tabular}
+\end{center}
+\end{table}
+%Adapted from MSCI \emph{Foundations of Factor Investment}
+
+\end{frame}
+
+\begin{frame}{Factor source 2}
+\begin{table}
+\begin{center}
+\rowcolors{1}{MyBrown!20}{MyBrown!5}
+\begin{tabular}{l p{3cm} l}
+\textbf{Factor} & \textbf{Risk} & \textbf{Behavr-Instit}\\
+\hline
+\textbf{Low vol} & Borrowing Constraint          & Lottery effect\\
+        &             & Overconfidence\\
+        &             & Leverage aversion\\
+\textbf{Quality} & NA          & Expectations errors\\
+        &             & Manipulated earnings\\
+\end{tabular}
+\end{center}
+\end{table}
+Adapted from MSCI \emph{Foundations of Factor Investment}
+
+\end{frame}
+
+
+\section{The future}
+\begin{frame}{The future}
+Emerging issues
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Higher rates/tighter policy
+\item Regulation of ETF
+\item More quantification
+\item Environmental, Social and Governance (ESG)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{US interest rates}
+<<money, echo=FALSE, fig.height=4.6, fig.width=6.7, cache=TRUE>>=
+da <- read.csv('../Data/Rate.csv', skip = 5)
+da$Date <- as.Date(da$Time.Period, format = "%Y-%m-%d")
+  plot(da$Date, da[,2], type = 'l', main = "US Official Interest Rate", col = 'chocolate4', 
+     xlab = "Year", ylab = "Rate")
+@
+\end{frame}
+
+\begin{frame}{US interest rates}
+<<reserves, echo=FALSE, fig.height=4.6, fig.width=6.7, cache=TRUE>>=
+da2 <- read.csv('../Data/Res.csv')
+da2$Date <- as.Date(da2$DATE, format =  "%Y-%m-%d")
+#https://stackoverflow.com/questions/28159936/formatting-large-
+#  currency-or-dollar-values-to-millions-billions
+da2$WALCL <- round(da2$WALCL /1e6, 1)
+plot(da2$Date, da2$WALCL, type = 'l', main = "Total Assets of the 
+     US Federal Reserve", xlab = "Year", ylab = "Tn", col = "chocolate4")
+@
+\end{frame}
+
+\begin{frame}{Machine Learning}
+\begin{center}
+  \includegraphics[scale = 1.0]{WC}
+\end{center}
+\end{frame}
+
+\begin{frame}{Machine Learning}
+Use text analysis of Fed to predict economy
+\begin{itemize}[<+-| alert@+>]
+\item Greenbook
+\item \emph{Tonality} to predict economy
+\item Can predict GDP and  unemployment four quarters ahead
+\item Also predicts rates and stocks
+\end{itemize}
+\end{frame}
+
+\begin{frame}{ESG}
+Environmental, social and governance
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item An emerging factor?
+\item \$22.9tn in 2016
+\item 80\% of asset managers and asset owners surveyed by State Street said that they had some policy
+\item Problems
+\begin{itemize}
+\item benchmarking
+\item performance measurement
+\item moving from negative to positive features
+\end{itemize}
+\item United Nations Principles for Responsible Investing
+\end{itemize}
+\end{frame}
+
 \section{Portfolio construction: decision-making}
 \begin{frame}{Norwegian Petroleum Fund}
 \begin{center}
@@ -698,7 +1034,7 @@ Started in 1996 with NOK 40 bn passed \$1.0tn in Sep 2017 (NOK 8.2tn)
 \begin{itemize}[<+-| alert@+>]
 \pause
 \item 1998 - 40\% of assets were equities
-\item 2001 - Budetary rule (maximum of 4\% to be used)
+\item 2001 - Budgetary rule (maximum of 4\% to be used)
 \item 2009 - 60\% of assets were equities
 \item 2010 - 5\% real estate
 \item Today 60\% equity, 35\% fixed income, 5\% real estate
@@ -798,306 +1134,8 @@ Ang, Goetzmann and Schaefer (2009) find the following factors explain the active
 \end{itemize}
 \end{frame}
 
-\section{Other portfolio construction methods}
-\begin{frame}{Assets as bundles of risk}
-\begin{textblock*}{5cm}(1cm, 2cm)
-Colourful metaphors
-\end{textblock*}
-\begin{textblock*}{5.2cm}(1cm, 3cm) % (block width) (coords)
-\includegraphics[scale = 0.1]{vit}
-\end{textblock*}
-\begin{textblock*}{5.2cm}(6.5cm, 3cm)
-\includegraphics[scale = 0.6]{atom}
-\end{textblock*}
-\end{frame}
-
-\begin{frame}{Assets as bundles of risk}
-For a standard pension fund (adapted from Podkaminer (2013) CFA Institute)
-\begin{table}
-\begin{center}
-\rowcolors{1}{MyBrown!20}{MyBrown!5}
-\begin{tabular}{l r r r}
-\textbf{Asset} & \textbf{\%} & \textbf{Risk} & \textbf{\%}\\
-\hline
-US equity     & 25\% & Equity & 57\% \\
-Non-US equity & 10\% & & \\
-Emerging equity & 2\% & & \\
-Private equity  & 20\% &  &  \\
-\hline
-US fixed income & 20\% & Interest rate&  10\%\\
-Global fixed income & 5\% & Credit & 18\%\\
-Cash            & 3\% & &  \\
-
-Real estate     & 10\% & Real estate & 10\%\\
-Other           & 5\% & Other & 5\% \\
-\end{tabular}
-\end{center}
-\end{table}
-\end{frame}
-
-\begin{frame}{Statistical methods}
-\begin{itemize}[<+-| alert@+>]
-\item Principal components (PCA)
-\item Seeks to identify orthogonal factors that contribute most to the variation of the portfolio
-\item It may find that different assets have very similar risk factors
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Matching liabilities}
-This will treat liabilities as a short position to be hedged
-\begin{itemize}
-\item Maturity matching
-\item Make use of long-term nature of liabilities to purchase illiquid assets
-\begin{itemize}
-\item commercial real estate
-\item infrastructure
-\end{itemize}
-\item Are liabilities bond-like or equity-like?
-\item This is something that was considered by the Norwegian Petroleum Fund.
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Risk parity}
-Weight assets so that their risk to the portfolio is equal.  
-\begin{itemize}[<+-| alert@+>]
-\pause
-%\item All-Weather Asset-allocation approach introduced by Bridgewater
-\item The large variance of equities usually dominates a 60/40 portfolio
-\item A 25/75 equity-bond mix will equalise effects of each asset but will reduce the expected return
-\item Leveraging bonds to have a risk that is comparable to equities will reduce the overall risk of portfolio \textbf{and} increase the expected return
-\item This takes advantage of \emph{leverage aversion}
-\item There is risk that is not quantified
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Risk parity examples}
-\begin{table}
-\begin{center}
-\rowcolors{1}{MyBrown!20}{MyBrown!5}
-\begin{tabular}{l  p{2.5cm} r}
-\textbf{Performance} & \textbf{60/40 stock-bonds} & \textbf{Risk parity}\\
-\hline
-Total Return & 8.5\% & 10.4\% \\
-Excess Return & 4.1\% & 5.9\%\\
-Standard Deviation & 8.9\% & 8.3\% \\
-Sharpe Ratio & 0.45 & 0.72
-\end{tabular}
-\end{center}
-\end{table}
-Risk-parity vs traditional average 1946 to 2015: Dalio, Prince, Jensen (2015)
-\end{frame}
-
-\section{Criticism}
-\begin{frame}{Criticisms of Smart Beta and Factor Investment}
-There are a number of criticism of Smart Beta (ironically, these have recently 
-come from \textbf{Research Affiliates}). 
-\begin{itemize}[<+-| alert@+>]
-\pause
-\item Data mining
-\item Exploitation of the inefficiency should remove that inefficiency
-\item Factors depend on underlying economic conditions
-\item Factors can become crowded or expensive 
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Torture the data until it speaks}
-\begin{center}
-\includegraphics[height = 3.0in]{torture}
-\end{center}
-\end{frame}
-
-\begin{frame}{But...}
-Behavioural studies find that it is natural to seek patterns
-\pause
-\vspace{1cm}
-\begin{block}{}
-Even when they do not exist!
-\end{block}
-\end{frame}
-
-\begin{frame}{Patterns emerge}
-\begin{center}
-\includegraphics[scale = 0.35]{jesus-clouds}
-\end{center}
-\end{frame}
 
 
-\begin{frame}{Increased efficiency}
-R. Arnott studied performance of factors before and after publication
-\begin{itemize}[<+-| alert@+>]
-\pause
-\item 8 published factors since 1967
-\item Return of 5.8\% before publication
-\item Return of 2.6\% after publication
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Economist and the one hundred dollar bill}
-\begin{center}
-\includegraphics[scale = 0.2]{oneHundredDollar}
-\end{center}
-\end{frame}
-
-\begin{frame}{Factors are expensive}
-A study carried out by Research Affiliates in 2015 found that factors were \emph{expensive}
-\begin{itemize}[<+-| alert@+>]
-\pause
-\item Assess whether factors are expensive of cheap by measuring the price-to-book ratio
-\item Compare the value (price-to-book) vs 5 year returns
-\item Find the current valuation
-\item Changes in recent years may be driven by valuation
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Factor value}
-\begin{table}
-\begin{center}
-\rowcolors{1}{MyBrown!20}{MyBrown!5}
-\begin{tabular}{l  p{2.3cm} r}
-\textbf{Testing} & \textbf{Coefficient} & \textbf{Current value}\\
-\hline
-Value vs growth & -1.9\%* & Cheap\\
-Capitalisation & -0.72\%* & Mid\\
-Momentum & -0.34\%* & Cheap\\
-Liquidity & -0.45\%* & Expensive\\ 
-Beta & -0.00 & Cheap\\
-Profitable & -0.35\%* & Expensive\\
-\end{tabular}
-\end{center}
-\end{table}
-Factor valuation vs following 5-year returns.  1967-2015.  R. Arnot, N. Beck, V. Kalesnik and J. West, Feb 2016.  
-* Statistically significant
-\end{frame}
-
-\begin{frame}{Explosion of factors and ETFs}
-\begin{itemize}[<+-| alert@+>]
-\item Low volatility introduced in 2011
-\begin{itemize}
-\item \emph{Crowded?} - concentrated in utilities
-\end{itemize}
-\item Based on analyst recommendations
-\item ETF called HACK
-\item ESG
-\end{itemize}
-\end{frame}
-
-\begin{frame}{MAGA ETF}
-\begin{center}
-  \includegraphics[scale = 1.0]{trump}
-\end{center}
-\begin{itemize}
-\item Rank firms according to the way they benefit from GOP policy
-\item Long winners from EU breakup; short loosers
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Fickle Factors}
-How resilient are these factors? 
-\begin{itemize}[<+-| alert@+>]
-\pause
-\item What is the source of the factor \emph{excess return}?
-\begin{itemize}
-\item Increased risk
-\item Inefficiency
-\begin{itemize}
-\item behavioural
-\item institutional
-\end{itemize}
-\end{itemize}
-\item Will the returns continue? 
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Factor source 1}
-\begin{table}
-\begin{center}
-\rowcolors{1}{MyBrown!20}{MyBrown!5}
-\begin{tabular}{l l l}
-\textbf{Factor} & \textbf{Risk} & \textbf{Behavr-Instit}\\
-\hline
-\textbf{Value} & Systematic risk & Expectation error\\
-      &                 & Loss aversion\\
-      &                 & Investment flows\\
-\textbf{Size}  & Systematic risk & Expectation error\\
-      & Liquidity risk   & \\
-\textbf{Momentum} & Crash risk & Over-reaction\\
-        &             & Investment flows\\
-        &             & Asynchronous trade\\
-\end{tabular}
-\end{center}
-\end{table}
-%Adapted from MSCI \emph{Foundations of Factor Investment}
-
-\end{frame}
-
-\begin{frame}{Factor source 2}
-\begin{table}
-\begin{center}
-\rowcolors{1}{MyBrown!20}{MyBrown!5}
-\begin{tabular}{l p{3cm} l}
-\textbf{Factor} & \textbf{Risk} & \textbf{Behavr-Instit}\\
-\hline
-\textbf{Low vol} & Borrowing Constraint          & Lottery effect\\
-        &             & Overconfidence\\
-        &             & Leverage aversion\\
-\textbf{Quality} & NA          & Expectations errors\\
-        &             & Manipulated earnings\\
-\end{tabular}
-\end{center}
-\end{table}
-Adapted from MSCI \emph{Foundations of Factor Investment}
-
-\end{frame}
-
-
-\section{The future}
-\begin{frame}{The future}
-Emerging issues
-\begin{itemize}[<+-| alert@+>]
-\pause
-\item Higher rates/tighter policy
-\item Regulation of ETF
-\item More quantification
-\item Environmental, Social and Governance (ESG)
-\end{itemize}
-\end{frame}
-
-\begin{frame}{US interest rates}
-<<money, echo=FALSE, fig.height=4.6, fig.width=6.7, cache=TRUE>>=
-da <- read.csv('../Data/Rate.csv', skip = 5)
-da$Date <- as.Date(da$Time.Period, format = "%Y-%m-%d")
-  plot(da$Date, da[,2], type = 'l', main = "US Official Interest Rate", col = 'chocolate4', 
-     xlab = "Year", ylab = "Rate")
-@
-\end{frame}
-
-\begin{frame}{US interest rates}
-<<reserves, echo=FALSE, fig.height=4.6, fig.width=6.7, cache=TRUE>>=
-da2 <- read.csv('../Data/Res.csv')
-da2$Date <- as.Date(da2$DATE, format =  "%Y-%m-%d")
-#https://stackoverflow.com/questions/28159936/formatting-large-
-#  currency-or-dollar-values-to-millions-billions
-da2$WALCL <- round(da2$WALCL /1e6, 1)
-plot(da2$Date, da2$WALCL, type = 'l', main = "Total Assets of the 
-     US Federal Reserve", xlab = "Year", ylab = "Tn", col = "chocolate4")
-@
-\end{frame}
-
-\begin{frame}{ESG}
-Environmental, social and governance
-\begin{itemize}[<+-| alert@+>]
-\pause
-\item An emerging factor?
-\item \$22.9tn in 2016
-\item 80\% of asset managers and asset owners surveyed by State Street said that they had some policy
-\item Problems
-\begin{itemize}
-\item benchmarking
-\item performance measurement
-\item moving from negative to positive features
-\end{itemize}
-\end{itemize}
-\end{frame}
 
 \begin{frame}{Portfolio construction}
 \begin{tikzpicture} 
@@ -1148,6 +1186,8 @@ Environmental, social and governance
 \item Fama E.F, K.R. French, (1993), "Common Risk Factors in the Returns on Stock and Bonds", Journal of Finance, 53, 1131-1147
 
 \item Jagadesh N., S. Titman, (1993), "Returns to Buying Winners and Selling Losers: Implications for Stock Market Efficiency", Journal of Finance, Vol 48, No, 1, 65 -  91
+
+\item Kroencke, T., M. Shmeling, A. Schrimpf, "Global Asset Allocation Shifts", BIS Working Paper No. 497, March 2015
 
 \item Malkiel B., (1995), "Returns from Investing in Equity Mutual Funds 1971 to 1991", Journal of Finance, 50, 549-572
 
