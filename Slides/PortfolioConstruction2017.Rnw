@@ -243,7 +243,7 @@ A number of additional risk factors have been found
 \section{Passive vs active investment}
 \begin{frame}{Economist and the one hundred dollar bill}
 \begin{center}
-\includegraphics[scale = 0.2]{oneHundredDollar}
+\includegraphics[scale = 0.05]{oneHundredDollar}
 \end{center}
 \end{frame}
 
@@ -315,12 +315,43 @@ and Wermers (2011)
 \textbf{ETFGI}
 \begin{itemize}[<+-| alert@+>]
 \pause
-\item ETF assets were \$4.3tn in Sep 2017 
+\item ETF assets were \$4.3tn in sep 2017 
 \item They were \$3.4tn at the end of 2016
 \item They were \$1.3tn at the end of 2010
 \item There is currently a price war (2-5bp in some places)
-\item Active management fees are down to 63bp from 100bp in 2000
+\item Active management fees are down to 63bp in 2017 from 100bp in 2000
 \item This compares to the 2-20 for hedge funds
+\end{itemize}
+\end{frame}
+
+\begin{frame}{The rise of ETF}
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item \emph{Pooled investment vehicles} with AP
+\item \emph{Authorised participant} will keep ETF value close to that of underlying assets by being prepared to arbitrage the two
+\begin{itemize}
+\item can create new shares or redeem old ones
+\item this may not be easy for illiquid assets
+\end{itemize}
+\item First ETF began in 1993 (SPY)
+\item Middle of 2016 there are more than 1600 ETF on US exchanges with a value of more than \$2.2tn
+\item Competition is reducing prices 
+\item Bond ETF: \$60bn end of 2007 to \$600bn mid 2016
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Risk of ETF}
+The proliferation of ETF has raised some concerns
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Size and complexity
+\item Risk of \emph{performance chasing}
+\item Some attention on bond ETF (illiquid to liquid test)
+% this means that 20\% fall in market would happen in 2 hours not 2 days.
+\item More volume in ETF than the underlying
+\item Can be redeemed in kind
+\item US (SEC), Irish and French investigations are underway: there are already limits on leverage and the minimum amount of cash)
+% restriction on use of derivatives and maximum of 15\% illiquid funds
 \end{itemize}
 \end{frame}
 
@@ -333,16 +364,16 @@ There are a number of persistent criticisms of using traditional indices as the 
 \item Index investment impedes the process of \emph{price discovery}
 \item Capitalisation-weighted indices are \textbf{NOT} equivalent to the \emph{market portfolio}
 \begin{itemize}
-\item Weights must be increased as shares gain in price
-\item Causes investors to buy \emph{winning stocks} and sell \emph{losing stocks}
-\item Buy \emph{growth} and sell \emph{value}
-\item Overweight over-valued and under-weight undervalued
+\item weights must be increased as shares gain in price
+\item causes investors to buy \emph{winning stocks} and sell \emph{losing stocks}
+\item buy \emph{growth} and sell \emph{value}
+\item overweight over-valued and under-weight undervalued
 \end{itemize}
 \end{itemize}
 \end{frame}
 
 \begin{frame}{Smart Beta}
-There are two main types of Smart Beta:
+There are two types of Smart Beta:
 \begin{itemize}[<+-| alert@+>]
 \pause
 \item Take \emph{value-weighted} indices and weight them by some other measure
@@ -520,6 +551,7 @@ Quality & Robust & Debt or management\\
 Most common factors, what they are and how they can be measured
 \end{frame}
 
+
 \begin{frame}{Factor risks}
 \begin{itemize}[<+-| alert@+>]
 \pause
@@ -634,7 +666,7 @@ These are for government and corporate sectors
 \item free cash flow 
 \item leverage
 \end{itemize}
-\item Equity-like factors
+\item equity-like factors
 \begin{itemize}
 \item Value, size, momentum, volatility, quality
 \end{itemize}
@@ -655,37 +687,6 @@ Though lagging equities, increased money has been drawn into bond ETFs this year
 \end{itemize}
 \end{frame}
 
-
-\begin{frame}{The rise of ETF}
-\begin{itemize}[<+-| alert@+>]
-\pause
-\item \emph{Pooled investment vehicles} with AP
-\item \emph{Authorised participant} will keep ETF value close to that of underlying assets by being prepared to arbitrage the two
-\begin{itemize}
-\item can create new shares or redeem old ones
-\item this may not be easy for illiquid assets
-\end{itemize}
-\item First ETF began in 1993 (SPY)
-\item Middle of 2016 there are more than 1600 ETF on US exchanges with a value of more than \$2.2tn
-\item Competition is reducing prices 
-\item Bond ETF: \$60bn end of 2007 to \$600bn mid 2016
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Risk of ETF}
-The proliferation of ETF has raised some concerns
-\begin{itemize}[<+-| alert@+>]
-\pause
-\item Size and complexity
-\item Risk of \emph{performance chasing}
-\item Some attention on bond ETF (illiquid to liquid test)
-% this means that 20\% fall in market would happen in 2 hours not 2 days.
-\item More volume in ETF than the underlying
-\item Can be redeemed in kind
-\item US (SEC), Irish and French investigations are underway: there are already limits on leverage and the minimum amount of cash)
-% restriction on use of derivatives and maximum of 15\% illiquid funds
-\end{itemize}
-\end{frame}
 
 
 \section{Other portfolio construction methods}
@@ -725,12 +726,39 @@ Other           & 5\% & Other & 5\% \\
 \end{table}
 \end{frame}
 
-\begin{frame}{Statistical methods}
+\begin{frame}{Statistical methods: principal components}
 \begin{itemize}[<+-| alert@+>]
-\item Principal components (PCA)
+\item Seeks to reduce the number of factors 
 \item Seeks to identify orthogonal factors that contribute most to the variation of the portfolio
-\item It may find that different assets have very similar risk factors
+\item It is most useful when the components are correlated
+\item The aim is to find risk factors that affect a number of different assets
 \end{itemize}
+\end{frame}
+
+\begin{frame}{Principal components}
+\begin{tikzpicture}[scale = 2] 
+%\draw[very thin, color = gray](0, 0) grid (5, 3);
+\draw [<->, thick] (0, 3) node (yaxis) [above] {$Return$} 
+  |- (5, 0) node (xaxis) [right] {$Risk$};
+\draw [fill = brown] (2.5, 1.75) circle [radius = 0.05];
+%\node at (2.5, 1.75) [above left] {$\beta$ = 1};
+\node at (2.5, 1.75) [below right] {\scriptsize Market Portfolio};
+\pause
+\draw [fill = brown] (3.5, 2.5) circle [radius = 0.05];
+\node at (3.5, 2.5) [left] {\scriptsize Small Capitalisation};
+\pause
+\draw [fill = brown] (1.5, 1.5) circle [radius = 0.05];
+\node at (1.5, 1.5) [left] {\scriptsize Value};
+\pause
+\draw [fill = brown] (3.5, 2.0) circle [radius = 0.05];
+\node at (3.5, 2.0) [right] {\scriptsize Growth};
+\pause
+  \draw[<->, thick, domain = 1.0:4.0, color = black] plot(\x, {0.5 + 0.5*\x});
+\node at (0.9, 0.8) [right] {\small Principal component};
+\pause
+\draw[<->, thick, domain = 2.0:2.5, color = black] plot(\x, {6.0 - 2.0*\x});
+\node at (1.0, 2.0) {\small Second component};
+\end{tikzpicture}
 \end{frame}
 
 \begin{frame}{Global Asset Allocation Shifts}
@@ -741,10 +769,10 @@ BIS paper by Kroenke, Schmeling and Schrimpf
 \item 90\% of the variation comes from two factors
 \begin{itemize}
 \item 80\% is the rotation from stocks to bonds
-\item Shifting abroad
+\item shifting from US to overseas 
 \end{itemize}
 \item US interest rate decisions affect each of these moves
-\item There is a switch to bond in times of uncertainty
+\item There is also a tendency to switch to bond in times of uncertainty
 \end{itemize}
 \end{frame}
 
@@ -840,7 +868,7 @@ R. Arnott studied performance of factors before and after publication
 
 \begin{frame}{Economist and the one hundred dollar bill}
 \begin{center}
-\includegraphics[scale = 0.2]{oneHundredDollar}
+\includegraphics[scale = 0.05]{oneHundredDollar}
 \end{center}
 \end{frame}
 
@@ -851,6 +879,7 @@ A study carried out by Research Affiliates in 2015 found that factors were \emph
 \item Assess whether factors are expensive or cheap by measuring the price-to-book ratio
 \item Compare the value (price-to-book) vs 5 year returns
 \item Find the current valuation
+\item Coefficient measures the relationship between returns and valuation
 \item Changes in recent years may be driven by valuation
 \end{itemize}
 \end{frame}
@@ -877,19 +906,21 @@ Factor valuation vs following 5-year returns.  1967-2015.  R. Arnot, N. Beck, V.
 
 \begin{frame}{Explosion of factors and ETFs}
 \begin{itemize}[<+-| alert@+>]
-\item Low volatility introduced in 2011
+\item The rise of thematic ETFs
 \begin{itemize}
-\item \emph{Crowded?} - concentrated in utilities
+\item Millennials: consumer, entertainment and technology 
+\item Health and well-being: health spending, exercise etc
+\item Diversity: women on boards
+\item Disruption: technology effects on consumer behaviour and business models
+\item Silver: pinpointing the spending power and longevity of \emph{baby-boomers}
+\item HACK: companies that benefit from cyber security
 \end{itemize}
-\item Based on analyst recommendations
-\item ETF called HACK
-\item ESG
 \end{itemize}
 \end{frame}
 
 \begin{frame}{MAGA ETF}
 \begin{center}
-\includegraphics[scale = 0.8]{trump}
+\includegraphics[scale = 0.6]{trump}
 \end{center}
 \begin{itemize}
 \item Rank firms according to the way they benefit from GOP policy
@@ -955,7 +986,6 @@ Adapted from MSCI \emph{Foundations of Factor Investment}
 
 \end{frame}
 
-
 \section{The future}
 \begin{frame}{The future}
 Emerging issues
@@ -998,6 +1028,7 @@ plot(da2$Date, da2$WALCL, type = 'l', main = "Total Assets of the
 \begin{frame}{Machine Learning}
 Use text analysis of Fed to predict economy
 \begin{itemize}[<+-| alert@+>]
+\pause
 \item Greenbook
 \item \emph{Tonality} to predict economy
 \item Can predict GDP and  unemployment four quarters ahead
@@ -1084,28 +1115,28 @@ Committee was split
 %\end{itemize}
 %\end{frame}
 
-\begin{frame}{Portfolio construction}
-\begin{tikzpicture} 
-%\draw[very thin, color = gray](0, 0) grid (12, 6);
-\tikzstyle{block} = [draw, rectangle, text width = 5em, 
-  text centered, minimum height = 6mm, node distance = 5em];
-\tikzstyle{line} = [draw, -stealth, thick]
-\node [block] at (1.5, 4) (one) {\scriptsize True 'market' \\ (unobserved)};
-\node [block] at (5, 4) (two) {\scriptsize Passive investable \\ benchmark};
-\node [block] at (8.5, 4) (three) {\scriptsize Rebalanced \\ benchmark};
-\node [block] at (8.5, 2) (four) {\scriptsize Factor \\ tilts};
-\node [block] at (8.5, 0) (five) {\scriptsize Active \\ Portfolio};
-\path [line] (one) -- (two);
-\path [line] (two) -- (three);
-\path [line] (three) -- (four);
-\path [line] (four) -- (five);
-\node at (3, 5.5) [align = center]{\scriptsize Choice of investable \\ \scriptsize benchmark};
-\node at (6.5, 5.5) [align = center]{\scriptsize Rebalancing \\ \scriptsize gain};
-\node at (11, 3) [align = center] {\scriptsize Factor \\ \scriptsize risk premia};
-\node at (11, 1) [align = center] {\scriptsize Active \\ \scriptsize management};
-\node at (2, 0) [align = center] {\scriptsize Ang, Brandt, Denison (2014)};
-\end{tikzpicture}
-\end{frame}
+%\begin{frame}{Portfolio construction}
+%\begin{tikzpicture} 
+%%\draw[very thin, color = gray](0, 0) grid (12, 6);
+%\tikzstyle{block} = [draw, rectangle, text width = 5em, 
+%  text centered, minimum height = 6mm, node distance = 5em];
+%\tikzstyle{line} = [draw, -stealth, thick]
+%\node [block] at (1.5, 4) (one) {\scriptsize True 'market' \\ (unobserved)};
+%\node [block] at (5, 4) (two) {\scriptsize Passive investable \\ benchmark};
+%\node [block] at (8.5, 4) (three) {\scriptsize Rebalanced \\ benchmark};
+%\node [block] at (8.5, 2) (four) {\scriptsize Factor \\ tilts};
+%\node [block] at (8.5, 0) (five) {\scriptsize Active \\ Portfolio};
+%\path [line] (one) -- (two);
+%\path [line] (two) -- (three);
+%\path [line] (three) -- (four);
+%\path [line] (four) -- (five);
+%\node at (3, 5.5) [align = center]{\scriptsize Choice of investable \\ \scriptsize benchmark};
+%\node at (6.5, 5.5) [align = center]{\scriptsize Rebalancing \\ \scriptsize gain};
+%\node at (11, 3) [align = center] {\scriptsize Factor \\ \scriptsize risk premia};
+%\node at (11, 1) [align = center] {\scriptsize Active \\ \scriptsize management};
+%\node at (2, 0) [align = center] {\scriptsize Ang, Brandt, Denison (2014)};
+%\end{tikzpicture}
+%\end{frame}
 
 \begin{frame}{Active components of fund}
 There are a number of places where the fund must be active
@@ -1116,6 +1147,21 @@ There are a number of places where the fund must be active
 \item Frequency of asset re-balancing
 \item Factor tilts
 \item Active security selection
+\end{itemize}
+\end{frame}
+
+\begin{frame}{ESG and the Norwegian Fund}
+The fund has an ethical council
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Established November 2004
+\item Work with RepRisk to monitor issues like
+\begin{itemize}
+\item human right violations (child labour)
+\item environmental harm
+\item monitor standard and social media
+\end{itemize}
+\item 17 tobacco companies excluded in 2010
 \end{itemize}
 \end{frame}
 
@@ -1133,9 +1179,6 @@ Ang, Goetzmann and Schaefer (2009) find the following factors explain the active
 \item \textbf{Vol:} Spread between implied and realised volatility
 \end{itemize}
 \end{frame}
-
-
-
 
 \begin{frame}{Portfolio construction}
 \begin{tikzpicture} 
