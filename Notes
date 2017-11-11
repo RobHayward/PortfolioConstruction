@@ -1,5 +1,18 @@
 These are some notes for the second of the Portfolio Construction sessions. I just need to remind myself of some of the key features.
 
+Risk parity
+The idea is based on the need for lower volatility assets to require leverage to achieve required returns. This means that not all investors can participate and that there is an opportunity for those that can to use leverage to capture this factor risk. 
+
+Risk-partity will use this to ensure that risk allocations are equal acrosss assets. Therefore, low risk assets will be overweighted. This is compared to the standard 60/40 portfolio where equity will have a much greater effect on performance because it is much more volatile.  It is mainly an equity portfolio. Risk parity will diversify by risk rather than dollars. In reality this can extend beyond stocks and bonds. 
+
+Frazzini and Pedersen (2010) following Black (1972) found that if some investors are adverse to leverage, some lower higher-beta assets will offer lower risk-adjusted returns. This is found across asset classes. Therefore, leverage may break the standard CAPM and justify the decision to hold something other than the market portfolio. The highest risk-adjusted return is achieved not by the market portfolio but by a portfolio that overweightws safer assets. In this case stocks are the high beta asset and bonds are the low beta asset. The 60/40 mix is not based on capitalisation of stocks and bonds.  A real market portfolio would be more like 68/32 in favour of bonds.   
+
+The theory of leverage aversion is tested across a long period of US histor (1926-2010), with a mixture of assets (1973-2010) and across many countries stock and bond markets. 
+
+There are other explanations for this phenomenon: delegateed portfolio managers with benchmarked institutional investors (Brennan 1993); Baker, Bradley and Wurgler (2011) - mutual find managers incentive to overweight high beta stocks due to the option-like payoff. 
+
+The idea of leverage aversion has strong foundations: it is a risk that investors need to be compensated for.  To obtain leverage requires the acquisition of technology: financing, using derivatives, establishing counterparty relations; to manage leverage requires adjusting margin and trading the portfoio dynamicall. Mutual funds and pension funds typically have restrictions on the amount of leverage that they can apply. 
+
 Regimes
 I did not speak much about the risk-on:risk-off strategy. This is all about low volatility. The HSBC note from the 6 August 2016 is all about the two regimes.  What do you buy in each of these regimes? 
 
