@@ -310,19 +310,6 @@ and Wermers (2011)
 \item There are exceptions
 \end{itemize}
 \end{frame}
- 
-\begin{frame}{The rise of passive investment}
-\textbf{ETFGI}
-\begin{itemize}[<+-| alert@+>]
-\pause
-\item ETF assets were \$4.3tn in sep 2017 
-\item They were \$3.4tn at the end of 2016
-\item They were \$1.3tn at the end of 2010
-\item There is currently a price war (2-5bp in some places)
-\item Active management fees are down to 63bp in 2017 from 100bp in 2000
-\item This compares to the 2-20 for hedge funds
-\end{itemize}
-\end{frame}
 
 \begin{frame}{The rise of ETF}
 \begin{itemize}[<+-| alert@+>]
@@ -337,6 +324,19 @@ and Wermers (2011)
 \item Middle of 2016 there are more than 1600 ETF on US exchanges with a value of more than \$2.2tn
 \item Competition is reducing prices 
 \item Bond ETF: \$60bn end of 2007 to \$600bn mid 2016
+\end{itemize}
+\end{frame}
+
+\begin{frame}{The rise of passive investment}
+\textbf{ETFGI}
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item ETF assets were \$4.3tn in sep 2017 
+\item They were \$3.4tn at the end of 2016
+\item They were \$1.3tn at the end of 2010
+\item There is currently a price war (2-5bp in some places)
+\item Active management fees are down to 63bp in 2017 from 100bp in 2000
+\item This compares to the 2-20 for hedge funds
 \end{itemize}
 \end{frame}
 
@@ -900,7 +900,7 @@ Profitable & -0.35\%* & Expensive\\
 \end{tabular}
 \end{center}
 \end{table}
-Factor valuation vs following 5-year returns.  1967-2015.  R. Arnot, N. Beck, V. Kalesnik and J. West, Feb 2016.  
+Factor valuation vs following 5-year returns.  1967-2015.  R. Arnott, N. Beck, V. Kalesnik and J. West, Feb 2016.  
 * Statistically significant
 \end{frame}
 
