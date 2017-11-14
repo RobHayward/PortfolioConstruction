@@ -42,7 +42,7 @@
 %\end{frame}
 
 \begin{frame}
-\includegraphics[scale=0.4]{FP}
+\includegraphics[scale=0.4]{FP2}
 \end{frame}
 
 \begin{frame}
@@ -87,7 +87,7 @@
 \pause
 \draw[domain = 0.0:3.9, color = black] plot(\x, {1 + 0.5*\x});
 \pause
-  \node at (3.5, 2.65) [right] {\scriptsize Security Market Line};
+  \node at (3.5, 2.65) [right] {\scriptsize Capital Market Line};
 \end{tikzpicture}
 \end{frame}
 
@@ -346,9 +346,9 @@ The proliferation of ETF has raised some concerns
 \pause
 \item Size and complexity
 \item Risk of \emph{performance chasing}
-\item Some attention on bond ETF (illiquid to liquid test)
 % this means that 20\% fall in market would happen in 2 hours not 2 days.
 \item More volume in ETF than the underlying
+\item Some attention on bond ETF (illiquid to liquid test)
 \item Can be redeemed in kind
 \item US (SEC), Irish and French investigations are underway: there are already limits on leverage and the minimum amount of cash)
 % restriction on use of derivatives and maximum of 15\% illiquid funds
@@ -1137,19 +1137,6 @@ Committee was split
 %\node at (2, 0) [align = center] {\scriptsize Ang, Brandt, Denison (2014)};
 %\end{tikzpicture}
 %\end{frame}
-
-\begin{frame}{Active components of fund}
-There are a number of places where the fund must be active
-\begin{itemize}[<+-| alert@+>]
-\pause
-\item Deciding on the appropriate market
-\item Finding an investable fund
-\item Frequency of asset re-balancing
-\item Factor tilts
-\item Active security selection
-\end{itemize}
-\end{frame}
-
 \begin{frame}{ESG and the Norwegian Fund}
 The fund has an ethical council
 \begin{itemize}[<+-| alert@+>]
@@ -1162,6 +1149,18 @@ The fund has an ethical council
 \item monitor standard and social media
 \end{itemize}
 \item 17 tobacco companies excluded in 2010
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Active components of fund}
+There are a number of places where the fund must be active
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Deciding on the appropriate market
+\item Finding an investable fund
+\item Frequency of asset re-balancing
+\item Factor tilts
+\item Active security selection
 \end{itemize}
 \end{frame}
 

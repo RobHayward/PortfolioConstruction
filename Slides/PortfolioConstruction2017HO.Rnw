@@ -42,7 +42,7 @@
 %\end{frame}
 
 \begin{frame}
-\includegraphics[scale=0.4]{FP}
+\includegraphics[scale=0.4]{FP2}
 \end{frame}
 
 \begin{frame}
