@@ -1,4 +1,17 @@
 These are some notes for the second of the Portfolio Construction sessions. I just need to remind myself of some of the key features.
+ 
+Re-reading Fundamental indexation. Benjamin Graham: in the short-run, the market is a voting machine, but in the long-run it is a weighing machine. The use of annual rebalancing for the fundaamental index meant that rebalancing costs were nearly as low as the capitaisation-wighed indices.  Captalisation is a volatile way to measure a company's size or importance. Is it too noisy relative to fundamentals? Equal weighting discards some of the benefits of capitalisation weighting. To avoid the combination of large capitalisation with the other metrics, the top 1000 firms were assssed.  The Russell 1000 represents nearly 92% of US equity market value; the Russell 5000 repreents 98%. There is no major change in results when using monthly or quartrely re-balacing. Young companies and fast-growing companies tend to beunder-represented. A 1000 stock capitalsation-weighted index was constructed for comparison. This is not quite Russell 1000. The information error is the value added divided by the standard deviation of the value added (tracking error). The TMT bubble was the key to the 190s outtperforance. There was a large infow to anything that had a large cap. The performance is partcularly good in recessionary phases: excess returns are 4.13 compared to 1.80 percent in expansions. The perforrmance is also better in bear than bull markets. It is clear that there is a growth bias in the capitalisation-weighted index. Although this method will tend to under-weight growth stocks, a better way to look at this may be to say that capitaisation-weighted indices will tend to over-weigh growth relative to the main-street weighing.
+
+The rise of ESG issues is partly the importance of climate change, partly the United Nations Principles of Responsible Investing and partly the rise of Twiter as a way of disseminating information. 27% of US firms have an ESG component, 17% of European and 15% vof Asian. There is a link between ESG and active involvement in companies.  
+
+The Norwegian petrolum fund has an operational reference portfolio that is used internally to assess performance. This is their version of the market portfolio. This starts with a benchmark that has been set by the Ministry of Finance.  There are then three objectives: increase diversification by inclusding stocks, weights and countries not usually included in the benchmark; try to harvest factor risk premia;  use proprietory methods to reduce transaction costs on rebalancing. 
+
+It is possible to think of the human capital as being bond-like or equity=like. This should also affect the allocation decision.  This is someting that has been discussed by the Norwegian governement. 
+
+The opportunity cost model of fund management means that there is a benchmark portfolio.  The active fund manager has to try to add to that benchamark. The active fund manager will tend to be active in the private markets that are more challenging, specualist and may offer the greatest scope for finding inefficiencies. 
+
+Rebalancing is a useful took to encourage cpounter-cyclical benaviour. 
+
 
 Risk parity
 The idea is based on the need for lower volatility assets to require leverage to achieve required returns. This means that not all investors can participate and that there is an opportunity for those that can to use leverage to capture this factor risk. 
