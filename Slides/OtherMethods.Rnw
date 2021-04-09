@@ -1,0 +1,383 @@
+\documentclass[14pt,xcolor=pdftex,dvipsnames,table]{beamer}
+
+% Specify theme
+\usetheme{Madrid}
+% See deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html for other themes
+\usepackage{caption}
+\usepackage{tikz}
+ \usetikzlibrary{arrows,positioning}
+\usepackage[absolute, overlay]{textpos}
+\definecolor{MyBrown}{RGB}{180, 151, 90}
+\usepackage{multirow}
+\usepackage[comma, sort&compress]{natbib}
+\usepackage{graphicx}
+\graphicspath{{../Pictures/}}
+\usepackage{amsmath}
+\bibliographystyle{agsm}
+% Specify base color
+\usecolortheme[named=OliveGreen]{structure}
+%\usecolortheme[named=MyBrown]{structure}
+% See http://goo.gl/p0Phn for other colors
+
+% Specify other colors and options as required
+\setbeamercolor{alerted text}{fg=Maroon}
+\setbeamertemplate{items}[square]
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
+% Title and author information
+\title{Other portfolio construction methods}
+\author{Rob Hayward}
+\date{Nov-2016}
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+\frametitle{Overview} 
+\tableofcontents
+\end{frame}
+
+% the next frame comes from 9 April 2021
+\begin{frame}{Active investment}
+Active investment 
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item \emph{Yale model}
+\begin{itemize}
+\item David Swensen
+\item inefficient markets
+\item private equity, macro hedge, illiquid (forests)
+\end{itemize}
+\item Public pension funds
+\begin{itemize}
+\item excessive funds
+\item high costs (1.25\%)
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\section{Other portfolio construction methods}
+\begin{frame}{Assets as bundles of risk}
+\begin{textblock*}{5cm}(1cm, 2cm)
+Colourful metaphors
+\end{textblock*}
+\begin{textblock*}{5.2cm}(1cm, 3cm) % (block width) (coords)
+\includegraphics[scale = 0.1]{vit}
+\end{textblock*}
+\begin{textblock*}{5.2cm}(6.5cm, 3cm)
+\includegraphics[scale = 0.6]{atom}
+\end{textblock*}
+\end{frame}
+
+\begin{frame}{Assets as bundles of risk}
+For a standard pension fund (adapted from Podkaminer (2013) CFA Institute)
+\begin{table}
+\begin{center}
+\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
+\begin{tabular}{l r r r}
+\textbf{Asset} & \textbf{\%} & \textbf{Risk} & \textbf{\%}\\
+\hline
+US equity     & 25\% & Equity & 57\% \\
+Non-US equity & 10\% & & \\
+Emerging equity & 2\% & & \\
+Private equity  & 20\% &  &  \\
+\hline
+US fixed income & 20\% & Interest rate&  10\%\\
+Global fixed income & 5\% & Credit & 18\%\\
+Cash            & 3\% & &  \\
+
+Real estate     & 10\% & Real estate & 10\%\\
+Other           & 5\% & Other & 5\% \\
+\end{tabular}
+\end{center}
+\end{table}
+
+\end{frame}
+
+
+\begin{frame}{Risk parity}
+Weight assets so that their risk to the portfolio is equal.  
+\begin{itemize}[<+-| alert@+>]
+\pause
+%\item All-Weather Asset-allocation approach introduced by Bridgewater
+\item The large variance of equities usually dominates a 60/40 portfolio
+\item A 25/75 equity-bond mix will equalise effects of each asset but will reduce the expected return
+\item Leveraging bonds to have a risk that is comparable to equities will reduce the overall risk of portfolio \textbf{and} increase the expected return
+\item This takes advantage of \emph{leverage aversion}
+\item There is risk that is not quantified
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Risk parity examples}
+\begin{table}
+\begin{center}
+\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
+\begin{tabular}{l  p{2.5cm} r}
+\textbf{Performance} & \textbf{60/40 stock-bonds} & \textbf{Risk parity}\\
+\hline
+Total Return & 8.5\% & 10.4\% \\
+Excess Return & 4.1\% & 5.9\%\\
+Standard Deviation & 8.9\% & 8.3\% \\
+Sharpe Ratio & 0.45 & 0.72
+\end{tabular}
+\end{center}
+\end{table}
+Risk-parity vs traditional average 1946 to 2015: Dalio, Prince, Jensen (2015)
+\end{frame}
+
+\begin{frame}{Other methods}
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Matching liabilities 
+\begin{itemize}
+\item Treat liabilities as a short position to be hedged
+\item Maturity matching
+\item Are liabilities bond-like or equity-like?
+\end{itemize}
+\item Statistical methods
+\begin{itemize}
+\item Principal components (PCA)
+\item Seeks to identify orthogonal factors that contribute most to the variation of the portfolio
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+%\begin{frame}{Statistical factors}
+%It is also possible to use statistical methods to draw out factors
+%\begin{itemize}[<+-| alert@+>]
+%\pause
+%\item Principal components analysis (PCA)
+%\end{itemize}
+%\end{frame}
+%
+begin{frame}{Factors are expensive}
+Recent work by Research Affiliates finds that factors have become \emph{expensive}
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Assess whether factors are expensive of cheap by measuring the price-to-book ratio
+\item Compare the value (price-to-book) vs 5 year returns
+\item Find the current valuation
+\item Changes in recent years  may be driven by valuation
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Factor value}
+\begin{table}
+\begin{center}
+\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
+\begin{tabular}{l  p{2.3cm} r}
+\textbf{Testing} & \textbf{Coefficient} & \textbf{Current value}\\
+\hline
+Value vs growth & -1.9\%* & Cheap\\
+Capitalisation & -0.72\%* & Mid\\
+Momentum & -0.34\%* & Cheap\\
+Liquidity & -0.45\%* & Expensive\\ 
+Beta & -0.00 & Cheap\\
+Profitable & -0.35\%* & Expensive\\
+\end{tabular}
+\end{center}
+\end{table}
+Factor valuation vs following 5-year returns.  1967-2015.  R. Arnot, N. Beck, V. Kalesnik and J. West, Feb 2016.  
+* Statistically significant
+\end{frame}
+
+\begin{frame}{For example: Low volatility}
+These have been one of the biggest winners of 2016
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Introduced in 2011
+\item BlackRock USMW 
+\item Inflow of \$16.0bn in first 9 months of 2016
+\item 28 funds hold \$44bn in assets (XTF)
+\item Seek to identify boring stocks.  
+\item Low or minimal volatility
+\item Tend to be high dividend stocks
+\item \emph{Crowded?} - concentrated in utilities
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Fickle Factors}
+How resilient are these factors? 
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item What is the source of the factor \emph{excess return}?
+\begin{itemize}
+\item Increased risk
+\item Inefficiency
+\begin{itemize}
+\item behavioural
+\item institutional
+\end{itemize}
+\end{itemize}
+\item Will the returns continue? 
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Factor source 1}
+\begin{table}
+\begin{center}
+\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
+\begin{tabular}{l l l}
+\textbf{Factor} & \textbf{Risk} & \textbf{Behavr-Instit}\\
+\hline
+\textbf{Value} & Systematic risk & Expectation error\\
+      &                 & Loss aversion\\
+      &                 & Investment flows\\
+\textbf{Size}  & Systematic risk & Expectation error\\
+      & Liquidity risk   & \\
+\textbf{Momentum} & Crash risk & Over-reaction\\
+        &             & Investment flows\\
+        &             & Asynchronous trade\\
+\end{tabular}
+\end{center}
+\end{table}
+%Adapted from MSCI \emph{Foundations of Factor Investment}
+
+\end{frame}
+
+\begin{frame}{Factor source 2}
+\begin{table}
+\begin{center}
+\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
+\begin{tabular}{l p{3cm} l}
+\textbf{Factor} & \textbf{Risk} & \textbf{Behavr-Instit}\\
+\hline
+\textbf{Low vol} & Borrowing Constraint          & Lottery effect\\
+        &             & Overconfidence\\
+        &             & Leverage aversion\\
+\textbf{Quality} & NA          & Expectations errors\\
+        &             & Manipulated earnings\\
+\end{tabular}
+\end{center}
+\end{table}
+Adapted from MSCI \emph{Foundations of Factor Investment}
+
+\end{frame}
+
+
+\section{The future}
+\begin{frame}{Low rate world}
+State street conducted a survey of the portfolio managers' response to the low-interest rate world
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Start of 2016
+\item 400 large institutional investors
+\item Mixture of active and passive investment
+\item Key questions 
+\begin{itemize}
+\item most important objective
+\item changes to deal with low returns
+\item barriers to overcome
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Findings: most important objective}
+The most important objective:
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item 41\% see asset class as the most important view
+\item 30\% see factors as the most important
+\item 25\% see a objective based investment
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Findings: changes to deal with low returns}
+Changes to deal with low returns
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item 49\% see an increased use of smart beta
+\item 27\% see an increased use of active investment
+\item 27\% see an increased use of objective investment
+\item 22\% see an increased use of alternative assets
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Findings: Barriers to change}
+Impediments to change
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Peer-group adoption
+\item Lack of in-house expertise
+\item Difficulties in benchmarking
+\item Difficulty in getting board buy-in
+\item Lack of proven record
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Portfolio construction}
+\begin{tikzpicture} 
+%\draw[very thin, color = gray](0, 0) grid (12, 6);
+\tikzstyle{block} = [draw, rectangle, text width = 5em, 
+  text centered, minimum height = 6mm, node distance = 5em];
+\tikzstyle{line} = [draw, -stealth, thick]
+\node [block] at (1.5, 4) (one) {\scriptsize True 'market' \\ (unobserved)};
+\node [block] at (5, 4) (two) {\scriptsize Passive investable \\ benchmark};
+\node [block] at (5, 2) (twoandhalf) {\scriptsize Alternative \\ assets};
+\node [block] at (8.5, 4) (three) {\scriptsize Rebalanced \\ benchmark};
+\node [block] at (8.5, 2) (four) {\scriptsize Dynamic factor \\ allocation};
+\node [block] at (8.5, 0) (five) {\scriptsize Active \\ Portfolio};
+\path [line] (one) -- (two);
+\path [line] (two) -- (three);
+\path [line] (two) -- (twoandhalf);
+\path [line] (three) -- (four);
+\path [line] (four) -- (five);
+\node at (3, 5.5) [align = center]{\scriptsize Choice of investable \\ \scriptsize benchmark};
+\node at (6.5, 5.5) [align = center]{\scriptsize Rebalancing \\ \scriptsize gain};
+\node at (11, 3) [align = center] {\scriptsize Factor \\ \scriptsize risk premia};
+\node at (11, 1) [align = center] {\scriptsize Active \\ \scriptsize management};
+\node at (2, 0) [align = center] {\scriptsize Adapted from \\ \scriptsize Ang, Brandt, Denison (2014)};
+\end{tikzpicture}
+\end{frame} 
+
+\begin{frame}{References and further reading}
+\begin{itemize}
+\item Ang, A, W.N. Goetmann and S.M. Schaefer (2009), "Evaluation of Active Management of the Norwegian Government Pension Fund",
+
+\item Arnott, R,. J.C. Hsu and Philip Moore (2005, "Fundamental Indexation", Financial Analysts Journal", Vol 61 No. 2. pp 83-89
+
+\item Bender J., R. Briand, D. Melas, R. Subramanian, (2013), 'Foundations for Factor Investing", MSCI Research Insight. 
+
+\item Black, F., M. Jense, M. Scholes, (1972), "The Capital Asset Pricing Model: Some Empirical Tests", In Studies in the Theory of Capital Markets, edited by M. Jensen, NY Praeger
+
+\item Dalio, R., B. Prince, G. Jensen, "Our Thoughts about Risk Parity and All Weather, Bridgewater Daily Observations" September 16 2015.
+
+\item De Bondt, W. R. Thaler, (1995), "Does the Stock Market Overreact?", Journal of Finance, vol 40, No 3, 793-803 
+
+\end{itemize}
+\end{frame}
+
+\begin{frame}{References cont.}
+\begin{itemize}
+\item Fama E.F, K.R. French, (1992), "The Cross Section of Expected Stock Returns", Journal of Finance, 47, 427-465
+
+\item Fama E.F, K.R. French, (1993), "Common Risk Factors in the Returns on Stock and Bonds", Journal of Finance, 53, 1131-1147
+
+\item Jagadesh N., S. Titman, (1993), "Returns to Buying Winners and Selling Losers: Implications for Stock Market Efficiency", Journal of Finance, Vol 48, No, 1, 65 -  91
+
+\item Malkiel B., (1995), "Returns from Investing in Equity Mutual Funds 1971 to 1991", Journal of Finance, 50, 549-572
+
+\item Podkaminer, E. (2013), Risk Factors as Building Blocks for Portfolio Diversification: the Chemistry of Asset Allocation, CFA Institute. 
+
+\item Ross, S. (1976), "The Arbitrage Theory of Capital Asset Pricing", Journal of Economic Theory, 13 (3), 341-360
+
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Reading}
+\begin{center}
+\includegraphics[height = 3.0in]{factorbook}
+\end{center}
+\end{frame}
+\end{document}
