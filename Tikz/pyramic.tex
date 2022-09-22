@@ -1,0 +1,22 @@
+%This comes from https://tex.stackexchange.com/questions/110522/how-to-elegantly-create-a-pyramid-hierarchy-in-tikz
+%https://tex.stackexchange.com/questions/294244/tikz-pyramid-hierarchy-colour
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{intersections}
+\def\colorlist{{"light green", "green", "dark green"}}
+\begin{document}
+
+\begin{tikzpicture}
+\coordinate (A) at (-5,0) {};
+\coordinate (B) at ( 5,0) {};
+\coordinate (C) at (0,7) {};
+\draw[name path=AC] (A) -- (C);
+\draw[name path=BC] (B) -- (C);
+\foreach \y/\A in {0/Security Selection,1/Fund Managers,2/Asset Owners} {
+    \path[name path=horiz] (A|-0,\y) -- (B|-0,\y);
+    \draw[name intersections={of=AC and horiz,by=P},
+          name intersections={of=BC and horiz,by=Q}] (P) -- (Q)
+        node[midway,above] {\A};
+}
+\end{tikzpicture}
+\end{document}

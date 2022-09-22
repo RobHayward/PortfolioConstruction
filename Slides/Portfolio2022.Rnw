@@ -1,0 +1,1552 @@
+\documentclass[14pt,xcolor=pdftex,dvipsnames,table, handout]{beamer}
+% Specify theme
+\usetheme{Madrid}
+% See deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html for other themes
+\usepackage{caption}
+\usepackage{tikz}
+\usepackage[absolute, overlay]{textpos}
+\usetikzlibrary{intersections}
+%\usetikzlibrary{arrows,positioning}
+%\usepackage[absolute, overlay]{textpos}
+\definecolor{MyBrown}{RGB}{180, 151, 90}
+\usepackage{multirow}
+%\usepackage[comma, sort&compress]{natbib}
+\usepackage{graphicx}
+\graphicspath{{../../Pictures/}}
+\usepackage{amsmath}
+%\bibliographystyle{agsm}
+% Specify base color
+% All this is needed for the ETF structure
+\usetikzlibrary{shapes.geometric, arrows}
+%\usepackage{adjustbox}
+\tikzstyle{block} = [rectangle, rounded corners, minimum width=3cm, 
+  minimum height= 2cm, text centered, text width = 2.8cm, draw = black, fill = MyBrown!20]
+\tikzstyle{shape1} = [circle, minimum width = 3.0cm, fill = MyBrown!20, text centered, 
+text width = 1.4cm, draw = black]
+\tikzstyle{arrow} = [thick, ->, >=stealth]
+\tikzstyle{arrow2} = [thick, <->, >=stealth]
+\usecolortheme[named=MyBrown]{structure}
+% See http://goo.gl/p0Phn for other colors
+
+% Specify other colors and options as required
+\setbeamercolor{alerted text}{fg=Maroon}
+\setbeamertemplate{items}[square]
+%\setbeameroption{show notes on second screen=left}
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
+% Title and author information
+\title{Portfolio Construction}
+\author{Rob Hayward}
+\date{Sep 2022}
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+% this is the front page taen from powerpoint picture FP
+%\begin{frame}
+%\includegraphics[scale=0.4]{FP}
+%\end{frame}
+
+\begin{frame}
+\frametitle{Overview} 
+\tableofcontents
+\end{frame}
+
+\section{Modern Portfolio Theory}
+%Outline of the theory and the usual slides. 
+\begin{frame}[label=MPT]{Modern Portfolio Theory}
+\begin{tikzpicture}[scale = 2] 
+%\draw[very thin, color = gray](0, 0) grid (5, 3);
+\draw [<->, thick] (0, 3) node (yaxis) [above] {$Return$} 
+  |- (5, 0) node (xaxis) [right] {$Risk$};
+\pause
+\draw[thick, color ={rgb: brown, 5; white, 1}] (1.0, 0.5) to [out = 120, in = 210] (2.0, 2.0) to [out = 25, in = 180] (5, 2.5);
+\pause
+\node at (1.0, 1.0) [right] {\scriptsize Efficient Frontier};
+\pause
+\node at (1.9, 2) [above left] {MP};
+\draw [fill = brown] (2, 2) circle [radius = 0.05];
+\pause
+\node at (0, 1) [left] {rf};
+\pause
+\draw[domain = 0.0:3.9, color = black] plot(\x, {1 + 0.5*\x});
+\pause
+  \node at (3.5, 2.65) [right] {\scriptsize Capital Market Line};
+\end{tikzpicture}
+% This will create a hyperlink button back to correlation slide
+%\hyperlink{correlation}{\beamerreturnbutton{Return}}
+\end{frame}
+
+\begin{frame}[label=universe]{Investment Universe}
+\includegraphics[scale= 0.4]{../../Pictures/universe.jpeg}
+\note{Need to consider human capital}
+\note{My Brexit story (Norges and oil, Saudi and diversification)}
+\end{frame}
+
+\begin{frame}{Market portfolio}
+<<ETFG1, fig.height=4.6, echo=FALSE, warning=FALSE>>=
+da <- read.csv('../../Data/ETFsize.csv')
+barplot(names.arg = da$Year, height = da$X, xlab = "Date", main = "The Increase In ETF Assets 2003 to 2022", ylab = "bn", col = 'chocolate4')	
+@
+%\notes{464 first half of the year}
+\end{frame}
+
+\begin{frame}{Physical  ETF structure}
+%\resizebox{4cm}{!}{
+\begin{center}
+\begin{figure}
+\begin{tikzpicture}
+\scope[shift = {(-6cm, -5.0cm)}, transform canvas={scale=0.9}]
+%  \draw[very thin, color = gray](0, 0) grid (12, 7);
+\node at (2, 2.5) (Stock Exchange) [block] {Stock Exchange};  
+\node at (10, 2.5) [block] {Retail and Institutional Investors};  
+\node at (2, 6.5) [block] {Authorised Participant};  
+\node at (10, 6.5) [block] {ETF};  
+% AP - stock exchange
+\draw [arrow2] (1, 3.5) -- node[left] {Cash} (1, 5.5);
+\draw [arrow2] (3, 5.5) -- node[right] {ETF} (3, 3.5);
+% Primary Market - creation
+\node at (6, 8.5) {\textbf{PRIMARY MARKET}}; 
+\node at (6, 8) {\textbf{Creation}}; 
+\draw [arrow] (3.6, 7) -- node[above] {Creation Unit} (8.4, 7);
+\draw [arrow] (8.4, 7.1) -- node[below] {Portfolio of Securities} (3.6, 7.1);
+% Primary market - redemption
+\node at (6, 5.1) {\textbf{Redemption}}; 
+\draw [arrow] (3.6, 6) -- node[above] {Creation Unit} (8.4, 6);
+\draw [arrow] (8.4, 5.9) -- node[below] {Portfolio of Securities} (3.6, 5.9);
+% Secondary Market
+\node at (6, 0.6) {\textbf{SECONDARY MARKET}}; 
+\draw [arrow2] (3.6, 2.5) -- node[above] {Cash} (8.4, 2.5);
+\draw [arrow2] (8.4, 2.0) -- node[below] {ETF} (3.6, 2.0);
+\endscope
+\end{tikzpicture}
+%\caption{\small{ETF: Primary and Secondary markets: Researve Bank of Australia (March 2011 Bulletin)}}
+\end{figure}
+\end{center}
+\end{frame}
+
+\againframe<7>{MPT}
+
+\begin{frame}[label=correlation]{Correlation between assets 2002:2022}
+% Picture of bond-stock correlation?
+	% Do we need another slide about regimes?
+\begin{table}
+\begin{center}
+\rowcolors{1}{MyBrown!20}{MyBrown!5}
+\begin{tabular}{l r r r r r r}
+& \textbf{SPY} & \textbf{TLT} & \textbf{GLD} & \textbf{VGSLX}& \textbf{JNK}& \textbf{EEM}\\
+\hline
+SPY & 1.00 & -0.38 & 0.04 & 0.76 & 0.60 & 0.85\\
+TLT & 	   & 1.00   & 0.15 & -0.22 & -0.21 & -0.34\\
+GLD & 	   &        & 1.00  & 0.04 & 0.06 & 0.13\\
+VGSLX &    &        &       & 1.00 & 0.43 & 0.68\\
+JNK   &    &        &       &      & 1.00 & 0.52 \\
+EEM   &	   &        &       &      &      & 1.00 \\
+\end{tabular}
+\end{center}
+\end{table}
+%\hyperlink{MPT<7>}{\beamergotobutton{Jump to MPT}}
+\end{frame}
+
+\begin{frame}{Correlation changes}
+<<cor, fig.height=4.6, echo=FALSE, warning=FALSE,message=FALSE>>=
+require(zoo)
+da <- read.csv('../../Data/port2.csv')
+da$Date <- as.Date(da$Date)
+da$SPYR <- c(NA, da$SPY[2:length(da$SPY)]/da$SPY[1:1-length(da$SPY)] - 1)
+da$TLTR <- c(NA, da$TLT[2:length(da$TLT)]/da$TLT[1:1-length(da$TLT)] - 1)
+# I worked out the indices for da$Date because I could not be bothered to do it myself. 
+plot(da$Date[60:5062], rollapply(da[, c("SPYR", "TLTR")], width = 60, FUN = cor, by.column = FALSE)[, 2], type = 'l', 
+     main = '60-day rolling correlation SPY and TLT', xlab = "Year", ylab = "Correlation")
+@
+\end{frame}
+
+\begin{frame}{Lack of transaction costs / liquidity}
+\begin{columns}{}
+\begin{column}{0.48\linewidth}
+\includegraphics[scale = 1.00]{../../Pictures/house.jpeg}
+\end{column}
+\begin{column}{0.47\linewidth}
+\includegraphics[scale = 0.50]{../../Pictures/water.jpeg}
+\end{column}
+\end{columns}
+% US stocks vs real estate. 
+\end{frame}
+
+\begin{frame}{The risk-free asset}
+	% the ocean?
+	% Photo by <a href="https://unsplash.com/@omeganova?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Deniz Altindas</a> on <a href="https://unsplash.com/s/photos/calm?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+	  \includegraphics[scale=6.4]{../../Pictures/USTreasurybond.jpg}
+\end{frame}
+
+\begin{frame}{Risk free rate}
+<<rr, fig.height=4.6, echo=FALSE, warning=FALSE,message=FALSE>>=
+da <- read.csv('../../Data/RealInterestRate.csv', col.names = c("Date", "R.Rate"))
+da$Date <- as.Date(da$Date)
+plot(da$Date, da$R.Rate, type = 'l', xlab = "Date", ylab = "Rate", main = "US 1-year real rate")
+abline(h  = 0, col = 'brown')
+@
+\end{frame}
+
+\begin{frame}{Investors are risk averse}
+\includegraphics[scale = 1.0]{../../Pictures/reddit.jpg}
+\end{frame}
+
+\againframe<7>{MPT}
+% repeats the frame labelled MPT
+
+\begin{frame}{Expected returns}
+	There are two ways to assess expected returns
+\begin{itemize}[<+-| alert@+>]
+		\pause
+	\item Use a survey of past performance
+		\begin{itemize}
+			\item sample must be representative
+			\item do you have the data?
+		\end{itemize}
+	\item Use a valuation model
+		\begin{itemize}
+			\item lots of assumptions
+			\item valuation can always become more extreme
+		\end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Expected returns (nominal): 1973-2013}
+\begin{table}
+\rowcolors{1}{MyBrown!20}{MyBrown!5}
+\begin{center}
+\small
+\begin{tabular}{lllll}
+  \hline
+	\textbf{Asset} & \textbf{Returns}& \textbf{Volatility}& \textbf{Sharpe}& \textbf{Drawdown} \\ 
+  \hline
+t-bills & 5.3\% & 1.0\% & 0.0 & 0.0\% \\ 
+US large & 10.2\% & 15.6\% & 0.32 & -51.0\% \\
+Foreign EEM & 12.1\% & 22.1\% & 0.31 & -61.4\% \\
+Corporate bonds & 9.3\% & 6.6\% & 0.61 & -20.1\% \\
+US 10-yr gov & 7.7\% & 8.4\% & 0.29 & -15.8\% \\
+Foreign 10-yr gov & 8.5\% & 10.5\% & 0.43 & -15.2\% \\
+TIPS & 7.7\% & 6.3\% & 0.38 & -11.9\% \\
+REIT & 9.5\% & 18.1\% & 0.23 & -67.7\% \\
+Gold & 7.4\% & 20.9\% & 0.10 & -65.0\% \\
+   \hline
+\end{tabular}
+\caption{Global Asset Allocation, Meb Faber}
+\end{center}
+\end{table}
+\end{frame}
+
+\begin{frame}[label=RR]{Expected returns (real): 1973-2013}
+\begin{table}
+\rowcolors{1}{MyBrown!20}{MyBrown!5}
+\begin{center}
+\small
+\begin{tabular}{lllll}
+  \hline
+	\textbf{Asset} & \textbf{Returns}& \textbf{Volatility}& \textbf{Sharpe}& \textbf{Drawdown} \\ 
+  \hline
+t-bills & 1.0\% & 1.2\% & 0.0 & -12.5\% \\ 
+US large &  5.7\% & 15.7\% & 0.30 & -54.1\% \\
+Foreign EEM &  7.5\% & 22.1\% & 0.29 & -62.0\% \\
+Corporate bonds & 4.8\% & 7.0\% & 0.55 & -39.2\% \\
+US 10-yr gov & 3.3\% & 8.7\% & 0.27 & -44.8\% \\
+Foreign 10-yr gov & 4.1\% &  7.8\% & 0.40 & -32.7\% \\
+TIPS & 3.3\% & 6.4\% & 0.36 & -22.3\% \\
+REIT & 5.0\% & 18.2\% & 0.22 & -69.3\% \\
+Gold & 3.0\% & 20.8\% & 0.10 & -84.6\% \\
+   \hline
+\end{tabular}
+\end{center}
+\caption{Global Asset Allocation, Meb Faber}
+\end{table}
+\end{frame}
+\begin{frame}{US equity valuation}
+Used by Robert Shiller in \emph{Irrational Exuberance}
+\begin{block}{}
+\begin{equation*}
+CAPE = \frac{\text{S\&P500 real price}}{\text{10-year MA S\&P 500 earnings}}
+\end{equation*}
+\end{block}
+\end{frame}
+
+\begin{frame}{CAPE}
+<<earnings, echo = FALSE, warning=FALSE, message=FALSE, fig.height=4.5, fig.cap= "Cumulative, adjusted price earnings ratio">>=
+library(xts)
+names <- c("Date", "S&P", "Dividend", "Earnings", "CPI", "Date.frac", "Long rate", "Real price", "Real dividend", "Real earnings", "PE10")
+da <- read.csv("../../Data/ie_data.csv", skip = 7, stringsAsFactors = FALSE)
+da <- da[,-dim(da)[2]]
+da$Date <- as.yearmon(da$Date, format = "&Y.%m")
+plot(da$Date, da$CAPE, type = 'l', main = "CAPE 1871 to 2022", 
+     ylab = "CAPE", xlab = "Year")
+text(1966, 26, "24.1 Jan 1966", col = "darkgreen")
+#text(2007, 25, "23.7 2007", col = "darkgreen")
+text(1925, 34, "32.6 Jan 1929", col = "darkgreen")
+text(1982, 44, "44.2 Dec 1999", col = "darkgreen")
+@
+
+\note{US earnings increased by 6\% year on year in the second quarter of the year. }
+\note{Interested in profit-margins, government deficit and consumer saving}
+\end{frame}
+
+\begin{frame}{US bond valuation}
+<<trend2, echo=FALSE, fig.height=4.6, message=FALSE, warning=FALSE>>=
+da2 <- read.csv('../../EC387/Data/Bond.csv')
+da2[,1] <- as.Date(da2$DATE, format = '%Y-%m-%d')
+colnames(da2) <- c("Date", "Yield")
+plot(da2, type = 'l', main = "US 10-year bond yield")
+y <- c(10, 1.0)
+x <- c(6085, 20050)
+lines(x, y, col = "DarkGreen")
+@
+\end{frame}
+
+\begin{frame}{10-year real rate}
+<<rr2, fig.height=4.6, echo=FALSE, warning=FALSE,message=FALSE>>=
+da <- read.csv('../../Data/REAINTRATREARAT10Y.csv', col.names = c("Date", "R.Rate"))
+da$Date <- as.Date(da$Date)
+plot(da$Date, da$R.Rate, type = 'l', xlab = "Date", ylab = "Rate", main = "US 10-year real rate")
+abline(h  = 0, col = 'brown')
+@
+\end{frame}
+%\againframe{frame:MPT}
+
+\begin{frame}{Risk}
+<<norm, fig.height=4.6, echo=FALSE, warning=FALSE>>=
+x <- seq(-4, 4, 0.1)
+fs = function(x, epsilon, delta){
+dnorm(sinh(delta*asinh(x) - epsilon)) * delta*cosh(delta*asinh(x) - 
+  epsilon)/sqrt(1 + x^2)
+}
+plot(x, fs(x, 0, 1), type = 'l', col = 'darkgreen', main = 'Normal Distribution', 
+   xlab = 'Return', ylab = 'frequency', ylim = c(0, 0.6))
+# http://stats.stackexchange.com/questions/43482/transformation-to-increase-kurtosis-and-skewness-of-normal-r-v
+#lines(x, fs(x, 0, 1.5), type = 'l', lty = 3)
+#lines(x, fs(x, -0.4, 1), type = 'l', lty = 2)
+@
+\end{frame}
+
+\begin{frame}{Skew}
+<<skew, fig.height=4.6, echo=FALSE, warning=FALSE>>=
+x <- seq(-4, 4, 0.1)
+fs = function(x, epsilon, delta){
+dnorm(sinh(delta*asinh(x) - epsilon)) * delta*cosh(delta*asinh(x) - 
+  epsilon)/sqrt(1 + x^2)
+}
+plot(x, fs(x, 0, 1), type = 'l', col = 'darkgreen', main = 'Distribution with Skew', 
+   xlab = 'Return', ylab = 'frequency', ylim = c(0, 0.6))
+# http://stats.stackexchange.com/questions/43482/transformation-to-increase-kurtosis-and-skewness-of-normal-r-v
+#lines(x, fs(x, 0, 1.5), type = 'l', lty = 3)
+lines(x, fs(x, -0.4, 1), type = 'l', lty = 2)
+@
+\end{frame}
+
+\begin{frame}{Kurtosis}
+<<kurt, fig.height=4.6, echo=FALSE, warning=FALSE>>=
+x <- seq(-4, 4, 0.1)
+fs = function(x, epsilon, delta){
+dnorm(sinh(delta*asinh(x) - epsilon)) * delta*cosh(delta*asinh(x) - 
+  epsilon)/sqrt(1 + x^2)
+}
+plot(x, fs(x, 0, 1), type = 'l', col = 'darkgreen', main = 'Distribution with Kurtosis', 
+   xlab = 'Return', ylab = 'frequency', ylim = c(0, 0.6))
+# http://stats.stackexchange.com/questions/43482/transformation-to-increase-kurtosis-and-skewness-of-normal-r-v
+lines(x, fs(x, 0, 1.5), type = 'l', lty = 2)
+#lines(x, fs(x, -0.4, 1), type = 'l', lty = 2)
+@
+\end{frame}
+
+\begin{frame}{Kurtosis and skew}
+<<skkurt, fig.height=4.6, echo=FALSE, warning=FALSE>>=
+x <- seq(-4, 4, 0.1)
+fs = function(x, epsilon, delta){
+dnorm(sinh(delta*asinh(x) - epsilon)) * delta*cosh(delta*asinh(x) - 
+  epsilon)/sqrt(1 + x^2)
+}
+plot(x, fs(x, 0, 1), type = 'l', col = 'darkgreen', main = 'Distribution with Kurtosis and skew', 
+   xlab = 'Return', ylab = 'frequency', ylim = c(0, 0.6))
+# http://stats.stackexchange.com/questions/43482/transformation-to-increase-kurtosis-and-skewness-of-normal-r-v
+#lines(x, fs(x, 0, 1.5), type = 'l', lty = 2)
+#lines(x, fs(x, -0.4, 1), type = 'l', lty = 2)
+lines(x, fs(x, -0.4, 1.5), type = 'l', lty = 2)
+@
+\end{frame}
+
+\begin{frame}{Regimes: calm}
+<<regimes1, fig.height=4.6, echo=FALSE, warning=FALSE>>=
+# Simulate a mixture distribution
+calm <- rnorm(1000000)
+hist(calm, xlim = c(-8,8), prob = TRUE)
+#crisis <- rnorm(20000, -2, sd = 2)
+#hist(crisis, xlim = c(-8, 8))
+#total <- c(calm, crisis)
+#hist(total, xlim = c(-8, 8))
+@
+\end{frame}
+
+\begin{frame}{Regimes: crisis}
+<<regimes2, fig.height=4.6, echo=FALSE, warning=FALSE>>=
+# Simulate a mixture distribution
+calm <- rnorm(1000000)
+#hist(calm, xlim = c(-8,8))
+crisis <- rnorm(20000, -2, sd = 2)
+hist(crisis, xlim = c(-8, 8), prob = TRUE)
+#total <- c(calm, crisis)
+#hist(total, xlim = c(-8, 8))
+@
+\end{frame}
+
+\begin{frame}{Regimes: mixed}
+<<regimes3, fig.height=4.6, echo=FALSE, warning=FALSE>>=
+# Simulate a mixture distribution
+calm <- rnorm(1000000)
+#hist(calm, xlim = c(-8,8))
+crisis <- rnorm(20000, -2, sd = 2)
+#hist(crisis, xlim = c(-8, 8))
+total <- c(calm, crisis)
+hist(total, xlim = c(-8, 8), prob = TRUE)
+@
+\end{frame}
+
+\begin{frame}{Black swan}
+\includegraphics[scale = 0.2]{../../Pictures/blackswan.jpg}
+\note{Higher moments and uncertainty}
+\end{frame}
+
+\begin{frame}{Grey Rhino}
+\includegraphics[scale = 0.3]{../../Pictures/greyrhino.jpeg}
+\note{Higher moments and uncertainty}
+\end{frame}
+
+\begin{frame}{Grey Rhino}
+\includegraphics[scale = 1.0]{../../Pictures/greyrhino.jpeg}
+\note{Higher moments and uncertainty}
+\end{frame}
+
+\begin{frame}{Unknown unknowns}
+\begin{textblock*}{5.2cm}(1cm, 3cm) % (block width) (coords)
+\includegraphics[scale = 0.5]{Rumsfeld2.jpeg}
+\end{textblock*}
+\begin{textblock*}{5.2cm}(6cm, 3cm)
+\begin{block}{}
+There are things we know; there are things we do not know; there are things that we do not know that we do not know
+\end{block}
+\end{textblock*}
+\end{frame}
+
+\againframe{RR}
+
+\begin{frame}{EMH}
+\includegraphics[scale=0.25]{oneHundredDollar.jpg}
+\end{frame}
+
+\againframe<7>{MPT}
+
+\section{Industry Structure}
+%Asset owners and asset managers
+
+%\begin{frame}{Asset owners and asset managers}
+%\begin{tikzpicture}
+%\coordinate (A) at (-5,0) {};
+%\coordinate (B) at ( 5,0) {};
+%\coordinate (C) at (0,7) {};
+%\draw[name path=AC] (A) -- (C);
+%\draw[name path=BC] (B) -- (C);
+%\foreach \y/\A in {0/Asset Managers,1/,2/Asset Owners} {
+%    \path[name path=horiz] (A|-0,\y) -- (B|-0,\y);
+%    \draw[name intersections={of=AC and horiz,by=P},
+%          name intersections={of=BC and horiz,by=Q}] (P) -- (Q)
+%        node[midway,above] {\A};
+%}
+%\end{tikzpicture}
+%\end{frame}
+
+\begin{frame}{Industry structure}
+There are two key areas of decision-making
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Asset owners
+\begin{itemize}
+\item SWF
+\item Pension/insurance funds
+\item Foundations and endowments
+\item Family offices
+\item Individuals
+\end{itemize}
+\item Asset managers
+\begin{itemize}
+\item Active to passive
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+% Initial decision is from the asset owner
+% maybe in consultation with the fund manager
+% This may be reconsidered-restructured. 
+\begin{frame}[label=dec]{Investment decision}
+Investment decisions to be taken
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Objectives
+% liabilities, liquidity needs, time,  etc
+\begin{itemize}
+\item Universe
+% all those things discussed before
+\item Risk tolerance
+\item Strategy 
+\item Tactics
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Objectives:PIF}
+\includegraphics[scale=1.0]{../../Pictures/toon.png}
+\end{frame}
+
+\againframe{universe}
+
+%\begin{frame}{Risk and long term investment}
+	% really need this? 
+%\begin{block}{}
+%Do we measure risk at the end of the period or throughout the whole investment period?
+%\end{block}
+%\pause
+%This matters in real life where people panic, get fired and have margins
+%\pause
+%\begin{itemize}
+%\item End of horizon risk falls
+%\item Within horizon risk rises
+%\end{itemize}
+%\end{frame}
+
+\begin{frame}{Strategic asset allocation}
+Determine the investment universe and allocate
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Asset weights
+\item Flexibility with weightings
+\item Factors and securities
+\item Rebalancing strategy
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Tactical asset allocation}
+Try to enhance returns
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Overweight and underweight
+\item Market timing
+\item Avoid assets
+\item Short positions
+\item 130:30
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label=DMF]{Decision-making framework}
+\begin{tikzpicture} 
+%\draw[very thin, color = gray](0, 0) grid (12, 6);
+\tikzstyle{block} = [draw, rectangle, text width = 5em, 
+  text centered, minimum height = 6mm, node distance = 5em];
+\tikzstyle{line} = [draw, -stealth, thick]
+\node [block] at (1.5, 4) (one) {\scriptsize Investment universe \\ (unobserved)};
+\node [block] at (5, 4) (two) {\scriptsize Passive investable \\ benchmark};
+\node [block] at (5, 2) (twoandhalf) {\scriptsize Alternative \\ assets};
+\node [block] at (8.5, 4) (three) {\scriptsize Rebalanced \\ benchmark};
+\node [block] at (8.5, 2) (four) {\scriptsize (Dynamic) factor \\ allocation};
+\node [block] at (8.5, 0) (five) {\scriptsize Active \\ Portfolio};
+\path [line] (one) -- (two);
+\path [line] (two) -- (three);
+\path [line] (two) -- (twoandhalf);
+\path [line] (three) -- (four);
+\path [line] (four) -- (five);
+\node at (3, 5.5) [align = center]{\scriptsize Choice of investable \\ \scriptsize benchmark};
+\node at (6.5, 5.5) [align = center]{\scriptsize Rebalancing \\ \scriptsize gain};
+\node at (11, 3) [align = center] {\scriptsize Factor \\ \scriptsize risk premia};
+\node at (11, 1) [align = center] {\scriptsize Active \\ \scriptsize management};
+\node at (2, 0) [align = center] {\scriptsize Adapted from \\ \scriptsize Ang, Brandt, Denison (2014)};
+\end{tikzpicture}
+\end{frame} 
+
+
+
+\section{Asset allocation}
+
+\begin{frame}{Strategic vs tactical}
+Collecting beta or alpha
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Strategic allocation
+\begin{itemize}
+\item long-run
+\item risk-tolerance
+\item liquidity tolerance
+\end{itemize}
+\item Tactical allocation
+\begin{itemize}
+\item collect factors
+\item market timing
+\item economic conditions
+\item regime shift
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Rebalancing}
+Decisions about rebalancing
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Strategy
+\begin{itemize}
+\item buy and hold 
+% weight of risky asset will increase with wealth
+% consistent with decreasing relative risk aversion
+% Best in a trending market.
+\item constant mix
+% Buying losers and selling winners (best in a fluctuating market)
+\item constant proportion portfolio insurance
+\item futures or options portfolio insurance
+% Increase the weight of risky asset as asset increases in price (Henrik page 14)
+\end{itemize}
+\item Frequency
+\begin{itemize}
+\item balance of cost and improvement
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+ \begin{frame}{Keynes}
+\includegraphics[scale=0.8]{../../Pictures/Keynes.jpeg}
+\footnotesize
+\vspace{1cm}
+David Chambers and Elroy Dimson: The British Origins of the US Endowment Model
+\end{frame}
+
+\begin{frame}{Edgar Lawrence Smith}
+\includegraphics[scale=0.35]{../../Pictures/ELSLongTermInvestments.jpg}
+\end{frame}
+
+\begin{frame}{Swensen model}
+	David Swensen CIO of Yale endowment
+\begin{itemize}[<+-| alert@+>]
+		\pause
+	\item Switch from equities to alternative assets
+		\begin{itemize}
+			\item private equity
+			\item hedge funds
+		\end{itemize}
+	\item Take advantage of fund characteristics
+		\begin{itemize}
+			\item long-term view
+			\item tolerance of illiquidity
+		\end{itemize}
+	\item First-mover advantage
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Yale allocation (2021)}
+\begin{table}
+\begin{center}
+\small
+\rowcolors{1}{MyBrown!20}{MyBrown!5}
+\begin{tabular}{lr}
+\hline
+\textbf{Asset} & \textbf{Weighting} \\
+  \hline
+Hedge funds & 23.5\% \\
+Venture capital & 23.5\% \\
+Private equity & 17.5\% \\
+Foreign equity & 11.75\% \\
+Real estate & 9.5\% \\
+Bonds and cash & 7.5\% \\
+Natural resources & 4.5\% \\
+US equity & 2.25\% \\
+   \hline
+\end{tabular}
+\end{center}
+\end{table}
+\end{frame}
+%
+% Now this is crowded and liquidity premium has been 
+% eroded by fees
+\begin{frame}{Criticism}
+Model has been criticised recently as 
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Crowded
+\item Liquidity premium is eroded by fees
+\item Less easy to measure performance
+\item Richard Ennis
+\begin{itemize}
+\item performance since 2007
+\item increased fees for followers
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Ennis: investment eras}
+\begin{table}
+\begin{center}
+\rowcolors{1}{MyBrown!20}{MyBrown!5}
+\small
+\begin{tabular}{p{0.4\linewidth}  p{0.2\linewidth} p{0.2\linewidth}} 
+  \hline
+\textbf{Era} & \textbf{Duration}& \textbf{Excess return} \\
+  \hline
+Stock and bond \\(1974-93) & 20 & -0.8\% \\
+\hline
+The Golden Age \\(1994-2008) & 15 & 4.1\% \\
+\hline
+The Post-GFC \\(2009-2020) & 12 & -1.6\%\\ 
+\hline
+\end{tabular}
+\caption{US University Endowment investment regimes}
+\end{center}
+\end{table}
+\end{frame}
+
+\begin{frame}{Ubiquitos US stock allocation}
+\begin{table}
+\begin{center}
+\rowcolors{1}{MyBrown!20}{MyBrown!5}
+\small
+\begin{tabular}{lrr}
+  \hline
+\textbf{Asset} & \textbf{Correlation}& \textbf{Beta} \\
+  \hline
+Aggregate bonds	& -0.47 & -1.0 \\
+High-yield 	&  0.56 & 0.25 \\
+Non-US equities &  0.96 & 1.07 \\
+Real Estate     &  0.85 & 0.83 \\
+Venture Capital &  0.80 & 1.16 \\
+Private Equity  &  0.96 & 1.00 \\
+Hedge Funds     &  0.96 & 0.45 \\
+NACUBO composite & 0.98 & 0.79 \\ 
+   \hline
+\end{tabular}
+\caption{Comparison with Russell 3000 2007 to 2021}
+\end{center}
+\end{table}
+\end{frame}
+% https://richardmennis.com/blog/the-modern-endowment-story-a-ubiquitous-united-states-equity-factor
+
+% Now add the note on under-performance. 
+
+%https://richardmennis.com/blog/the-modern-endowment-story-a-ubiquitous-united-states-equity-factor
+
+\begin{frame}{Standard pension fund asset allocation}
+\begin{table}
+\begin{center}
+\rowcolors{1}{MyBrown!20}{MyBrown!5}
+\begin{tabular}{l r r r}
+\textbf{Asset} & \textbf{\%} & \textbf{Risk} & \textbf{\%}\\
+\hline
+US equity     & 25\% & Equity & 57\% \\
+Non-US equity & 10\% & & \\
+Emerging equity & 2\% & & \\
+Private equity  & 20\% &  &  \\
+\hline
+US fixed income & 20\% & Interest rate&  10\%\\
+Global fixed income & 5\% & Credit & 18\%\\
+Cash            & 3\% & &  \\
+
+Real estate     & 10\% & Real estate & 10\%\\
+Other           & 5\% & Other & 5\% \\
+\end{tabular}
+\end{center}
+\end{table}
+\small
+For a standard pension fund (adapted from Podkaminer (2013) CFA Institute
+\end{frame}
+
+\begin{frame}{Core portfolio assets}
+The core assets of a portfolio are bond and stocks
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Core assets
+\item Fundamentally, they are often opposites
+\item Correlation is often negative
+\item Usually 60:40
+\end{itemize}
+\note{it is difficult.  Correlations change over time. }
+\note{Can investors acatually find a market portfolio? }
+\end{frame}
+
+\begin{frame}{Basic equity-bond portfolio}
+Portfolio construction (2002-2018)
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Equal weights (50:50) of SPY and TLT
+\item No costs
+\item No re-balancing (they are 60:40 at the end)
+\begin{itemize}
+\item rebalancing will tend to improve returns as it will sell winners and buy losers
+\item rebalancing will increase costs
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Equity-bond performance}
+<<port, echo=FALSE, fig.height=4.6, message=FALSE, warning=FALSE>>=
+da <- read.csv('../../Data/port.csv')
+da$Date <- as.Date(da$Date, format = "%Y-%m-%d")
+plot(da$Date, da$rebasePort, type = 'l', xlab = "Date", ylab = "Re-based Value", 
+     main = "Portfolio Performance", ylim = c(90, 420))
+lines(da$Date, da$rebasetlt, col = 'DarkGreen')
+lines(da$Date, da$rebasespy, col = 'blue')
+legend('topleft', inset = 0.05, c('Portfolio', 'SPY', 'TLT'), lty = 1, 
+       col = c("Black", "brown","DarkGreen" ))
+@
+\end{frame}
+
+\begin{frame}{Relative performance}
+% latex table generated in R 3.4.4 by xtable 1.8-3 package
+% Thu Jan 24 15:17:24 2019
+\rowcolors{1}{MyBrown!20}{MyBrown!5}
+\begin{table}[ht]
+\centering
+\small
+\begin{tabular}{rrrrrr}
+  \hline
+	& \textbf{AnnRet} & \textbf{AnnVol} & \textbf{Sharpe} & \textbf{DailyMax} & \textbf{DailyMin} \\ 
+  \hline
+Equity  & 10.32 & 18.48 & 0.56 & 14.52 & -9.84 \\ 
+  Debt  & 6.95 & 13.34 & 0.52 & 5.17 & -5.04 \\ 
+  Portfolio  & 7.74 & 8.66 & 0.89 & 5.18 & -3.83 \\ 
+   \hline
+\end{tabular}
+\end{table}
+\end{frame}
+
+
+% The basic equity-bond.  
+% What about risk-on/risk-off?  Would be bond-equity.  What now?
+% Is it useful to think of regimes?  
+% Start with risk-on and risk-off.  We have already spoken about economic spheres (inflation and growth matrix). 
+% Most returns come from asset allocation. Market timing does not work.  Strategic allocation (long run), tactical allocation (short run)
+% There is an active element - over or under weight assets.  High beta or low beta?
+
+\begin{frame}{All Weather/risk-parity}
+\begin{itemize}[<+-| alert@+>]
+		\pause
+	\item Diversification of assets
+	\item Risk-parity
+	\item Weighting or leverage
+\end{itemize}
+\end{frame}
+
+\againframe<7>{MPT}
+% repeats the frame labelled MPT
+
+\begin{frame}{All Weather/risk-parity: US focus}
+\begin{table}
+\begin{center}
+\rowcolors{1}{MyBrown!20}{MyBrown!5}
+\small
+\begin{tabular}{ll}
+  \hline
+	 \textbf{Asset} & \textbf{Weight} \\ 
+  \hline
+US equities & 30\% \\
+US 20-year plus Treasury bond & 40\% \\
+US 7 to 10 year Treasury bond & 15\% \\
+Gold 	&	7.5\% \\
+Commodities & 7.5\% \\
+   \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\end{frame}
+\begin{frame}{All Weather/risk-parity: international}
+\begin{table}
+\begin{center}
+\rowcolors{1}{MyBrown!20}{MyBrown!5}
+\small
+\begin{tabular}{lr}
+  \hline
+\textbf{Asset} & \textbf{Weighting} \\
+  \hline
+US large cap & 8\% \\
+Overseas developed & 8\% \\
+Corporate bonds & 35\% \\
+10-year US government bonds & 35\%	\\
+Commodities & 5\%	\\
+Gold & 5\%	\\
+REIT	& 5\%	\\
+   \hline
+\end{tabular}
+\end{center}
+\end{table}
+\end{frame}
+
+\begin{frame}{All Weather/risk-partity:1973-2013}
+\begin{table}
+\begin{center}
+\rowcolors{1}{MyBrown!20}{MyBrown!5}
+\small
+\begin{tabular}{rrrrr}
+  \hline
+	& \textbf{US Tbills} & \textbf{US bond}& \textbf{US equity}& \textbf{Risk parity} \\
+  \hline
+Nominal Return	& 5.2\%	& 7.74\%  & 10.21\%  & 9.21\%  \\
+Volatility	& 0.97\%& 8.43\%  & 15.57\%  & 6.48\%  \\
+Sharpe Ratio	& 0.00	& 0.29	 & 0.32  & 0.61 \\
+Max drawdown	& 0.00  & -15.79\%  & -50.95\%  & -14.41\% \\
+  \hline
+\end{tabular}
+\end{center}
+\end{table}
+\end{frame}
+
+
+\begin{frame}{Investment regimes}
+\begin{tikzpicture}[scale = 1.2]
+%\draw[very thin, color = gray](0, 0) grid (12, 7);
+\draw [thick, fill = yellow, fill opacity = 0.2] (3, 1) -- (6, 1) -- (3, 3) -- (3, 1);
+\draw [thick, fill = MyBrown, fill opacity = 0.2] (6, 1) -- (6, 3) -- (3, 3);
+\draw [thick, fill = yellow, fill opacity = 0.2] (6, 1) -- (9, 1) -- (6, 3) -- (6, 1);
+\draw [thick, fill = MyBrown, fill opacity = 0.2] (9, 1) -- (9, 3) -- (6, 3);
+\draw [thick, fill = yellow, fill opacity = 0.2] (6, 3) -- (9, 3) -- (6, 5) -- (6, 3);
+\draw [thick, fill = MyBrown, fill opacity = 0.2] (9, 3) -- (9, 5) -- (6, 5);
+\draw [thick, fill = yellow, fill opacity = 0.2] (3, 3) -- (6, 3) -- (3, 5) -- (3, 3);
+\draw [thick, fill = MyBrown, fill opacity = 0.2] (6, 3) -- (6, 5) -- (3, 5);
+\node at  (3, 1) [above right] {Bond +};
+\node at  (6, 3) [below left] {Stock +};
+\node at  (3, 3) [above right] {Bond +};
+\node at  (6, 5) [below left] {Stock -};
+\node at  (6, 1) [above right] {Bond -};
+\node at  (9, 3) [below left] {Stock +};
+\node at  (6, 3) [above right] {Bond -};
+\node at  (9, 5) [below left] {Stock -};
+\node at (4, 5) [above] {\scriptsize Low};
+\node at (7, 5) [above] {\scriptsize High};
+\node [rotate = 90] at (2.5, 1.7) {\scriptsize High};
+\node [rotate = 90] at (2.5, 4.3) {\scriptsize Low};
+\node at (6, 6) {Inflation};
+\node [rotate = 90] at (1, 3) [below] {Growth};
+\end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Man inflation study: real returns}
+\begin{table}
+\begin{center}
+\rowcolors{1}{MyBrown!20}{MyBrown!5}
+\small
+\begin{tabular}{lrrrr}
+  \hline
+	& \textbf{BW} & \textbf{OPEC}& \textbf{Iran}& \textbf{All} \\
+  \hline
+Start & Feb-66 & Jul-27 & Feb-77 & \\
+End   & Jan-70 & Dec-74 & Mar-80 & \\
+Length& 48m    & 30m    & 38m & \\
+Price change& 19\%   & 24\%   & 37\% & \\
+\hline 
+Energy & -16\% & 264\% & 57\% & 41\%\\
+Gold & - & 166\% & 154\% & 13\% \\
+Res Real Estate & -2\% & -7\% & 11\% & -2\% \\
+Equity & -7\% & -46\% & -14\% & -7\% \\
+Gov  & -13\% & -12\% & -31\%  & -5\% \\
+60:40 & -9\% & -34\% & -20\% & -6\% \\
+  \hline
+\end{tabular}
+\end{center}
+\end{table}
+\scriptsize
+BW is end of Bretton Woods, OPEC is OPEC oil embargo, Iran is the Iranian revolution.  All includes US entering WW2, end of WW2, Korean War, Reagan boom of 1987 and China boom of 2007 
+\end{frame}
+
+\begin{frame}{Real commodity prices since 1950}
+<<RCP, fig.height=4.6, echo=FALSE, warning=FALSE>>=
+da <- read.csv('../../Data/Realcommodityprices.csv', skip = 1)
+colnames(da)[1] <- "Year"
+rebase <- function(x = data, y = year){
+  x[1]/x[1:length(x)] * 100
+}
+# Just plot from set date
+plot(da$Year[da$Year > 1950], rebase(da$Lead[da$Year > 1950]), type = 'l', ylim = c(40, 600), 
+     ylab = "Price (100 = 1950", main = "Selected real commodity prices", xlab = "Year")
+lines(da$Year[da$Year > 1950], rebase(da$Petroleum[da$Year > 1950]), type = 'l', col = 'blue')
+lines(da$Year[da$Year > 1950], rebase(da$Tea[da$Year > 1950]), type = 'l', col = 'red')
+legend('topleft', inset = 0.05, cex = 0.6, legend = c("Lead", "Petroleum", "Tea"), 
+       lty = c(1,1,1), col = c('black', 'blue', 'red'))
+@
+\end{frame}
+
+\begin{frame}{Asset performance by regime (real)}
+\begin{table}
+\rowcolors{1}{MyBrown!20}{MyBrown!5}
+\begin{center}
+\small
+\begin{tabular}{lllll}
+  \hline
+	\textbf{Asset} & \textbf{1973-83}& \textbf{1982-2013}& \textbf{Nominal}& \textbf{Real} \\ 
+  \hline
+t-bills & -0.7\ & 1.5\% & 5.3\% & 1.0\% \\ 
+US large & -3.9\% & 8.6\% & 10.2\% & 5.7\% \\
+Foreign EEM & 4.3\% & 8.5\% & 12.1\% & 7.5\% \\
+Corporate bonds & -3.8\% & 7.4\% & 9.3\% & 4.8\% \\
+US 10-yr gov & -5.1\% & 5.9\% & 7.7\% & 3.3\% \\
+Foreign 10-yr gov & -2.7\% & 6.1\% & 8.5\% & 4.1\% \\
+TIPS & 0.5\% & 4.1\% & 7.7\% & 3.3\% \\
+REIT & -2.3\% & 7.2\% & 9.5\% & 5.0\% \\
+Gold & 13.0\% & 0.4\% & 7.4\% & 3.0\% \\
+   \hline
+\end{tabular}
+\caption{Global Asset Allocation, Meb Faber}
+\end{center}
+\end{table}
+\end{frame}
+
+% - alternatives
+% there has been no sustained surge in inflation in the last three decades. 
+
+% How about fx as an asset class.  Hedge or not hedge? 
+
+%Equity-bond
+%Alternatives (commodities and real estate)
+%The Swanson model
+%Risk-parity
+%Tactical asset allocation (momentum in assets https://www.tradersinsight.news/traders-insight/securities/macro/long-volatility-strategies-versus-tactical-asset-allocation/
+% Diversification through short, logn volatility now that bonds are not so useful. 
+%Link back to market efficiency
+%
+%Valuations and the economic environment
+% what do commodities do for diversification? 27 May 2022. 
+% Commodities are negatively related to equities and bonds and have a positive correlation with measures of inflation and inflation expectations. 
+
+
+
+\section{Security selection}
+% this might be about diversification across industry or country
+% evidence suggests that each work at different times.  It depends on the shock
+%Sectoral investment
+% FT graph from 23 May 2022.  The source is Bloomberg for the exact numbers.
+
+\begin{frame}{Smart Beta}
+There are two types of Smart Beta:
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Take \emph{value-weighted} indices and weight them by some other measure
+\item Use risk \emph{factors} or anomalies 
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Fundamental indexation}
+%\begin{textblock*}{3cm}(1cm, 1.5cm)
+%\includegraphics[scale = 0.3]{RA}
+%\end{textblock*}
+Research Affiliates is generally credited with introducing the first \emph{Smart Beta} fund 
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Arnott, R., J. Hsu and P. Moore, \emph{Fundamental Indexation}, Financial Analysts Journal, 2005
+\item Fundamentally-weight index fund was launched in 2005. 
+\item \textbf{RAFI}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Fundamentally weighted indices}
+\begin{columns}{}
+\begin{column}{0.48\linewidth}
+\includegraphics[scale = 0.38]{Main-Street}
+\end{column}
+\begin{column}{0.47\linewidth}
+\includegraphics[scale = 0.18]{Wall-Street}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Fundamentally weighted indices}
+Arnott, Hsu and More tested a range of alternative (fundamental) weightings
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Book value
+\item Trailing 5-year average cash flow
+\item Trailing 5-year average revenue
+\item Trailing 5-year average gross sales
+\item Trailing 5-year average gross dividends
+\item Total employment
+\item Composite of book, cash-flow, sales and dividends (most widely available for most countries)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Details}
+\begin{itemize}[<+-| alert@+>]
+\item Compustat data from 1962 to 2004
+\item Portfolio re-balanced once a year (at end of year)
+\item Comparison of expansion and recession
+\item Comparison of rising and falling interest rate environments
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Fundamentally weighted indices: results}
+\begin{table}
+\begin{center}
+\rowcolors{1}{MyBrown!20}{MyBrown!5}
+\begin{tabular}{l r r r}
+\textbf{Portfolio/index} & \textbf{1980s} & \textbf{1990s} & \textbf{2000-04}\\
+\hline
+S\&P 500 & 17.7\% & 18.6\% & -2.1\% \\
+Book & 18.3\%     & 17.1\% & 5.8\%\\
+Income & 19.0\%   & 17.7\% & 7.6\% \\
+Sales & 19.5\%    & 16.8\% & 8.7\% \\
+Dividends & 19.2\% & 15.4\% & 8.0\% \\
+Employment & 17.7\% & 15.7\% & 7.8\%\\
+Composite & 19.0\% & 16.6\% & 7.7\% 
+\end{tabular}
+\end{center}
+\end{table}
+Annualised returns by decade.  Arnott, Hsu and More (2005)
+\end{frame}
+
+\begin{frame}{Factors}
+\begin{tikzpicture}[scale = 2] 
+%\draw[very thin, color = gray](0, 0) grid (5, 3);
+\draw [<->, thick] (0, 3) node (yaxis) [above] {$Return$} 
+  |- (5, 0) node (xaxis) [right] {$Risk$};
+\pause
+\draw[domain = 0.0:5.0, color = olive] plot(\x, {0.5 + 0.5*\x});
+\draw [fill = brown] (2.5, 1.75) circle [radius = 0.05];
+%\node at (2.5, 1.75) [above left] {$\beta$ = 1};
+\node at (2.5, 1.75) [below right] {\scriptsize Market Portfolio};
+\pause
+\draw [fill = brown] (3.5, 2.5) circle [radius = 0.05];
+\node at (3.5, 2.5) [left] {\scriptsize Small Capitalisation};
+\pause
+\draw [fill = brown] (1.5, 1.5) circle [radius = 0.05];
+\node at (1.5, 1.5) [left] {\scriptsize Value};
+\pause
+\draw [fill = brown] (3.5, 2.0) circle [radius = 0.05];
+\node at (3.5, 2.0) [right] {\scriptsize Growth};
+\pause
+\draw [fill = brown] (4.0, 2.8) circle [radius = 0.05];
+\node at (4.0, 2.8) [left] {\scriptsize Momentum};
+\pause
+\draw [fill = brown] (0.8, 1.0) circle [radius = 0.05];
+\node at (0.8, 1.0) [left] {\scriptsize Low vol};
+\end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Factor investment}
+\begin{table}
+\begin{center}
+\rowcolors{1}{MyBrown!20}{MyBrown!5}
+\begin{tabular}{l r r }
+\textbf{Factor} & \textbf{What is it?} & \textbf{Metric} \\
+\hline
+Value & Cheap & Book-to-price\\
+Size & Small cap & Capitalisation\\
+Momentum & Past performance & Recent gains\\
+Low vol & Low risk & Standard deviation\\
+Quality & Robust & Debt or management\\
+\end{tabular}
+\end{center}
+\end{table}
+Most common risk factors
+\end{frame}
+% own quality in the downturn and value in the upturn. 
+
+%\begin{frame}{Factor risks}
+%\begin{itemize}[<+-| alert@+>]
+%\pause
+%  \item \textbf{Value:} behavioural bias of pro-cyclical investment: De Bondt and Thaler (1985) and Fama French (1993)
+%\item \textbf{Growth:} behavioural bias of pro-cyclical investment: De Bondt and Thaler (1985) and Fama French (1993)
+%\item \textbf{Small cap:} increased risk of small firms, liquidity or access to funding: Fama French (1993)
+%\item \textbf{Momentum:} behavioural and institutional serial correlation: Jagadesh and Titman (1993)
+%\item \textbf{Volatility:} Black, Jensen and Scholes (1972)
+%\item \textbf{High dividend:}
+%\item \textbf{Quality:} 
+%\end{itemize}
+%\end{frame}
+
+\begin{frame}{Results of factor investment}
+Investec analysis of following factors for S\&P 500 and MSCI EAFE (Dec 1991 to Dec 2015)
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item \textbf{Value:} 20\% of stocks with the lowest price-to-book ratio
+\item \textbf{Small tilt:} 20\% with smallest capitalisation
+\item \textbf{Momentum:} 20\% with the highest 12-month price return
+\item \textbf{Low volatility:} 20\% with the lowest 12-month realised volatility
+\item \textbf{Quality:} top 20\% of stocks with highest rating for return on equity, debt-to-equity and earnings variability
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Results 1}
+Dec 1991 to Dec 2015
+%\begin{center}
+\rowcolors{1}{MyBrown!20}{MyBrown!5}
+\begin{table}
+\begin{center}
+\begin{tabular}{l r c }
+\textbf{Portfolio/index} & \textbf{Return} & \textbf{Risk-adjusted return} \\
+\hline
+S\&P 500        & 9.0\% &  0.6\\
+Quality         & 11.1\% & 0.8\\
+Value           & 10.6\% & 0.5\\
+Small tilt      & 13.9\% & 0.6\\
+Momentum        & 12.0\% & 0.8\\
+Low volatility &  10.5\% & 0.9\\
+\end{tabular}
+\end{center}
+\end{table}
+US stocks; risk-adjusted return is return per unit of volatility. Bender, Briand, Melas, Subramanian (2013)
+\end{frame}
+
+\begin{frame}{Results 2}
+Dec 1991 to Dec 2015
+%\begin{center}
+\rowcolors{1}{MyBrown!20}{MyBrown!5}
+\begin{table}
+\begin{center}
+\begin{tabular}{l r c }
+\textbf{Portfolio/index} & \textbf{Return} & \textbf{Risk-adjusted return} \\
+\hline
+MSCI EAFA        & 4.7\% &  0.3\\
+Quality         & 9.7\% & 0.7\\
+Value           & 9.5\% & 0.5\\
+Small tilt      & 7.9\% & 0.4\\
+Momentum        & 9.0\% & 0.6\\
+Low volatility &  10.0\% & 0.8\\
+\end{tabular}
+\end{center}
+\end{table}
+International stocks; risk-adjusted return is return per unit of volatility. Bender, Briand, Melas, Subramanian (2013).
+\end{frame}
+
+\begin{frame}{Growth and value performance}
+<<factor, fig.height=4.6, echo=FALSE, warning=FALSE>>=
+da <- read.csv('../../Data/RAGRAV.csv')
+da <- da[, c(1, 2, 3)]
+colnames(da) <- c("Date", "Value", "Growth")
+da$Date <- as.Date(da$Date, format = "%d/%m/%Y")
+benchmark <- function(x, specify = FALSE, 
+                      date = as.Date("2008-01-01")) {
+  ifelse(specify == FALSE, 
+      mydata <- x/x[date] * 100, 
+           mydata <- x/x[which(da$Date == as.Date(date))] * 100 )
+  return(mydata)
+}
+da$ValueB <- benchmark(da$Value, specify = TRUE, date = as.Date("2019-12-31"))
+da$GrowthB <- benchmark(da$Growth, specify = TRUE, date = as.Date("2019-12-31"))
+plot(da$Date, da$ValueB, type = 'l', ylim = c(60, 180), lty = 1, 
+     main = "Russell 3000 Growth and Value", xlab = "Year", ylab = "Index = 100 Dec 2019")
+lines(da$Date, da$GrowthB, type = 'l', col = 'red',
+      main = "Russell 3000 Value and Growth", lty = 2)
+legend('topleft', inset = 0.04, legend = c("Russell Value", "Russell Growth"), 
+       col = c('black', 'red'), lty = c(1,2), cex = 0.8)
+@
+\end{frame}
+
+\begin{frame}{Growth and value absolute valuation}
+<<factor2, fig.height=4.6, echo=FALSE, warning=FALSE>>=
+da <- read.csv('../../Data/RAGRAV.csv')
+da <- da[, c(1, 7, 8)]
+colnames(da) <- c("Date", "ValueV", "GrowthV")
+da$Date <- as.Date(da$Date, format = "%d/%m/%Y")
+da$ValueVB <- benchmark(da$ValueV, specify = TRUE, date = as.Date("2019-12-31"))
+da$GrowthVB <- benchmark(da$GrowthV, specify = TRUE, date = as.Date("2019-12-31"))
+# First plot the absolute valuation 
+plot(da$Date, da$ValueV, type = 'l', lty = 1, main = "Russell 3000 Growth and Value", xlab = "Year", 
+     ylab = "PE ratio", ylim = c(10, 50))
+lines(da$Date, da$GrowthV, type = 'l', col = 'red',
+      main = "Russell Value and Growth", lty = 2)
+legend('topleft', inset = 0.04, legend = c("Russell Value", "Russell Growth"), 
+       col = c('black', 'red'), lty = c(1,2), cex = 0.8)
+@
+\end{frame}
+
+\begin{frame}{Growth and value relative valuation}
+<<factor3, fig.height=4.6, echo=FALSE, warning=FALSE>>=
+da <- read.csv('../../Data/RAGRAV.csv')
+da <- da[, c(1, 7, 8)]
+colnames(da) <- c("Date", "ValueV", "GrowthV")
+da$Date <- as.Date(da$Date, format = "%d/%m/%Y")
+da$ValueVB <- benchmark(da$ValueV, specify = TRUE, date = as.Date("2019-12-31"))
+da$GrowthVB <- benchmark(da$GrowthV, specify = TRUE, date = as.Date("2019-12-31"))
+plot(da$Date, da$ValueVB, type = 'l', ylim = c(60, 180), lty = 2, 
+     main = "Russell Growth and Value", xlab = "Year", ylab = "Index = 100 Dec 2019")
+lines(da$Date, da$GrowthVB, type = 'l', col = 'red',
+      main = "Russell Value and Growth")
+legend('topleft', inset = 0.04, legend = c("Russell Value", "Russell Growth"), 
+       col = c('black', 'red'), lty = c(1,2), cex = 0.8)
+@
+\end{frame}
+
+\begin{frame}{Volatility value}
+\includegraphics[scale=0.4]{../../Pictures/RAValVol.png}
+\end{frame}
+
+\begin{frame}{Quality value}
+\includegraphics[scale=0.4]{../../Pictures/RAValQu.png}
+\end{frame}
+
+\begin{frame}{Value value}
+\includegraphics[scale=0.4]{../../Pictures/RAValVal.png}
+\end{frame}
+%ESG as a factor?
+% there is also dispute about the measurement of ESG.  Long run or short run?  Environmental or risk? 
+%Equities-bonds-commodities-foreign exchange (as an asset class)
+
+\begin{frame}{US expensive vs world 1}
+<<inter, fig.height=4.6, echo=FALSE, warning=FALSE>>=
+da <- read.csv('../../Data/USWorld.csv')
+da$Date <- as.Date(da$Date, format = "%d/%m/%Y")
+colnames(da) <- c("Date", "MSCIUS", "MSCIWorld")
+plot(da$Date, da$MSCIUS, type = 'l', 
+     main = "MSCI US and World Valuation", xlab = "Year", 
+     ylab = "PE", ylim = c(10, 80))
+lines(da$Date, da$MSCIWorld, type = 'l', col = 'red', lty = 2)
+legend("topleft", inset = 0.03, legend = c("MSCI US", "MSCI World"), 
+       col = c('black', 'red'), lty = c(1,2), cex = 0.8)
+@
+\end{frame}
+
+\begin{frame}{US expensive vs world 2}
+<<inter2, fig.height=4.6, echo=FALSE, warning=FALSE>>=
+da <- read.csv('../../Data/USWorld.csv')
+da$Date <- as.Date(da$Date, format = "%d/%m/%Y")
+colnames(da) <- c("Date", "MSCIUS", "MSCIWorld")
+benchmark <- function(x, specify = FALSE, 
+                      date = as.Date("2008-01-01")) {
+  ifelse(specify == FALSE, 
+      mydata <- x/x[date] * 100, 
+           mydata <- x/x[which(da$Date == as.Date(date))] * 100 )
+  return(mydata)
+}
+da$MSCIWorldRB <- benchmark(da$MSCIWorld, specify = TRUE, 
+                            date = as.Date("2019-12-31"))
+da$MSCIUSRB <- benchmark(da$MSCIUS, specify = TRUE, 
+                         date = as.Date("2019-12-31"))
+plot(da$Date, da$MSCIWorldRB, type = 'l', main = 
+       "US and World Equity Values", xlab = "Year", 
+     ylab = "Index = 100 Dec 2019", ylim = c(60, 200), lty = 2, 
+col = 'red')
+lines(da$Date, da$MSCIUSRB, type = 'l', col = 'black', 
+      lty = 1, main = "US and World Valuation", xlab = "Year", 
+     ylab = "PE", ylim = c(10, 80))
+legend("topleft", inset = 0.03, legend = c("MSCI US", "MSCI World"), 
+       col = c('red', 'black'), lty = c(2,1), cex = 0.8)
+@
+\end{frame}
+
+\begin{frame}{International discount}
+Reasons for international discount
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Differences in return on assets
+\item Margins
+\item Growth rates
+\end{itemize}
+% this is in Verdad, Abandoning diversification 29 Aug
+\end{frame}
+
+\begin{frame}{ESG as a factor?}
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item ESG has evolved
+\begin{itemize}
+\item avoidance
+\item embrace
+\item change
+\end{itemize}
+\item Investment returns
+\begin{itemize}
+\item cost of capital
+\item factor
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Engine No. One: externalities}
+\includegraphics[scale = 0.25]{ESGvalue}
+\end{frame}
+
+\begin{frame}{ESG performance}
+\tiny
+\rowcolors{1}{MyBrown!20}{MyBrown!5}
+\begin{table}
+\begin{center}
+\begin{tabular}{l r r r r r r r r r r r}
+& \textbf{2008} 
+& \textbf{2009}  
+& \textbf{2010} 
+& \textbf{2011} 
+& \textbf{2012} 
+& \textbf{2013} 
+& \textbf{2014} 
+& \textbf{2015} 
+& \textbf{2016} 
+& \textbf{2017} 
+& \textbf{2018} \\
+\hline
+Ret diff  & -0.80 & 0.84 & -1.37 & -0.08 & 0.63 & 1.38 & 1.18 & 0.00 & -0.23 & 3.63 & -0.03 \\
+Sus-conv   & & & ** & &  &  & & & & *** & \\
+DD diff & 0.60 & 0.84 & 0.35 & 0.22 & 0.22 & 0.34 & 0.51 & 1.82 & 0.80 & 1.11 & 1.32 \\
+Sus-conv & * & ** & ** & & *** & ** & *** & *** & *** & *** & *** \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+Morgan Stanley: Sustainable Reality (2019)
+\end{frame}
+
+\begin{frame}{Distribution of ESG returns}
+\includegraphics[scale = 0.35]{../Pictures/ESGDist.png}
+\end{frame}
+
+\begin{frame}{Sectoral performance 2020}
+The first half of 2020
+\begin{table}
+\begin{center}
+\rowcolors{1}{MyBrown!20}{MyBrown!5}
+\begin{tabular}{lc}
+Sector & H1 performance\\
+\hline
+Info tech & 42\%\\
+Cons.dis. & 32\%\\
+Comm.serv. & 22\%\\
+Materials & 18\%\\
+Health care & 11\%\\
+Industrials & 9\%\\
+Cons.staples & 8\%\\
+Utilities & -3\%\\
+Financials & -4\%\\
+Real estate & -5\%\\
+Energy & -37\%\\
+\end{tabular}
+\end{center}
+\end{table}
+\end{frame}
+
+\begin{frame}[label=SP2022]{Sectoral performance 2022}
+The first half of 2022
+\begin{table}
+\begin{center}
+\rowcolors{1}{MyBrown!20}{MyBrown!5}
+\begin{tabular}{lc}
+Sector & H1 performance\\
+\hline
+Energy & 43\%\\
+Utilities & -2\%\\
+Health care & -11\%\\
+Cons.staples & -12\%\\
+Materials & -12\%\\
+Industrials & -17\%\\
+Financials & -18\%\\
+Real estate & -19\%\\
+Info tech & -28\%\\
+Comm.serv. & -31\%\\
+Cons.dis. & -20\%\\
+\end{tabular}
+\end{center}
+\end{table}
+\end{frame}
+
+
+% Cyclical, high beta, low-quality and small-medium 
+% tend to lead the cycle. 
+% materials, energy and industrials are the main cyclical stocks. 
+
+\section{Norges bank}
+%Case study
+\begin{frame}{Norwegian Petroleum Fund}
+\begin{center}
+\includegraphics[height = 3.0in]{Flag_Norway}
+\end{center}
+\end{frame}
+
+\begin{frame}{Norwegian Petroleum Fund}
+Started 1996
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Dutch disease
+\item 70\% equities, 30\% fixed-income, upto 7\% real estate
+\begin{itemize}
+\item 72\% equity, 25.5\% fixed-income, 2.5\% real estate today
+\end{itemize}
+\item Owns about 1.3\% of all listed companies
+\item Guidance of 3\% fund used for state budget
+\item Ethical council 
+\item Mork Committee
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Knut Anton Mork}
+\begin{center}
+\includegraphics[height = 3.0in]{Mork}
+\end{center}
+\end{frame}
+
+\begin{frame}{Mork}
+Committee was split
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Majority wanted to increase equity share to 70\%
+\begin{itemize}
+\item Risky oil and gas reserves have fallen as a share of assets
+\item Fiscal rule could be more adaptable
+\end{itemize}
+\item Mork wanted to reduce the size of the equity share to 50\%
+\begin{itemize}
+\item His minority group was Concerned about the need for steady fiscal transfers
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Investing in equities}
+Norges bank report on 20 years investment
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Evolution of the strategy
+\item Securities lending
+\item Identification of fraud
+\item Rebalancing and index entry/exit
+\item External managers
+\end{itemize}
+\end{frame}
+
+\begin{frame}{2022}
+The performance in the first half of 2022
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item 14.4\% loss or \$174bn
+\begin{itemize}
+\item equities -17\%
+\item fixed-income -9.3\%
+\item real estate +7.1\% (but only 3\% of the fund's assets)
+\end{itemize}
+\item Gained 14.5\% in 2021
+\end{itemize}
+\end{frame}
+
+\againframe{DMF}
+
+\begin{frame}{Fund manager opinion}
+\includegraphics[scale=0.4]{BoAfund3}
+\end{frame}
+
+\begin{frame}{Reading}
+\begin{center}
+\includegraphics[height = 3.0in]{factorbook}
+\end{center}
+\end{frame}
+
+\begin{frame}{Reading 2}
+\begin{itemize}
+\item \href{https://eprints.pm-research.com/17511/58502/index.html}{Mann Study of US, UK and Japan}
+\item \href{https://www.nbim.no/contentassets/3c31bf0882e445b38ef45a1377cc0513/investing-in-equities_government-pension-fund-global_web_final.pdf}{Norges bank:  Investing in equities, the 20-year history}
+\item Global Asset Allocation.  MEB Faber
+\end{itemize}
+\end{frame}
+\end{document}
+

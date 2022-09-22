@@ -1,73 +1,260 @@
+04-Sep-2022: Slide structure
+
+Modern Portfolio Theory
+- The MPT chart
+- Investment universe
+- Market portfolio (ETF growth)
+- ETF structure 
+- Correlation between assets
+- Stability of relationships (rolling correlation)
+- Lack of transaction costs
+- The risk-free asset
+- Investors are risk averse
+- The risk-free rate (picture of it declining over time)
+- Expected returns.  Past or future.  Survey or current valuation. 
+- Expected returns (historic) - table
+- Expected returns (US stocks) CAPE (talk about components).  Earnings affected by sales and margins. 
+- Expected returns (US nominal bonds) 
+- Expected returns (US real yield) 
+- Normal distribution
+- Skew
+- Kurtosis
+- Regimes
+- Risk measurement (blackswan)
+- EMH (one hundred dollar bill)
+- MPT
+
+
+Industry Structure
+- Asset owners and asset managers (pyramid).  Probably take this out. 
+- Industry structure
+- Investment decision (Maybe take each of these in turn, like the MPT issues above. 
+	universe
+	objectives
+	risk tolerance
+	strategy
+	tactics
+- Objectives (Saudi Monetary Authority)
+- Universe
+- Strategic asset allocation
+	Not sure whether to use the regime pictures. 
+- Tactical asset allocation (active investment)
+- Decision-making framework (Norway model)
+
+Asset allocation
+- Strategic vs tactical allocation
+- Rebalancing
+- Keynes (picture)
+- EAD - stocks as long term investments
+- Swanson model (long-term and liquidity tollerance)
+- Swanson quote (diversfication)
+- Swensen allocations
+- Richard Mennis ubiquitos equity
+- I would like something on performance (Mennis).  Not yet completed. 
+- Standard assets (does this come first or after the basic)?
+- Core assets (bond-equity, 60:40)
+- Basic equity-bond portfolio
+- Equity-bond performance (Picture)
+- Equity-bond relative performance
+- All weather
+- Risk parity portfolio (weights)
+- Risk parity performance (compared to assets)
+- Risk parity performance (by decade)
+- Regime change (maybe repeat this for the business cycle). 
+- Inflationary surge (do I need this?)
+- Maybe a note about commodity prices.  I have the long run data in data.  Make a chart and use the Meb dataset?
+- Asset performance by period
+- Some comments about real assets
+-
+
+
+Security selection
+- Sectoral performance 2020 (need expanding or moving)
+- Sectoral performance H1 2022
+- Can I get current valuation and look at this compared to expectations?
+- Smart beta (two types - correct)
+- Fundamental indexation
+- Fundamentally weighted indices (wall and main)
+- Fundamentally weighted indices (measurement)
+- Details (remove)
+- Fundamentally weighted indices (results)
+- Factor investment (pick up value and size).  This needs to go later. 
+- CAPM (picture).  Need to add quality, momentum etc
+- Factor investment (list and measure)
+- Results for factor investment (Investec study)
+- Results 1 (S&P
+- Results 2 (MSCI)
+- RAValVol
+- RAValQu
+- RAValVal
+- Size (recent under-performance).  Needs expanding
+- International (US outperformance)
+- International discount (merge with above if needed)
+- Factor measurement (rebalancing and measurement). Is this needed?  Does it go higher? 
+- ESG (not yet completed). Is this a factor
+- Factor value (not yet completed)
+- ESG performance
+- ESG distribution of returns
+- 130:30 portfolio.  Is this required?
+
+
+
+Norges bank case study
+- Norewgian petroleum fund (flag)
+- Norwegian petroleum fund (details)
+- Knut Mork (Picture)
+- Mork (details) - investment universe. 
+- Slides about the report (not yet completed
+- 2022 performance
+
+
+01-Sep-2022: ETF notes
+SPY: S&P 500
+TLT: US 20 year+ bonds
+IEF: US 7 to 10 year bonds
+GLD: Gold
+DBC: Invesco DB commodity tracker
+GSG: GSCI commodity index
+DJP: Bloomberg commodity index
+
+
+24-Aug-2022:  Asset owners.  Asset Management.  A systematic approach to factor investment.  Andrew Ang. 
+Timore-Leste became independent from Indonesia in May 2002. Government established a petroleum fund in 2005 and it had assets of $11.8bn by the end of 2012. A SWF is a vehicle for moving a country's savings from the present into the future. Are SWF holdings too high?  Reserves were increased following Latin American and Asian crises.  Payouts can be contingency or regularly set by rules. There is a blur between SWF and national pension funds. 
+
+Liability-driven framework was introduced in 1986 by Martin Leibowitz (Solomon Brothers).  The aim is to maximize the surplus between the assets and the liabilities. 
+
+There is focus on the payments to external fund managers.  These fees have been subject to California, New York and Norwegian pension funds. 
+
+Structures are important.  The Norwegian petroleum fund is an example of good practice with the politicians held at arm's length by a separate division of the central bank. 
+
+Foundations and endowments. Keynes as the endowment manager of King's College Cambridge, moving into equities. David Swensen at Yale moved public equity from 60% to 20% and private equity from below 5% to above 20% from 1980 to the mid 1990s. The idea is that long-term investors have an advantage in illiquid investments. 1990s, Yale led the way in investing in hedge funds. These went from zero to over 20% from 1990 to the mid 1990a. However, these portfolio performed poorly during the GFC. 
+
+Family offices are run by wealthy families. The money is frequently squandered.  There is a disconnect between the concentrated holdings that make a fortune and the diversification that preserves it. 
+
+Important elements:  human wealth is important; liquidity (mortgage is a short bond position) is important; health is important. 
+13-Aug-2022 Notes on what is needed
+- Something about the future of investment.  This will be easy and mechanised, like washing. 
+- This means index funds and some factor investments and some active fund management as well as the meme-investment of Robinhood for the risk-loving type of gambling investment. 
+- Something about thematic funds.  These have performed poorly recently.  Some information on 23 July 2022. Do they arrive too early when there are few significant players (rising illiquidity).  Do they jump on the bandwagon as it extends too far?  Are they at risk of reversal? 
+- The sectoral performance in the first half of the year.  23 May 2022.  Compare that to Covid. 
+- Use of volatility as a hedge now that bonds are less attractive (low yield) and the short-strategy of hedge funds is limited.  More here https://www.tradersinsight.news/traders-insight/securities/macro/long-volatility-strategies-versus-tactical-asset-allocation/
+- Past three decades a sustained surge in inflation has been absent.
+
+12-Aug-22: Outline
+
+- Introduction
+  MPT
+  Implementing MPT in practice
+
+	- Costs
+	- Market efficiency
+	- Risk free assets
+	- Variance as risk
+
+- Asset owners and asset managers (the owners range from individuals through pension funds to Sovereign wealth funds - who is the owner?)
+
+- MPT and asset allocation
+- Traditional 60:40 and adjustments
+- Recent research and the quadrants
+- Alternatives.   Commodities and real assets
+
+- The Swanson model
+- Risk-parity
+
+- Equities
+ - Sectoral investment
+ - Factor investment 
+
+- Debt
+ - Credit
+ - Maturity 
+ - Factors? 
+
+
+- The Norwegian Petroleum fund case study
+
+The PortfolioConstruction2017 file has very good general slides to be used. 
+
+12-Aug-2022: Schedule for Cambridge session
+This will involve 2 sessions. 
+
+13:30 to 15:30: Introduction  
+15:30 to 15:45: Break
+15:45 to 16:45: Close it out
+
+Khaled will wrap it up at 16:45 to 17:00
+These are notes from the previous version of the programme. 
+
 These are some notes for the second of the Portfolio Construction sessions. I just need to remind myself of some of the key features.
  
-Re-reading Fundamental indexation. Benjamin Graham: in the short-run, the market is a voting machine, but in the long-run it is a weighing machine. The use of annual rebalancing for the fundaamental index meant that rebalancing costs were nearly as low as the capitaisation-wighed indices.  Captalisation is a volatile way to measure a company's size or importance. Is it too noisy relative to fundamentals? Equal weighting discards some of the benefits of capitalisation weighting. To avoid the combination of large capitalisation with the other metrics, the top 1000 firms were assssed.  The Russell 1000 represents nearly 92% of US equity market value; the Russell 5000 repreents 98%. There is no major change in results when using monthly or quartrely re-balacing. Young companies and fast-growing companies tend to beunder-represented. A 1000 stock capitalsation-weighted index was constructed for comparison. This is not quite Russell 1000. The information error is the value added divided by the standard deviation of the value added (tracking error). The TMT bubble was the key to the 190s outtperforance. There was a large infow to anything that had a large cap. The performance is partcularly good in recessionary phases: excess returns are 4.13 compared to 1.80 percent in expansions. The perforrmance is also better in bear than bull markets. It is clear that there is a growth bias in the capitalisation-weighted index. Although this method will tend to under-weight growth stocks, a better way to look at this may be to say that capitaisation-weighted indices will tend to over-weigh growth relative to the main-street weighing.
+Re-reading Fundamental indexation. Benjamin Graham: in the short-run, the market is a voting machine, but in the long-run it is a weighing machine. The use of annual rebalancing for the fundamental index meant that rebalancing costs were nearly as low as the capitalisation-weighed indices.  Capitalisation is a volatile way to measure a company's size or importance. Is it too noisy relative to fundamentals? Equal weighting discards some of the benefits of capitalisation weighting. To avoid the combination of large capitalisation with the other metrics, the top 1000 firms were assessed.  The Russell 1000 represents nearly 92% of US equity market value; the Russell 5000 represents 98%. There is no major change in results when using monthly or quarterly re-balancing. Young companies and fast-growing companies tend to under-represented. A 1000 stock capitalisation-weighted index was constructed for comparison. This is not quite Russell 1000. The information error is the value added divided by the standard deviation of the value added (tracking error). The TMT bubble was the key to the 190s outperformance. There was a large inflow to anything that had a large cap. The performance is particularly good in recessionary phases: excess returns are 4.13 compared to 1.80 percent in expansions. The performance is also better in bear than bull markets. It is clear that there is a growth bias in the capitalisation-weighted index. Although this method will tend to under-weight growth stocks, a better way to look at this may be to say that capitalisation-weighted indices will tend to over-weigh growth relative to the main-street weighing.
 
-The rise of ESG issues is partly the importance of climate change, partly the United Nations Principles of Responsible Investing and partly the rise of Twiter as a way of disseminating information. 27% of US firms have an ESG component, 17% of European and 15% vof Asian. There is a link between ESG and active involvement in companies.  
+The rise of ESG issues is partly the importance of climate change, partly the United Nations Principles of Responsible Investing and partly the rise of Twitter as a way of disseminating information. 27% of US firms have an ESG component, 17% of European and 15% of Asian. There is a link between ESG and active involvement in companies.  
 
-The Norwegian petrolum fund has an operational reference portfolio that is used internally to assess performance. This is their version of the market portfolio. This starts with a benchmark that has been set by the Ministry of Finance.  There are then three objectives: increase diversification by inclusding stocks, weights and countries not usually included in the benchmark; try to harvest factor risk premia;  use proprietory methods to reduce transaction costs on rebalancing. 
+The Norwegian petroleum fund has an operational reference portfolio that is used internally to assess performance. This is their version of the market portfolio. This starts with a benchmark that has been set by the Ministry of Finance.  There are then three objectives: increase diversification by including stocks, weights and countries not usually included in the benchmark; try to harvest factor risk premium;  use proprietary methods to reduce transaction costs on rebalancing. 
 
-It is possible to think of the human capital as being bond-like or equity=like. This should also affect the allocation decision.  This is someting that has been discussed by the Norwegian governement. 
+It is possible to think of the human capital as being bond-like or equity=like. This should also affect the allocation decision.  This is something that has been discussed by the Norwegian government. 
 
-The opportunity cost model of fund management means that there is a benchmark portfolio.  The active fund manager has to try to add to that benchamark. The active fund manager will tend to be active in the private markets that are more challenging, specualist and may offer the greatest scope for finding inefficiencies. 
+The opportunity cost model of fund management means that there is a benchmark portfolio.  The active fund manager has to try to add to that benchmark. The active fund manager will tend to be active in the private markets that are more challenging, specialist and may offer the greatest scope for finding inefficiencies. 
 
-Rebalancing is a useful took to encourage cpounter-cyclical benaviour. 
+Rebalancing is a useful took to encourage counter-cyclical behaviour. 
 
 
 Risk parity
 The idea is based on the need for lower volatility assets to require leverage to achieve required returns. This means that not all investors can participate and that there is an opportunity for those that can to use leverage to capture this factor risk. 
 
-Risk-partity will use this to ensure that risk allocations are equal acrosss assets. Therefore, low risk assets will be overweighted. This is compared to the standard 60/40 portfolio where equity will have a much greater effect on performance because it is much more volatile.  It is mainly an equity portfolio. Risk parity will diversify by risk rather than dollars. In reality this can extend beyond stocks and bonds. 
+Risk-parity will use this to ensure that risk allocations are equal across assets. Therefore, low risk assets will be overweighted. This is compared to the standard 60/40 portfolio where equity will have a much greater effect on performance because it is much more volatile.  It is mainly an equity portfolio. Risk parity will diversify by risk rather than dollars. In reality this can extend beyond stocks and bonds. 
 
-Frazzini and Pedersen (2010) following Black (1972) found that if some investors are adverse to leverage, some lower higher-beta assets will offer lower risk-adjusted returns. This is found across asset classes. Therefore, leverage may break the standard CAPM and justify the decision to hold something other than the market portfolio. The highest risk-adjusted return is achieved not by the market portfolio but by a portfolio that overweightws safer assets. In this case stocks are the high beta asset and bonds are the low beta asset. The 60/40 mix is not based on capitalisation of stocks and bonds.  A real market portfolio would be more like 68/32 in favour of bonds.   
+Frazzini and Pedersen (2010) following Black (1972) found that if some investors are adverse to leverage, some lower higher-beta assets will offer lower risk-adjusted returns. This is found across asset classes. Therefore, leverage may break the standard CAPM and justify the decision to hold something other than the market portfolio. The highest risk-adjusted return is achieved not by the market portfolio but by a portfolio that overweights safer assets. In this case stocks are the high beta asset and bonds are the low beta asset. The 60/40 mix is not based on capitalisation of stocks and bonds.  A real market portfolio would be more like 68/32 in favour of bonds.   
 
-The theory of leverage aversion is tested across a long period of US histor (1926-2010), with a mixture of assets (1973-2010) and across many countries stock and bond markets. 
+The theory of leverage aversion is tested across a long period of US history (1926-2010), with a mixture of assets (1973-2010) and across many countries stock and bond markets. 
 
-There are other explanations for this phenomenon: delegateed portfolio managers with benchmarked institutional investors (Brennan 1993); Baker, Bradley and Wurgler (2011) - mutual find managers incentive to overweight high beta stocks due to the option-like payoff. 
+There are other explanations for this phenomenon: delegated portfolio managers with benchmarked institutional investors (Brennan 1993); Baker, Bradley and Wurgler (2011) - mutual find managers incentive to overweight high beta stocks due to the option-like pay-off. 
 
-The idea of leverage aversion has strong foundations: it is a risk that investors need to be compensated for.  To obtain leverage requires the acquisition of technology: financing, using derivatives, establishing counterparty relations; to manage leverage requires adjusting margin and trading the portfoio dynamicall. Mutual funds and pension funds typically have restrictions on the amount of leverage that they can apply. 
+The idea of leverage aversion has strong foundations: it is a risk that investors need to be compensated for.  To obtain leverage requires the acquisition of technology: financing, using derivatives, establishing counterparty relations; to manage leverage requires adjusting margin and trading the portfolio dynamically. Mutual funds and pension funds typically have restrictions on the amount of leverage that they can apply. 
 
 Regimes
 I did not speak much about the risk-on:risk-off strategy. This is all about low volatility. The HSBC note from the 6 August 2016 is all about the two regimes.  What do you buy in each of these regimes? 
 
-The big doubt at that time was that volatility was low even though there had been some major shocks: Brexit, Trump, terrorism, (others?, can we use some pictures here?).  The move forward 12 months means that volatiliktyremains low.  Use ViX index.  It is probably not enough just to say that it will change at some point and it will be ugly.  We need some metrics that can determine when this will be. 
+The big doubt at that time was that volatility was low even though there had been some major shocks: Brexit, Trump, terrorism, (others?, can we use some pictures here?).  The move forward 12 months means that volatility remains low.  Use ViX index.  It is probably not enough just to say that it will change at some point and it will be ugly.  We need some metrics that can determine when this will be. 
 
 One good example of this is the carry-trade.  When they are successful, they become crowded and the risk of reversal 
 
 Alternative assets
-Another though it the exposuire to credit risk. There are securitisations of loans but also some scope for more machine-learning of credit risk. Can this be captured.  Is it a hedge-fund idea or a fintech idea? Can it be scalled?  
+Another though it the exposure to credit risk. There are secularisations of loans but also some scope for more machine-learning of credit risk. Can this be captured.  Is it a hedge-fund idea or a fintech idea? Can it be scaled?  
 
-Robert Barro and Sanjay Misra have a study of gold performance. The answer: gold has not been a good hedge against poor economic performance. From 1836 to 2011 gold delivered a return of 1.1% (close to the treaury bill rate of 1.0%).  However, the standard deviation of annual gold returns was 13.7% compared to 16.7% for the US stock market. There is no negative correlation with GDP as would be the case if it were to offer protection against recession. The correlation is essentially zero. The authors identify 56 'economic disasters' and find that the real returns in these disasters are litle more than average and that there are real losses in over half of the 56 cases. 
+Robert Barro and Sanjay Misra have a study of gold performance. The answer: gold has not been a good hedge against poor economic performance. From 1836 to 2011 gold delivered a return of 1.1% (close to the treasury bill rate of 1.0%).  However, the standard deviation of annual gold returns was 13.7% compared to 16.7% for the US stock market. There is no negative correlation with GDP as would be the case if it were to offer protection against recession. The correlation is essentially zero. The authors identify 56 'economic disasters' and find that the real returns in these disasters are little more than average and that there are real losses in over half of the 56 cases. 
 
 Diversification 
 Raviv 06-Aug-2016 has the article on 60-40 portfolio performance that shows that even a very simple diversified model will do relatively well. I can use this 
 
 Risk metrics
-MSCI: Foundations of Factor Investment (in other). POrtfolio performacne can be explained by factors. Investors can harvest these risk factors by expostig themseves to factors. There are six equity risk factors: value, low size, low volatility, high yield, quality and momentym. 
+MSCI: Foundations of Factor Investment (in other). Portfolio performance can be explained by factors. Investors can harvest these risk factors by exposing themselves to factors. There are six equity risk factors: value, low size, low volatility, high yield, quality and momentum. 
 
-The use of factors immediately bring some active investment. It means that there is a decision being taken about the sources of factor premia.  It is also the case that factor premia have been highly cyclical and are subject to momentum themselves. 
+The use of factors immediately bring some active investment. It means that there is a decision being taken about the sources of factor premium.  It is also the case that factor premium have been highly cyclical and are subject to momentum themselves. 
 
-Different theories have been advanced to explain factor performance.  One view is that factors are a return for bearing systematic risk. A second view is that these returns are a consequence of systematic investor errors or the interplay of different incentives for different agents in financial markets.  For example, Investors have different time horizons and varying acess to liquidity. 
+Different theories have been advanced to explain factor performance.  One view is that factors are a return for bearing systematic risk. A second view is that these returns are a consequence of systematic investor errors or the interplay of different incentives for different agents in financial markets.  For example, Investors have different time horizons and varying access to liquidity. 
 
-The longevity of the factors will depend on whether they represent a return for taking systematic risk.  This is a risk that cannot be diversified away.  For example, small cap premium could be because the firms are less liquid or transparent (Zhang 2006)., more likely to be distressed (CHan and Chen 1991, Dichev 1998). Alternativelty, the returns may be a consequence of systematic errors. One part of this is the behavioural finance literature, the other is the industry practice. In the first camp there are investor biases, myopia and confort of home investments; in the second there are regulations, institutionsal fearures and incentives. For example, investors without the luxury of investing for the long-term may not be able to take advantage of the liquidity premium that is available on illiquid stocks. Dasgupta, Prat and Verado (2011) argue that repuation causes fund managers to herd and brings about the momentum in securities' prices. 
+The longevity of the factors will depend on whether they represent a return for taking systematic risk.  This is a risk that cannot be diversified away.  For example, small cap premium could be because the firms are less liquid or transparent (Zhang 2006)., more likely to be distressed (CHan and Chen 1991, Dichev 1998). Alternatively, the returns may be a consequence of systematic errors. One part of this is the behavioural finance literature, the other is the industry practice. In the first camp there are investor biases, myopia and comfort of home investments; in the second there are regulations, institutional features and incentives. For example, investors without the luxury of investing for the long-term may not be able to take advantage of the liquidity premium that is available on illiquid stocks. Dasgupta, Prat and Verado (2011) argue that reputation causes fund managers to herd and brings about the momentum in securities' prices. 
 
-Different institutions may have different costs to arbitrage.  Even if we look from the perspective of DeLong(1990) - my comment, it may be that they can wait for the long-term and take advatage of inefficiencies. Not all can do that. 
+Different institutions may have different costs to arbitrage.  Even if we look from the perspective of DeLong(1990) - my comment, it may be that they can wait for the long-term and take advantage of inefficiencies. Not all can do that. 
 
-Melas, Briand & Urwin (2011) point out that as factor investment becomes more popular it is likely to be less effective.  Factor indices do not represent the 'full equity	opportunity set, they are not 'macro-consistent'. A key element in factor performance is the cyclical nature of the returns. Each factor experiences periods of under-performance.  Small cap went through a six year period in the 1990s,  This cyclicality may be one reasoin that the returns have not been arbitraged away. Factors, like markets, are extremely hard to time. 
+Melas, Briand & Urwin (2011) point out that as factor investment becomes more popular it is likely to be less effective.  Factor indices do not represent the 'full equity	opportunity set, they are not 'macro-consistent'. A key element in factor performance is the cyclical nature of the returns. Each factor experiences periods of under-performance.  Small cap went through a six year period in the 1990s,  This cyclically may be one reason that the returns have not been arbitraged away. Factors, like markets, are extremely hard to time. 
 
-The academic studies are often carried out under condictions that are too strindent for fund managers.  for example, there is frequent monthly re-balancing.  
-Ang and the risk factors that may run across asset classes.  Assets like property, venture capital commodities and emerging markets all have equity-like features and perform very much like equities in times of crisis.  Does this link to the regimes above? This is probably exacerbated by the increased linkages caused by globalisation. There are also institutional features: funds will sell liquid assets in times of crisis so that they have cash that is available for redemptions. redemptions 
+The academic studies are often carried out under conditions that are too stringent for fund managers.  For example, there is frequent monthly re-balancing.  
+Ang and the risk factors that may run across asset classes.  Assets like property, venture capital commodities and emerging markets all have equity-like features and perform very much like equities in times of crisis.  Does this link to the regimes above? This is probably exacerbated by the increased linkages caused by globalisation. There are also institutional features: funds will sell liquid assets in times of crisis so that they have cash that is available for redemptions. Redemptions 
 
-Ang's list of factors are: volatility, momentum, quality, value and yield.  For bonds, Pimco has five buckets of risk: duration, curve, volatility, sensitivity to foreign exchange and spread ? Linking to the regimes above, some of these factors do well duering volatile periods and some do not. The aim is to be truely diversificed. Towers watson speaks of return drivers. This can inclde the sort of techniques used by hedge funds such as merger arbitrage and carry etc. The aim is to test the performance of these factros through a period of shocks such as LTCM etc. Asset classes tend to fall together but risk factors offer the diversification. 
+Ang's list of factors are: volatility, momentum, quality, value and yield.  For bonds, Pimco has five buckets of risk: duration, curve, volatility, sensitivity to foreign exchange and spread ? Linking to the regimes above, some of these factors do well during volatile periods and some do not. The aim is to be truly diversified. Towers Watson speaks of return drivers. This can include the sort of techniques used by hedge funds such as merger arbitrage and carry etc. The aim is to test the performance of these factors through a period of shocks such as LTCM etc. Asset classes tend to fall together but risk factors offer the diversification. 
 
-The return drivers: equity risk premium, credit risk premium and inflation risk premium to begin. Different return drivers perform in different ways under different circumstances. Thematic investing could also represent an alternative solution. Thematic investment tries to focus on future trends. It screens the players to be affected by major new trends. This also provides a nice contrast to the traditional MPT approach that relies on past performance. Thematic investment is not easy. For example, Towers report that over 2000 auto companies were creating in the US after the investion of the car.  However, only a very few of these survive.  The aim is to capture those winners.  This is the same as the dot.com time. Amazon survive amongst the many. Therefore, thematic investment requires top-down and also bottom-up approaches. 
+The return drivers: equity risk premium, credit risk premium and inflation risk premium to begin. Different return drivers perform in different ways under different circumstances. Thematic investing could also represent an alternative solution. Thematic investment tries to focus on future trends. It screens the players to be affected by major new trends. This also provides a nice contrast to the traditional MPT approach that relies on past performance. Thematic investment is not easy. For example, Towers report that over 2000 auto companies were creating in the US after the invention of the car.  However, only a very few of these survive.  The aim is to capture those winners.  This is the same as the dot.com time. Amazon survive amongst the many. Therefore, thematic investment requires top-down and also bottom-up approaches. 
 
-This thematic approach is based on the concept that the future will be different in this way.... It is very hard to get concrete support for these sort of ideas. The aim is to tilt the portfllio to take advantage of trends and to avoid potenital pitfalls. An example offered by Tower is that in a world of increasing population and relative scarcity of water, this could be a theme: to take advantage of water owners and steer clear of thse that are vulnerable. It may involve technology that will find a solution. 
+This thematic approach is based on the concept that the future will be different in this way.... It is very hard to get concrete support for these sort of ideas. The aim is to tilt the portfolio to take advantage of trends and to avoid potential pitfalls. An example offered by Tower is that in a world of increasing population and relative scarcity of water, this could be a theme: to take advantage of water owners and steer clear of these that are vulnerable. It may involve technology that will find a solution. 
 
-It is important to be aware of possible risk concetratins.  For example, an Austrailian pension fund is already exposed to Australian equities nad therefore to emerging markets.  Using an emerging markets theme would unduely concetrate risk. 
+It is important to be aware of possible risk concentrating.  For example, an Australian pension fund is already exposed to Australian equities and therefore to emerging markets.  Using an emerging markets theme would unduly concentrated risk. 
 
-Some other theems from Towers Watson (paper in Other): Altered spedending (aging population, negaive equities in short-term, better equities in lopng-term; heealtcare and consumer staples. Water: water companies, clean technology. Othes. Emerging wealth: rise of global middle class: developed market portfolio to emerging wealth. Opportunities in hedge funds and private wealth. 
+Some other themes from Towers Watson (paper in Other): Altered spending (ageing population, negative equities in short-term, better equities in long-term; healthcare and consumer staples. Water: water companies, clean technology. Other. Emerging wealth: rise of global middle class: developed market portfolio to emerging wealth. Opportunities in hedge funds and private wealth. 
 
-Institutiions
+Institutions
 State street has stopped using the Russle indices and started compiling its own indicates as part of the race to cut costs. The expense ratio will fall to 0.03 from 0.1 and 0.05 from 0.1. The boom in ETF has been a boon to the large index providers. 
-There is a distinction between asset owners (pension funds and insurance funds) and the fund managers. There is a report here that suggests that asset owners are increasingly taking some of the work in-house and are restribting the funds that they put outside to those that involve specialist fund managers and specialist assets. Alterantive investments may be outsurced. Pension fund have very specific mandates for hedge funds. Asset owners include pension funds, insurance companies, sovereign wealth funds and endowments. Mkinsey is asking for these asset owners to seek a more long-term bhorizon. 
+There is a distinction between asset owners (pension funds and insurance funds) and the fund managers. There is a report here that suggests that asset owners are increasingly taking some of the work in-house and are redistributing the funds that they put outside to those that involve specialist fund managers and specialist assets. Alternative investments may be outsourced. Pension fund have very specific mandates for hedge funds. Asset owners include pension funds, insurance companies, sovereign wealth funds and endowments. Mkinsey is asking for these asset owners to seek a more long-term horizon. 
 
